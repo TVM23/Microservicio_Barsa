@@ -1,0 +1,1 @@
+export const MUEBLES_CLIENT = Symbol('MUEBLES_CLIENT')
