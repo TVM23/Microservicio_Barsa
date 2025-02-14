@@ -1,7 +1,6 @@
 import { Controller, ParseIntPipe } from '@nestjs/common';
 import { MueblesService } from './muebles.service';
-import { CreateMuebleDto, UpdateMuebleDto, MUEBLES_PATTERNS } from '@app/contracts';
-import { PaginationDto } from '@app/contracts';
+import { CreateMuebleDto, UpdateMuebleDto, PaginationDto, MUEBLES_PATTERNS } from '@app/contracts';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 
 

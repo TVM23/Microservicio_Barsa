@@ -28,13 +28,22 @@
         "tsConfigPath": "apps/muebles/tsconfig.app.json"
       }
     },
-    "pruebas-api-gateway": {
+    "api-gateway": {
       "type": "application",
       "root": "apps/api-gateway",
       "entryFile": "main",
       "sourceRoot": "apps/api-gateway/src",
       "compilerOptions": {
         "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "user-authentication": {
+      "type": "application",
+      "root": "apps/user-authentication",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-authentication/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-authentication/tsconfig.app.json"
       }
     }
   }
