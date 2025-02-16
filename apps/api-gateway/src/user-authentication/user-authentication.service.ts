@@ -3,6 +3,7 @@ import { USERS_CLIENT } from './constant';
 import { ClientProxy } from '@nestjs/microservices';
 import { CreateUserRequest } from './dto/create-user.request';
 import { lastValueFrom } from 'rxjs';
+import { USER_PATTERNS } from '@app/contracts';
 
 @Injectable()
 export class UserAuthenticationService {
@@ -12,9 +13,8 @@ export class UserAuthenticationService {
     async createUser(dtoCreateUser: CreateUserRequest) {
         try {
             const result = await lastValueFrom(
-                this.usersClient.send('CREAR_USUARIO', dtoCreateUser)
+                this.usersClient.send(USER_PATTERNS.CREATE_USUARIO, dtoCreateUser)
             );
-            console.log('Respuesta recibida:', result);
             return result;
         } catch (error) {
             console.error('Error al crear el usuario:', error);
