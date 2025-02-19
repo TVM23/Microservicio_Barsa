@@ -21,7 +21,7 @@ export class User {
     @Prop({ required: true, unique: true })
     email: string;
 
-    @Prop({ required: true, select: false })
+    @Prop({ required: true })
     password: string;
 
     @Prop({ required: true })
@@ -29,6 +29,9 @@ export class User {
 
     @Prop({ default: true })
     estado: boolean;
+
+    @Prop({ required: false})
+    hashRefreshToken: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

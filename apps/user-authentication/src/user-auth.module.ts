@@ -5,6 +5,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { envs } from '@app/contracts';
 import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -14,7 +15,8 @@ import { UsersModule } from './users/users.module';
         uri: envs.mongodb_URI
       }),
     }),
-    UsersModule
+    UsersModule,
+    AuthModule
   ],
   controllers: [UserAuthController],
   providers: [UserAuthService],
