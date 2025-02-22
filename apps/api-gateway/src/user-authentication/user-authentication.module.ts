@@ -4,6 +4,9 @@ import { UserAuthenticationController } from './user-authentication.controller';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { envs } from '@app/contracts';
 import { USERS_CLIENT } from './constant';
+import { AtStrategy, RtStrategy } from './strategies';
+import { PassportModule } from '@nestjs/passport';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -17,10 +20,11 @@ import { USERS_CLIENT } from './constant';
             host: envs.usuariosMicroserviceHost,
           }
         }
-      ])
+      ]),
+      PassportModule, JwtModule, JwtModule.register({})
     ],
     
-  providers: [UserAuthenticationService],
+  providers: [UserAuthenticationService, AtStrategy, RtStrategy],
   controllers: [UserAuthenticationController]
 })
 export class UserAuthenticationModule {}
