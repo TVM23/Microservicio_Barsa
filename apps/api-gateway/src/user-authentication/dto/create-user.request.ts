@@ -15,7 +15,14 @@ export class CreateUserRequest {
     @IsEmail({}, { message: "Debes ingresar un correo válido" })
     public email: string;
 
-    @IsStrongPassword({}, { message: "Debes poner una contraseña fuerte" })
+    @IsString()
+    @IsStrongPassword({
+        minLength: 8,          
+        minLowercase: 1,        
+        minUppercase: 1,        
+        minNumbers: 1,         
+        minSymbols: 1           
+    }, { message: "La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula, un número y un símbolo." })
     public password: string;
 
     @IsIn(["admin", "usuario"], { message: "Rol inválido" })

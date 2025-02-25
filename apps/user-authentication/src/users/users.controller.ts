@@ -1,9 +1,8 @@
 import { Controller, HttpCode, HttpStatus } from '@nestjs/common';
-import { CreateUserRequest } from './dto/create-user.request';
+import { CreateUserRequest, USER_PATTERNS, UpdateUserDto } from '@app/contracts';
 import { UsersService } from './users.service';
-import { MessagePattern, Payload } from '@nestjs/microservices';
-import { USER_PATTERNS } from '@app/contracts';
-import { GetUsersFiltersDto } from './dto/get-users-filter.dto';
+import { MessagePattern, Payload, RpcException } from '@nestjs/microservices';
+import { GetUsersFiltersDto } from 'libs/contracts/users/get-users-filter.dto';
 
 @Controller('users')
 export class UsersController {
@@ -19,6 +18,11 @@ export class UsersController {
     @MessagePattern(USER_PATTERNS.LISTADO_USUARIOS)
     async getListadoUsuarios(@Payload() dtoGetUsers: GetUsersFiltersDto) {
         return await this.userService.getListadoUsuarios(dtoGetUsers);
+    }
+
+    @MessagePattern(USER_PATTERNS.UPDATE_USUARIOS)
+    async updateUser(@Payload() dtoUpdateUser: UpdateUserDto){
+        return await this.userService.updateUser(dtoUpdateUser._id, dtoUpdateUser)
     }
 
 }

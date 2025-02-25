@@ -110,8 +110,6 @@ export class MueblesService {
     })
     .join(', ');
 
-    const query = `UPDATE Muebles SET ${fieldsToUpdate} WHERE ID = ${id}`;
-
     try {
       //Checa que elm nueble si exista en el registro
       const mueble = await this.db.query(`SELECT * FROM Muebles WHERE id = ${id}`);
@@ -121,6 +119,8 @@ export class MueblesService {
           status: HttpStatus.BAD_REQUEST
         })
       }
+      
+      const query = `UPDATE Muebles SET ${fieldsToUpdate} WHERE ID = ${id}`;
       await this.db.query(query); // Ejecuta la consulta
       return { message: 'Mueble actualizado correctamente' };
     } catch (error) {

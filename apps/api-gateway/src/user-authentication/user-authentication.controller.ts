@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Post, Put, Query, Req, Request, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch, Post, Put, Query, Req, Request, UseGuards } from '@nestjs/common';
 import { UserAuthenticationService } from './user-authentication.service';
 import { CreateUserRequest } from './dto/create-user.request';
 import { LoginDto } from './dto/login.dto';
@@ -8,6 +8,8 @@ import { GetCurrentUser, GetCurrentUserId, Public } from './common/decorators';
 import { ChangePasswordDto } from './dto/change-password.dto';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
 import { GetUsersFiltersDto } from './dto/get-users-filter.dto';
+import { Types } from 'mongoose';
+import { UpdateUserDto } from './dto/update-user.dto';
 
 @Controller('user-authentication')
 export class UserAuthenticationController {
@@ -53,7 +55,7 @@ export class UserAuthenticationController {
 
     @Get('obtener-info-usuario')
     @HttpCode(HttpStatus.OK)
-    async getInfoUserAdmin(@Query() userId: string,){
+    async getInfoUserAdmin(@Query('userId') userId: string){
         return await this.userAuthService.getInfoUser(userId)
     }
 
@@ -61,6 +63,14 @@ export class UserAuthenticationController {
     @HttpCode(HttpStatus.OK)
     async getInfoUser(@GetCurrentUserId() userId: string,){
         return await this.userAuthService.getInfoUser(userId)
+    }
+
+    @Patch(':_id')
+    async updateUser(
+        @Param('_id') _id: string, 
+        @Body() dtoUpdateUser: UpdateUserDto
+    ) {
+        return await this.userAuthService.updateUser({_id, ...dtoUpdateUser});
     }
 
     @Put('cambiar-password')

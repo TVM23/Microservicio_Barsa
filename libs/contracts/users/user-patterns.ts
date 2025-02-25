@@ -6,5 +6,6 @@ export const USER_PATTERNS = {
     GET_INFO_USUARIO: "users.get_info",
     CHANGE_PASSWORD: "users.change_password",
     FORGOT_PASSWORD: "users.forgot_password",
-    LISTADO_USUARIOS: "users.get_listado"
+    LISTADO_USUARIOS: "users.get_listado",
+    UPDATE_USUARIOS: "users.update",
 }

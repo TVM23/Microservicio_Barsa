@@ -9,7 +9,7 @@ import { RpcException } from '@nestjs/microservices';
 import { ChangePasswordDto } from './dto/change-password.dto';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
 import { nanoid } from 'nanoid';
-import { GetUsersFiltersDto } from '../users/dto/get-users-filter.dto';
+import { GetUsersFiltersDto } from '@app/contracts';
 
 @Injectable()
 export class AuthService {

@@ -1,13 +1,12 @@
-import { HttpStatus, Injectable } from '@nestjs/common';
+import { HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from './schema/user.schema';
-import { Model } from 'mongoose';
-import { CreateUserRequest } from './dto/create-user.request';
+import { Model, Types } from 'mongoose';
+import { CreateUserRequest, GetUsersFiltersDto, UpdateUserDto } from '@app/contracts';
 import { hash } from 'bcryptjs';
 import * as bcrypt from 'bcryptjs';
 import { RpcException } from '@nestjs/microservices';
 import { ResetToken } from './schema/reset-token.schema';
-import { GetUsersFiltersDto } from './dto/get-users-filter.dto';
 
 @Injectable()
 export class UsersService {
@@ -50,6 +49,37 @@ export class UsersService {
         
         return this.userModel.find(query)
             .select('nombre apellidoPaterno apellidoMaterno email rol estado').exec();
+    }
+
+    async updateUser(_id: string, dtoUpdateUser: UpdateUserDto) {
+        try {
+          const user = await this.userModel.findById(_id).exec();
+          if (!user) {
+            throw new NotFoundException(`Usuario con id ${_id} no encontrado.`);
+          }
+      
+          const { _id: _, ...data } = dtoUpdateUser; // Excluir _id del DTO
+
+          if (data.estado !== "true" && data.estado !== "false") {
+            data.estado = "true";
+          }
+
+          if (data.password) {
+            data.password = await bcrypt.hash(data.password, 10); // Encriptar la contraseña
+            await this.deleteRtUser(_id)
+          }
+
+
+          Object.assign(user, data); // Copiar los campos del DTO al usuario existente
+      
+          await user.save(); // Guardar los cambios
+          const userActualizado = await this.userModel.findById(_id)
+                .select('nombre apellidoPaterno apellidoMaterno email rol estado');
+          return userActualizado
+        } catch (error) {
+          console.error("Error en UserService:", error); // Log del error
+          throw error;
+        }
     }
 
     //Cambiar contraseña
@@ -103,12 +133,19 @@ export class UsersService {
     //Buscar usuario por id y obtener solo ciertos datos
     async getUserByIdInfo(userId: string){
         const user = await this.userModel.findOne({ _id: userId })
-            .select('nombre apellidoPaterno apellidoMaterno email rol');
+            .select('nombre apellidoPaterno apellidoMaterno email rol estado');
         if (!user) {
             throw new RpcException({
               message: `Usuario con id ${userId} no encontrado.`,
               error: 'Unauthorized',
               status: 403
+            });
+        }
+        if (user.estado == false){
+            throw new RpcException({
+                message: `Este usuario ha sido desactivado`,
+                error: 'Unauthorized',
+                status: 403
             });
         }
         return user;
