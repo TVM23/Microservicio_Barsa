@@ -5,6 +5,7 @@ import { MueblesModule } from './muebles/muebles.module';
 import { UserAuthenticationModule } from './user-authentication/user-authentication.module';
 import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
+import { AtGuard } from './user-authentication/common/guards';
 
 @Module({
   imports: [MueblesModule, UserAuthenticationModule,
@@ -12,10 +13,10 @@ import { APP_GUARD } from '@nestjs/core';
   ],
   controllers: [ApiGatewayController],
   providers: [ 
-    /*{
+    {
       provide: APP_GUARD,
       useClass: AtGuard,
-    },*/
+    },
     ApiGatewayService,
   ],
 })

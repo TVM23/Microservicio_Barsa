@@ -7,6 +7,8 @@ import { LoginDto } from './dto/login.dto';
 import { USER_PATTERNS } from '@app/contracts';
 import { Tokens } from './types';
 import { AuthGuard } from '@nestjs/passport';
+import { ChangePasswordDto } from './dto/change-password.dto';
+import { ForgotPasswordDto } from './dto/forgot-password.dto';
 
 @Controller('auth')
 export class AuthController {
@@ -20,9 +22,6 @@ export class AuthController {
 
     @MessagePattern(USER_PATTERNS.LOGOUT_USUARIO)
     async logout(@Payload()  data: { userId: string }) {
-        if (!data.userId) {
-            throw new UnauthorizedException('Usuario no autenticado');
-        }
         return await this.authService.logout(data.userId);
     }
     
@@ -31,5 +30,21 @@ export class AuthController {
         return await this.authService.refreshToken(data.userId, data.rt)
     }
 
+
+    @MessagePattern(USER_PATTERNS.GET_INFO_USUARIO)
+    async getInfoUser(@Payload() data: { userId: string }){
+        return await this.authService.getInfoUser(data.userId)
+    }
+
+    @MessagePattern(USER_PATTERNS.CHANGE_PASSWORD)
+    async changePassword(@Payload() data: { dtoChangePassword: ChangePasswordDto, userId: string }) {
+        return await this.authService.changePassword(data.dtoChangePassword, data.userId);
+    }
+
+    //PENDIENTE POR EL MOMENTO ------- Cambiar contraseña pero se olvido de la antigua
+    @MessagePattern(USER_PATTERNS.FORGOT_PASSWORD)
+    async forgotPassword(@Payload() dtoForgotPassword: ForgotPasswordDto) {
+        return await this.authService.forgotPassword(dtoForgotPassword);
+    }
 
 }

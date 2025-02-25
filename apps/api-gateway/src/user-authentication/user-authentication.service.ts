@@ -7,6 +7,9 @@ import { USER_PATTERNS } from '@app/contracts';
 import { LoginDto } from './dto/login.dto';
 import { catchError, firstValueFrom } from 'rxjs';
 import { use } from 'passport';
+import { ChangePasswordDto } from './dto/change-password.dto';
+import { ForgotPasswordDto } from './dto/forgot-password.dto';
+import { GetUsersFiltersDto } from './dto/get-users-filter.dto';
 
 @Injectable()
 export class UserAuthenticationService {
@@ -34,6 +37,31 @@ export class UserAuthenticationService {
 
     refreshToken(userId: string, rt: string) {
         return this.usersClient.send(USER_PATTERNS.REFRESH_TOKEN, { userId, rt }).pipe(
+            catchError(err => { throw new RpcException(err) })
+        );
+    }
+
+    getListadoUsuarios(dtoGetUsers: GetUsersFiltersDto){
+        return this.usersClient.send(USER_PATTERNS.LISTADO_USUARIOS, dtoGetUsers).pipe(
+            catchError(err => { throw new RpcException(err) })
+        );
+    }
+
+    getInfoUser(userId: string){
+        return this.usersClient.send(USER_PATTERNS.GET_INFO_USUARIO, { userId }).pipe(
+            catchError(err => { throw new RpcException(err) })
+        );
+    }
+
+    changePassword(dtoChangePassword: ChangePasswordDto, userId: string){
+        return this.usersClient.send(USER_PATTERNS.CHANGE_PASSWORD, { dtoChangePassword, userId }).pipe(
+            catchError(err => { throw new RpcException(err) })
+        );
+    }
+
+    //PENDIENTE POR EL MOMENTO ------- Cambiar contraseña pero se olvido de la antigua
+    forgotPassword(dtoForgotPassword: ForgotPasswordDto){
+        return this.usersClient.send(USER_PATTERNS.FORGOT_PASSWORD, dtoForgotPassword ).pipe(
             catchError(err => { throw new RpcException(err) })
         );
     }
