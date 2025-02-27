@@ -1,0 +1,1 @@
+export const PRODUCTO_CLIENT = Symbol("PRODUCTO_CLIENT")

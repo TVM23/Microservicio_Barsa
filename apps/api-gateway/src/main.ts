@@ -1,17 +1,20 @@
 import { NestFactory, Reflector } from '@nestjs/core';
 import { ApiGatewayModule } from './api-gateway.module';
 import { envs, RpcCustomExceptionFilter } from '@app/contracts';
-import { ValidationPipe } from '@nestjs/common';
+import { Logger, ValidationPipe } from '@nestjs/common';
 import { AtGuard } from './user-authentication/common/guards';
 
 async function bootstrap() {
   const app = await NestFactory.create(ApiGatewayModule);
+  const logger = new Logger('ApiGateway')
+
   // Habilitar CORS para permitir peticiones desde otras aplicaciones (por ejemplo, Android)
   app.enableCors({
     origin: '*',
-    methods: 'GET,POST,PUT,DELETE,OPTIONS,PATCH',
+    methods: 'GET,HEAD,POST,PUT,DELETE,OPTIONS,PATCH',
     allowedHeaders: 'Content-Type, Authorization',
   });
+  
   app.setGlobalPrefix('api');
 
   //Usado para validaciones en los dtos
@@ -30,5 +33,7 @@ async function bootstrap() {
 
   await app.listen(envs.port);
   console.log(`API Gateway corriendo en: ${await app.getUrl()}`);
+  logger.log(`ApiGateway running on port: ${envs.port}`)
+
 }
 bootstrap();

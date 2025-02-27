@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import * as joi from 'joi';
+import Joi, * as joi from 'joi';
 
 interface EnvVars{
     PORT: number;
@@ -11,6 +11,12 @@ interface EnvVars{
 
     USUARIOS_MICROSERVICE_PORT: number;
     USUARIOS_MICROSERVICE_HOST: string;
+
+    PRODUCTO_MICROSERVICE_PORT: number;
+    PRODUCTO_MICROSERVICE_HOST: string;
+
+    PAPELETA_MICROSERVICE_PORT: number;
+    PAPELETA_MICROSERVICE_HOST: string;
 }
 
 const envsSchema = joi.object({
@@ -22,7 +28,13 @@ const envsSchema = joi.object({
     MUEBLES_MICROSERVICE_HOST: joi.string().required(),
 
     USUARIOS_MICROSERVICE_PORT: joi.number().required(),
-    USUARIOS_MICROSERVICE_HOST: joi.string().required()
+    USUARIOS_MICROSERVICE_HOST: joi.string().required(),
+
+    PRODUCTO_MICROSERVICE_PORT: joi.number().required(),
+    PRODUCTO_MICROSERVICE_HOST: joi.string().required(),
+
+    PAPELETA_MICROSERVICE_PORT: joi.number().required(),
+    PAPELETA_MICROSERVICE_HOST: joi.string().required(),
 })
 .unknown(true);
 
@@ -44,5 +56,11 @@ export const envs = {
 
     usuariosMicroservicePort: envVars.USUARIOS_MICROSERVICE_PORT,
     usuariosMicroserviceHost: envVars.USUARIOS_MICROSERVICE_HOST,
+
+    productoMicroservicePort: envVars.PRODUCTO_MICROSERVICE_PORT,
+    productoMicroserviceHost: envVars.PRODUCTO_MICROSERVICE_HOST,
+
+    papeletaMicroservicePort: envVars.PAPELETA_MICROSERVICE_PORT,
+    papeletaMicroserviceHost: envVars.PAPELETA_MICROSERVICE_HOST,
 }
 

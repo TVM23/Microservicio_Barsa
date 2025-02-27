@@ -10,6 +10,15 @@
   "monorepo": true,
   "root": "apps/api-gateway",
   "projects": {
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
     "contracts": {
       "type": "library",
       "root": "libs/contracts",
@@ -28,13 +37,22 @@
         "tsConfigPath": "apps/muebles/tsconfig.app.json"
       }
     },
-    "api-gateway": {
+    "papeleta": {
       "type": "application",
-      "root": "apps/api-gateway",
+      "root": "apps/papeleta",
       "entryFile": "main",
-      "sourceRoot": "apps/api-gateway/src",
+      "sourceRoot": "apps/papeleta/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+        "tsConfigPath": "apps/papeleta/tsconfig.app.json"
+      }
+    },
+    "producto": {
+      "type": "application",
+      "root": "apps/producto",
+      "entryFile": "main",
+      "sourceRoot": "apps/producto/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/producto/tsconfig.app.json"
       }
     },
     "user-authentication": {

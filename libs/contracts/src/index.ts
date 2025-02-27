@@ -12,5 +12,11 @@ export * from '../users/get-users-filter.dto'
 export * from '../users/update-user.dto'
 export * from '../users/user-patterns'
 
+export * from '../producto/producto.patterns'
+
+
+export * from '../papeleta/papeleta.patterns'
+export * from '../papeleta/papeleta-pagination.dto'
+
 
 

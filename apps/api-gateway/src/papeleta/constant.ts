@@ -1,0 +1,1 @@
+export const PAPELETA_CLIENT = Symbol("PAPELETA_CLIENT")

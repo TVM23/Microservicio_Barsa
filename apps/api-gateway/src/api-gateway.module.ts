@@ -6,10 +6,14 @@ import { UserAuthenticationModule } from './user-authentication/user-authenticat
 import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
 import { AtGuard } from './user-authentication/common/guards';
+import { ProductoModule } from './producto/producto.module';
+import { PapeletaModule } from './papeleta/papeleta.module';
 
 @Module({
   imports: [MueblesModule, UserAuthenticationModule,
     ConfigModule.forRoot({ isGlobal: true }),
+    ProductoModule,
+    PapeletaModule,
   ],
   controllers: [ApiGatewayController],
   providers: [ 
