@@ -17,6 +17,12 @@ interface EnvVars{
 
     PAPELETA_MICROSERVICE_PORT: number;
     PAPELETA_MICROSERVICE_HOST: string;
+
+    MATERIA_MICROSERVICE_PORT: number;
+    MATERIA_MICROSERVICE_HOST: string;
+
+    ACCESS_API_PORT: number;
+    ACCESS_API_HOST: string;
 }
 
 const envsSchema = joi.object({
@@ -35,6 +41,12 @@ const envsSchema = joi.object({
 
     PAPELETA_MICROSERVICE_PORT: joi.number().required(),
     PAPELETA_MICROSERVICE_HOST: joi.string().required(),
+
+    MATERIA_MICROSERVICE_PORT: joi.number().required(),
+    MATERIA_MICROSERVICE_HOST: joi.string().required(),
+
+    ACCESS_API_PORT: joi.number().required(),
+    ACCESS_API_HOST: joi.string().required(),
 })
 .unknown(true);
 
@@ -62,5 +74,11 @@ export const envs = {
 
     papeletaMicroservicePort: envVars.PAPELETA_MICROSERVICE_PORT,
     papeletaMicroserviceHost: envVars.PAPELETA_MICROSERVICE_HOST,
+
+    materiaMicroservicePort: envVars.MATERIA_MICROSERVICE_PORT,
+    materiaMicroserviceHost: envVars.MATERIA_MICROSERVICE_HOST,
+
+    apiAccessPort: envVars.ACCESS_API_PORT,
+    apiAccessHost: envVars.ACCESS_API_HOST
 }
 

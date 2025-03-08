@@ -16,6 +16,7 @@ export class UserAuthenticationController {
 
     constructor (private userAuthService: UserAuthenticationService) {}
 
+    @Public()
     @Post()
     @HttpCode(HttpStatus.CREATED)
     async createUser(@Body() dtoCreateUser: CreateUserRequest ){

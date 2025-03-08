@@ -1,5 +1,107 @@
 services:
+  access-api:
+    build: 
+      context: .
+      dockerfile: ./apps/access-api/Dockerfile
+    container_name: access-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - C:\Users\Tadeo\Downloads\prueba:/app/database
+      - ./apps/access-api/practica-access-1-0.0.1-SNAPSHOT.jar:/app/app.jar
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:ucanaccess:///app/database/Prod_Data.mdb;memory=false;
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=net.ucanaccess.jdbc.UcanaccessDriver
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS= kafka:9092
+    depends_on:
+      - kafka
+    networks:
+      - app-network
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.0.1
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - app-network
+
+  kafka:
+    image: confluentinc/cp-kafka:7.0.1
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    depends_on:
+      - zookeeper
+    networks:
+      - app-network
+    
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: ./apps/api-gateway/Dockerfile
+      target: development
+    command: npm run start:dev api-gateway
+    env_file:
+      - ./.env
+    depends_on:
+      - mongo
+      - kafka
+    environment:
+      KAFKA_BROKER: kafka:9092
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - ./libs:/usr/src/app/libs  
+    ports:
+      - '3000:3000'
+    networks:
+      - app-network
+
+  user-authentication:
+    build:
+      context: .
+      dockerfile: ./apps/user-authentication/Dockerfile
+      target: development
+    command: npm run start:dev user-authentication
+    env_file:
+      - ./.env
+    depends_on:
+      - mongo
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - ./libs:/usr/src/app/libs  
+    ports:
+      - '3002:3002'
+    networks:
+      - app-network
+  
   mongo:
     image: mongo
+    container_name: mongo_db
     ports:
       - "27017:27017"
+    volumes:
+      - mongodb_master_data:/data/db
+    networks:
+      - app-network
+      
+volumes:
+  mongodb_master_data:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge
+
+  

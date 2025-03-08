@@ -18,5 +18,10 @@ export * from '../producto/producto.patterns'
 export * from '../papeleta/papeleta.patterns'
 export * from '../papeleta/papeleta-pagination.dto'
 
+export * from '../papeleta/papeleta.patterns'
+export * from '../materia/materia-pagination.dto'
 
 
+
+export * from '../../kafka/kafka.module'
+export * from '../../kafka/KafkaPublisherService'

@@ -29,9 +29,19 @@ export class UsersService {
                 status: HttpStatus.BAD_REQUEST
             });
         }
+        if (typeof data.password === 'object') {
+            throw new RpcException({
+                message: 'Password should be a string',
+                error: 'BadRequestException',
+                status: HttpStatus.BAD_REQUEST
+            });
+        }
+        
+        const hashedPassword = await bcrypt.hash(data.password.trim(), 10);
+
         await new this.userModel({
             ...data,
-            password: await hash(data.password, 10),
+            password: hashedPassword,
         }).save();
         return { message: `Usuario creado correctamente` };
     }

@@ -8,12 +8,14 @@ import { APP_GUARD } from '@nestjs/core';
 import { AtGuard } from './user-authentication/common/guards';
 import { ProductoModule } from './producto/producto.module';
 import { PapeletaModule } from './papeleta/papeleta.module';
+import { MateriaModule } from './materia/materia.module';
 
 @Module({
   imports: [MueblesModule, UserAuthenticationModule,
     ConfigModule.forRoot({ isGlobal: true }),
     ProductoModule,
     PapeletaModule,
+    MateriaModule,
   ],
   controllers: [ApiGatewayController],
   providers: [ 

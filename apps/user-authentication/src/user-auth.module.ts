@@ -12,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
     ConfigModule.forRoot({ isGlobal: true }),
     MongooseModule.forRootAsync({
       useFactory: () => ({
-        uri: envs.mongodb_URI
+        uri: process.env.MONGODB_URI
       }),
     }),
     UsersModule,

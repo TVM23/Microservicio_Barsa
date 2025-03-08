@@ -28,6 +28,15 @@
         "tsConfigPath": "libs/contracts/tsconfig.lib.json"
       }
     },
+    "materia": {
+      "type": "application",
+      "root": "apps/materia",
+      "entryFile": "main",
+      "sourceRoot": "apps/materia/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/materia/tsconfig.app.json"
+      }
+    },
     "muebles": {
       "type": "application",
       "root": "apps/muebles",
