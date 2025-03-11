@@ -16,15 +16,18 @@ export class MateriaService {
     await this.kafkaService.sendMessage('access-api-topic', 'Hello from NestJS');
     return { message: 'Message sent' };
   }
-/*
 
   getListadoMateria(){
-    return this.kafkaService.sendMessage('get-listado-materia', "")      
+    return this.kafkaService.sendMessageAndWait('get-listado-materia', "")      
+  }
+
+  getListadoMateriaFiltro(dtoMateriaPaginado: MateriaPaginationDto){
+    return this.kafkaService.sendMateriaPagination('get-listado-materia-filtro', dtoMateriaPaginado)
   }
 
   getMateriaPorCodigo(codigo: string) {
     return this.kafkaService.sendMessage('get-materia-codigo', codigo)
-}*/
+}
 
   create(createMateriaDto: CreateMateriaDto) {
     return 'This action adds a new materia';

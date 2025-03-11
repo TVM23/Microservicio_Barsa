@@ -5,10 +5,7 @@ WORKDIR /usr/src/app
 
 # Instalar dependencias necesarias para ODBC
 RUN apt-get update && apt-get install -y \
-    unixodbc \
-    unixodbc-dev \
-    odbcinst \
-    odbc-mdbtools \
+
     && rm -rf /var/lib/apt/lists/*
 
 COPY package*.json ./
@@ -28,10 +25,6 @@ WORKDIR /usr/src/app
 
 # Instalar dependencias necesarias para ODBC
 RUN apt-get update && apt-get install -y \
-    unixodbc \
-    unixodbc-dev \
-    odbcinst \
-    odbc-mdbtools \
     && rm -rf /var/lib/apt/lists/*
 
 COPY package*.json ./

@@ -14,17 +14,20 @@ export class MateriaController {
     return await this.materiaService.sendMessage();
   }
 
-/*
   @Get('get-listado-materia')
   async getListadoMateria(){
     return await this.materiaService.getListadoMateria();
+  }
+
+  @Get('get-listado-materia-filtro')
+  async getListadoMateriaFiltro(@Query() dtoMateriaPaginado: MateriaPaginationDto){
+    return await this.materiaService.getListadoMateriaFiltro(dtoMateriaPaginado);
   }
 
   @Get(':codigo')
   async getMateriaPorCodigo(@Param('codigo') codigo: string){
     return await this.materiaService.getMateriaPorCodigo(codigo);
   }
-*/
 
   @Post()
   create(@Body() createMateriaDto: CreateMateriaDto) {
