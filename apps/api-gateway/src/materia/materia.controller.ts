@@ -9,11 +9,6 @@ import { firstValueFrom } from 'rxjs';
 export class MateriaController {
   constructor(private readonly materiaService: MateriaService) {}
 
-  @Get('send')
-  async sendMessage() {
-    return await this.materiaService.sendMessage();
-  }
-
   @Get('get-listado-materia')
   async getListadoMateria(){
     return await this.materiaService.getListadoMateria();

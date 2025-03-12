@@ -11,15 +11,15 @@ export class KafkaPublisherService implements OnModuleInit {
 
   private producer = this.kafka.producer();
   private consumer = this.kafka.consumer({ groupId: 'materia-response-group' });
-
   private responses = new Map<string, (data: any) => void>(); // Store promises for responses
 
   async onModuleInit() {
     await this.producer.connect();
     await this.consumer.connect();
-    await this.consumer.subscribe({ topic: 'materia-response', fromBeginning: true });
-    await this.consumer.subscribe({ topic: 'materia-pagination-response', fromBeginning: true });
-
+    await this.consumer.subscribe({
+      topics: ['materia-response', 'materia-pagination-response'],
+      fromBeginning: true,
+    });
 
     // Run the consumer ONCE and listen for responses
     await this.consumer.run({
@@ -40,56 +40,41 @@ export class KafkaPublisherService implements OnModuleInit {
     });
   }
 
-  async sendMessage(topic: string, message: string) {
+  public async sendRequest<T>(topic: string, payload: T): Promise<any> {
+    const correlationId = Math.random().toString(36).substring(7);
+
+    return new Promise(async (resolve, reject) => {
+      this.responses.set(correlationId, resolve); // Store resolver
+
+      await this.producer.send({
+        topic,
+        messages: [{ value: JSON.stringify({ correlationId, data: payload }) }],
+      });
+
+      // Timeout to prevent waiting forever
+      setTimeout(() => {
+        if (this.responses.has(correlationId)) {
+          this.responses.delete(correlationId);
+          reject(new Error(`Timeout waiting for response on topic: ${topic}`));
+        }
+      }, 40000);
+    });
+  }
+
+  /*async sendMessage(topic: string, message: string) {
     await this.producer.send({
       topic,
       messages: [{ value: message }],
     });
   }
 
-  async sendMessageAndWait(topic: string, message: string): Promise<any> {
-    const correlationId = Math.random().toString(36).substring(7);
-
-    // eslint-disable-next-line no-async-promise-executor
-    return new Promise(async (resolve, reject) => {
-      this.responses.set(correlationId, resolve); // Store the resolver
-
-      await this.producer.send({
-        topic,
-        messages: [{ value: JSON.stringify({ correlationId, message }) }],
-      });
-
-      // Timeout to prevent waiting forever
-      setTimeout(() => {
-        if (this.responses.has(correlationId)) {
-          this.responses.delete(correlationId);
-          reject(new Error('Timeout waiting for response'));
-        }
-      }, 30000);
-    });
+  public async sendMateriaPagination(topic: string, dto: MateriaPaginationDto): Promise<any> {
+    return this.sendRequest(topic, dto);
   }
 
-  async sendMateriaPagination(topic: string, dto: MateriaPaginationDto): Promise<any> {
-    const correlationId = Math.random().toString(36).substring(7);
-  
-    // eslint-disable-next-line no-async-promise-executor
-    return new Promise(async (resolve, reject) => {
-      this.responses.set(correlationId, resolve); // Store resolver for response
-
-      await this.producer.send({
-        topic,
-        messages: [{ value: JSON.stringify({ correlationId, data: dto }) }],
-      });
-  
-      // Timeout to prevent waiting forever
-      setTimeout(() => {
-        if (this.responses.has(correlationId)) {
-          this.responses.delete(correlationId);
-          reject(new Error("Timeout waiting for response"));
-        }
-      }, 30000);
-    });
-  }  
+  public async sendMessageResponse(topic: string, message: string): Promise<any> {
+    return this.sendRequest(topic, message);
+  }*/
 
 }
 

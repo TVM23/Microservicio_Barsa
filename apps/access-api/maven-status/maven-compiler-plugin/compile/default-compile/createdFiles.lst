@@ -1,11 +1,12 @@
-com\access\service\KafkaConsumer.class
-com\access\service\MateriaService.class
+com\access\dto\materia\MateriaPaginationDTO.class
+com\access\dto\PaginationResult.class
 com\access\model\Papeleta.class
 com\access\ProyectoAccess1Application.class
 com\access\service\PapeletaService.class
 com\access\controller\PapeletaController.class
 com\access\config\KafkaProducerConfig.class
-com\access\service\MateriaPaginationDTO.class
 com\access\model\Materia.class
-com\access\config\JdbcConfig.class
 com\access\controller\MateriaController.class
+com\access\service\MateriaService.class
+com\access\listener\MateriaListener.class
+com\access\config\JdbcConfig.class

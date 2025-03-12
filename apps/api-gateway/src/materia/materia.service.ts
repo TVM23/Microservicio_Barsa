@@ -12,22 +12,17 @@ export class MateriaService {
   //constructor(@Inject(MATERIA_CLIENT) private materiaClient: ClientProxy){}
   constructor(private readonly kafkaService: KafkaPublisherService) {}
 
-  async sendMessage() {
-    await this.kafkaService.sendMessage('access-api-topic', 'Hello from NestJS');
-    return { message: 'Message sent' };
-  }
-
   getListadoMateria(){
-    return this.kafkaService.sendMessageAndWait('get-listado-materia', "")      
+    return this.kafkaService.sendRequest('get-listado-materia', "")      
   }
 
   getListadoMateriaFiltro(dtoMateriaPaginado: MateriaPaginationDto){
-    return this.kafkaService.sendMateriaPagination('get-listado-materia-filtro', dtoMateriaPaginado)
+    return this.kafkaService.sendRequest('get-listado-materia-filtro', dtoMateriaPaginado)
   }
 
   getMateriaPorCodigo(codigo: string) {
-    return this.kafkaService.sendMessage('get-materia-codigo', codigo)
-}
+    return this.kafkaService.sendRequest('get-materia-codigo', codigo)
+  }
 
   create(createMateriaDto: CreateMateriaDto) {
     return 'This action adds a new materia';
