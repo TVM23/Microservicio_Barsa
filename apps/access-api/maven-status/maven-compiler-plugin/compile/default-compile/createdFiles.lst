@@ -7,6 +7,11 @@ com\access\controller\PapeletaController.class
 com\access\config\KafkaProducerConfig.class
 com\access\model\Materia.class
 com\access\controller\MateriaController.class
+com\access\dto\papeleta\DetallePapeletaDTO.class
+com\access\dto\papeleta\PapeletaPaginationDTO.class
+com\access\model\DetallePapeleta.class
+com\access\service\DetallePapeletaService.class
 com\access\service\MateriaService.class
 com\access\listener\MateriaListener.class
+com\access\listener\PapeletaListener.class
 com\access\config\JdbcConfig.class

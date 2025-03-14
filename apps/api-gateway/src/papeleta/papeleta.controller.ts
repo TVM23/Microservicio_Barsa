@@ -13,6 +13,11 @@ export class PapeletaController {
     return await this.papeletaService.getListadoPapeletas(papeletaPaginationDto)
   }
 
+  @Get(':folio')
+  async getPapeletaPorFolio(@Param('folio') folio: number){
+    return await this.papeletaService.getPapeletaPorFolio(folio)
+  }
+
   @Post()
   create(@Body() createPapeletaDto: CreatePapeletaDto) {
     return this.papeletaService.create(createPapeletaDto);

@@ -4,18 +4,20 @@ import { UpdatePapeletaDto } from './dto/update-papeleta.dto';
 import { PAPELETA_CLIENT } from './constant';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { catchError } from 'rxjs';
-import { PAPELETA_PATTERNS } from '@app/contracts';
+import { KafkaPublisherService, PAPELETA_PATTERNS } from '@app/contracts';
 import { PapeletaPaginationDto } from '@app/contracts';
 
 @Injectable()
 export class PapeletaService {
-  constructor(@Inject(PAPELETA_CLIENT) private readonly papeletaClient: ClientProxy ){}
+  //constructor(@Inject(PAPELETA_CLIENT) private readonly papeletaClient: ClientProxy ){}
+  constructor(private readonly kafkaService: KafkaPublisherService) {}
 
   getListadoPapeletas(papeletaPaginationDto: PapeletaPaginationDto){
-    return this.papeletaClient.send(PAPELETA_PATTERNS.GET_LISTADO_PAPELETAS, papeletaPaginationDto )
-        .pipe(
-        catchError( err => { throw new RpcException(err) } )
-    );
+    return this.kafkaService.sendRequest('get-papeleta-listado', papeletaPaginationDto)
+  }
+
+  getPapeletaPorFolio(folio: number){
+    return this.kafkaService.sendRequest('get-papeleta-folio', folio)
   }
 
   create(createPapeletaDto: CreatePapeletaDto) {

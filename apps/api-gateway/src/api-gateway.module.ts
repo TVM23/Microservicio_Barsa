@@ -19,10 +19,10 @@ import { MateriaModule } from './materia/materia.module';
   ],
   controllers: [ApiGatewayController],
   providers: [ 
-    {
+    /*{
       provide: APP_GUARD,
       useClass: AtGuard,
-    },
+    },*/
     ApiGatewayService,
   ],
 })

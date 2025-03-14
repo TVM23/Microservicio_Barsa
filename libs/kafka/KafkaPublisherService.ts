@@ -17,7 +17,10 @@ export class KafkaPublisherService implements OnModuleInit {
     await this.producer.connect();
     await this.consumer.connect();
     await this.consumer.subscribe({
-      topics: ['materia-response', 'materia-pagination-response'],
+      topics: [
+        'materia-response', 'materia-pagination-response', 'materia-codigo-response',
+        'papeleta-response', 'papeleta-pagination-response', 'papeleta-codigo-response',
+      ],
       fromBeginning: true,
     });
 
@@ -38,9 +41,33 @@ export class KafkaPublisherService implements OnModuleInit {
         }
       },
     });
+
+    // Mantener la conexión viva con un "ping" cada 30s
+    setInterval(async () => {
+      await this.producer.send({
+        topic: 'health-check',
+        messages: [{ value: JSON.stringify({ timestamp: Date.now() }) }],
+      });
+    }, 30000);
+  }
+
+  private async ensureConnected() {
+    if (!this.producer) {
+      this.producer = this.kafka.producer();
+      await this.producer.connect();
+    }
+    if (!this.consumer) {
+      this.consumer = this.kafka.consumer({
+        groupId: 'materia-response-group',
+        sessionTimeout: 60000,  // 1 min antes de que Kafka cierre el consumer
+        heartbeatInterval: 15000, // Heartbeat cada 15s
+      });
+      await this.consumer.connect();
+    }
   }
 
   public async sendRequest<T>(topic: string, payload: T): Promise<any> {
+    await this.ensureConnected();
     const correlationId = Math.random().toString(36).substring(7);
 
     return new Promise(async (resolve, reject) => {
@@ -59,6 +86,11 @@ export class KafkaPublisherService implements OnModuleInit {
         }
       }, 40000);
     });
+  }
+
+  async onModuleDestroy() {
+    await this.producer.disconnect();
+    await this.consumer.disconnect();
   }
 
   /*async sendMessage(topic: string, message: string) {

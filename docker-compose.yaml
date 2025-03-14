@@ -15,6 +15,7 @@ services:
       - SPRING_KAFKA_BOOTSTRAP_SERVERS= kafka:9092
     depends_on:
       - kafka
+      - zookeeper
     networks:
       - app-network
 
@@ -56,6 +57,7 @@ services:
     depends_on:
       - mongo
       - kafka
+      - zookeeper
     environment:
       KAFKA_BROKER: kafka:9092
     volumes:
@@ -78,6 +80,7 @@ services:
     depends_on:
       - mongo
       - kafka
+      - zookeeper
       - api-gateway
     volumes:
       - .:/usr/src/app

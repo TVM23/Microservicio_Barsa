@@ -36,23 +36,5 @@ async function bootstrap() {
 
   console.log(`API Gateway corriendo en: ${await app.getUrl()}`);
   logger.log(`ApiGateway running on port: ${envs.port}`)
-
-
-  /*const rabbitmqMicroservice = app.connectMicroservice<MicroserviceOptions>({
-    transport: Transport.RMQ,
-    options: {
-      urls: ['amqp://user:password@rabbitmq:5672'], // Usar el nombre del servicio de RabbitMQ en Docker
-      queue: 'materia_queue', // Nombre de la cola
-      queueOptions: {
-        durable: false, // Cola no durable (se pierde si RabbitMQ se reinicia)
-      },
-    },
-  });
-
-
-  // Iniciar los microservicios
-  await app.startAllMicroservices();
-  logger.log('Microservice RabbitMQ are running')*/
-
 }
 bootstrap();

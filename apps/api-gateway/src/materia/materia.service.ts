@@ -13,11 +13,11 @@ export class MateriaService {
   constructor(private readonly kafkaService: KafkaPublisherService) {}
 
   getListadoMateria(){
-    return this.kafkaService.sendRequest('get-listado-materia', "")      
+    return this.kafkaService.sendRequest('get-materia-listado', "")      
   }
 
   getListadoMateriaFiltro(dtoMateriaPaginado: MateriaPaginationDto){
-    return this.kafkaService.sendRequest('get-listado-materia-filtro', dtoMateriaPaginado)
+    return this.kafkaService.sendRequest('get-materia-listado-filtro', dtoMateriaPaginado)
   }
 
   getMateriaPorCodigo(codigo: string) {

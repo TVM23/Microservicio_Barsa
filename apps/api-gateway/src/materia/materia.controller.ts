@@ -9,12 +9,12 @@ import { firstValueFrom } from 'rxjs';
 export class MateriaController {
   constructor(private readonly materiaService: MateriaService) {}
 
-  @Get('get-listado-materia')
+  @Get('get-listado')
   async getListadoMateria(){
     return await this.materiaService.getListadoMateria();
   }
 
-  @Get('get-listado-materia-filtro')
+  @Get('get-listado-materia')
   async getListadoMateriaFiltro(@Query() dtoMateriaPaginado: MateriaPaginationDto){
     return await this.materiaService.getListadoMateriaFiltro(dtoMateriaPaginado);
   }
