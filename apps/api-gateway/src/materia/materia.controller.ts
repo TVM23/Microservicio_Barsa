@@ -3,7 +3,6 @@ import { MateriaService } from './materia.service';
 import { CreateMateriaDto } from './dto/create-materia.dto';
 import { UpdateMateriaDto } from './dto/update-materia.dto';
 import { MateriaPaginationDto } from '@app/contracts';
-import { firstValueFrom } from 'rxjs';
 
 @Controller('materia')
 export class MateriaController {

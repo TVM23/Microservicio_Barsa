@@ -1,4 +1,3 @@
-import { MateriaPaginationDto } from '@app/contracts';
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { Kafka } from 'kafkajs';
 
@@ -7,6 +6,8 @@ export class KafkaPublisherService implements OnModuleInit {
   private kafka = new Kafka({
     clientId: 'materia-app',
     brokers: ['kafka:9092'], // Kafka service name in docker-compose
+    connectionTimeout:20000,
+    requestTimeout:30000
   });
 
   private producer = this.kafka.producer();
