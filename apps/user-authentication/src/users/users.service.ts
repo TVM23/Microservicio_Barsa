@@ -3,7 +3,6 @@ import { InjectModel } from '@nestjs/mongoose';
 import { User } from './schema/user.schema';
 import { Model, Types } from 'mongoose';
 import { CreateUserRequest, GetUsersFiltersDto, UpdateUserDto } from '@app/contracts';
-import { hash } from 'bcryptjs';
 import * as bcrypt from 'bcryptjs';
 import { RpcException } from '@nestjs/microservices';
 import { ResetToken } from './schema/reset-token.schema';
@@ -84,12 +83,34 @@ export class UsersService {
       
           await user.save(); // Guardar los cambios
           const userActualizado = await this.userModel.findById(_id)
-                .select('nombre apellidoPaterno apellidoMaterno email rol estado');
+                .select('nombre apellidos email rol estado');
           return userActualizado
         } catch (error) {
           console.error("Error en UserService:", error); // Log del error
           throw error;
         }
+    }
+
+    //Desactivar cuenta
+    async deactivateUser(userId: string){
+        try {
+            const user = await this.userModel.findById(userId).exec();
+            if (!user) {
+              throw new NotFoundException(`Usuario con id ${userId} no encontrado.`);
+            }
+          
+            if(user.estado == true){
+                user.estado = false
+            }
+        
+            await user.save(); // Guardar los cambios
+            const userActualizado = await this.userModel.findById(userId)
+                  .select('nombre apellidos email rol estado');
+            return userActualizado
+          } catch (error) {
+            console.error("Error en UserService:", error); // Log del error
+            throw error;
+          }
     }
 
     //Cambiar contraseña

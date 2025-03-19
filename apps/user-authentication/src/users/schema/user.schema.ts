@@ -13,10 +13,7 @@ export class User {
     nombre: string;
 
     @Prop({ required: false, default: "" }) 
-    apellidoPaterno: string;
-
-    @Prop({ required: false, default: "" }) 
-    apellidoMaterno: string;
+    apellidos: string;
 
     @Prop({ required: true, unique: true })
     email: string;

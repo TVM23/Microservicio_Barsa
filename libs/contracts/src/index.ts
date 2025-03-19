@@ -13,6 +13,7 @@ export * from '../users/update-user.dto'
 export * from '../users/user-patterns'
 
 export * from '../producto/producto.patterns'
+export * from '../producto/producto-pagination.dto'
 
 
 export * from '../papeleta/papeleta.patterns'

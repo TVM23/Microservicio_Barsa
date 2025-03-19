@@ -59,6 +59,12 @@ export class UserAuthenticationService {
         );
     }
 
+    deactivateUser(userId: string){
+        return this.usersClient.send(USER_PATTERNS.DEACTIVATE_USUARIO, userId ).pipe(
+            catchError(err => { throw new RpcException(err) })
+        );
+    }
+
     changePassword(dtoChangePassword: ChangePasswordDto, userId: string){
         return this.usersClient.send(USER_PATTERNS.CHANGE_PASSWORD, { dtoChangePassword, userId }).pipe(
             catchError(err => { throw new RpcException(err) })

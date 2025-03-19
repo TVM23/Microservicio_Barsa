@@ -6,11 +6,7 @@ export class CreateUserRequest {
 
     @IsOptional()
     @IsString()
-    public apellidoPaterno?: string;
-
-    @IsOptional()
-    @IsString()
-    public apellidoMaterno?: string;
+    public apellidos: string;
 
     @IsEmail({}, { message: "Debes ingresar un correo válido" })
     public email: string;

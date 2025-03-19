@@ -25,4 +25,8 @@ export class UsersController {
         return await this.userService.updateUser(dtoUpdateUser._id, dtoUpdateUser)
     }
 
+    @MessagePattern(USER_PATTERNS.DEACTIVATE_USUARIO)
+    async deactivateUser(@Payload() userId: string){
+        return await this.userService.deactivateUser(userId)
+    }
 }

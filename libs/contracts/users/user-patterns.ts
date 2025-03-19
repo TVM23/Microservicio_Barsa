@@ -8,4 +8,5 @@ export const USER_PATTERNS = {
     FORGOT_PASSWORD: "users.forgot_password",
     LISTADO_USUARIOS: "users.get_listado",
     UPDATE_USUARIOS: "users.update",
+    DEACTIVATE_USUARIO: "users.deactivate"
 }

@@ -16,7 +16,7 @@ async function bootstrap() {
     allowedHeaders: 'Content-Type, Authorization',
   });
   
-  app.setGlobalPrefix('api');
+  //app.setGlobalPrefix('api');
 
   //Usado para validaciones en los dtos
   app.useGlobalPipes(

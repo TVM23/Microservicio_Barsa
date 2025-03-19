@@ -16,6 +16,7 @@ services:
     depends_on:
       - kafka
       - zookeeper
+      - api-gateway
     networks:
       - app-network
 
@@ -58,7 +59,6 @@ services:
       - mongo
       - kafka
       - zookeeper
-      - access-api
     environment:
       KAFKA_BROKER: kafka:9092
     volumes:

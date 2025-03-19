@@ -6,6 +6,8 @@ export class KafkaPublisherService implements OnModuleInit {
   private kafka = new Kafka({
     clientId: 'materia-app',
     brokers: ['kafka:9092'], // Kafka service name in docker-compose
+    // logLevel:4,
+    retry: {retries:10, initialRetryTime: 5000},
     connectionTimeout:20000,
     requestTimeout:30000
   });
@@ -21,6 +23,7 @@ export class KafkaPublisherService implements OnModuleInit {
       topics: [
         'materia-response', 'materia-pagination-response', 'materia-codigo-response',
         'papeleta-response', 'papeleta-pagination-response', 'papeleta-codigo-response',
+        //'producto-response', 'producto-pagination-response', 'producto-codigo-response',
       ],
       fromBeginning: true,
     });

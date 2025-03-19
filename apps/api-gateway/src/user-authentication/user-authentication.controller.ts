@@ -74,6 +74,12 @@ export class UserAuthenticationController {
         return await this.userAuthService.updateUser({_id, ...dtoUpdateUser});
     }
 
+    @Put('desactivar-usuario/:_id')
+    @HttpCode(HttpStatus.OK)
+    async deactivateUser(@Param('_id') _id: string){
+        return await this.userAuthService.deactivateUser(_id)
+    }
+
     @Put('cambiar-password')
     @HttpCode(HttpStatus.OK)
     async changePassword(@Body() dtoChangePassword: ChangePasswordDto, @GetCurrentUserId() userId: string){

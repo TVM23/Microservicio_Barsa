@@ -1,21 +1,15 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { CreateProductoDto } from './dto/create-producto.dto';
 import { UpdateProductoDto } from './dto/update-producto.dto';
-import { PRODUCTO_CLIENT } from './constant';
-import { ClientProxy, RpcException } from '@nestjs/microservices';
-import { catchError } from 'rxjs';
-import { PRODUCTO_PATTERNS } from '@app/contracts';
+import { KafkaPublisherService, PRODUCTO_PATTERNS, ProductoPaginationDto } from '@app/contracts';
 
 @Injectable()
 export class ProductoService {
-  constructor(@Inject(PRODUCTO_CLIENT) private readonly productoClient: ClientProxy){}
+  constructor(private readonly kafkaService: KafkaPublisherService){}
 
-  getProductos(){
-      return this.productoClient.send(PRODUCTO_PATTERNS.LISTADO_PRODUCTOS, { })
-      .pipe(
-          catchError( err => { throw new RpcException(err) } )
-      );
-  }
+  /*getProductos(productoPaginationDto: ProductoPaginationDto){
+      return this.kafkaService.sendRequest('get-producto-listado', productoPaginationDto)
+  }*/
   
   create(createProductoDto: CreateProductoDto) {
     return 'This action adds a new producto';
