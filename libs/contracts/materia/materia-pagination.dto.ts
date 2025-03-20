@@ -22,7 +22,6 @@ export class MateriaPaginationDto extends PaginationDto{
     public proceso: string
 
     @IsOptional()
-    @IsBoolean()
-    @Type(() => Boolean)
-    public borrado: boolean
+    @IsString()
+    public borrado: string
 }

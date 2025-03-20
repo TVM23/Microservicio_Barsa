@@ -37,12 +37,10 @@ export class ProductoPaginationDto extends PaginationDto {
     sku: string;
 
     @IsOptional()
-    @IsBoolean({ message: 'Valor incorrecto' })
-    @Type(() => Boolean)
-    tapices: boolean;
+    @IsString()
+    tapices: string;
 
     @IsOptional()
-    @IsBoolean({ message: 'Valor incorrecto' })
-    @Type(() => Boolean)
-    borrado: boolean;
+    @IsString()
+    borrado: string;
 }

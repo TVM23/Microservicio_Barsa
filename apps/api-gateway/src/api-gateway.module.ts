@@ -9,6 +9,7 @@ import { AtGuard } from './user-authentication/common/guards';
 import { ProductoModule } from './producto/producto.module';
 import { PapeletaModule } from './papeleta/papeleta.module';
 import { MateriaModule } from './materia/materia.module';
+import { ColoresModule } from './colores/colores.module';
 
 @Module({
   imports: [MueblesModule, UserAuthenticationModule,
@@ -16,6 +17,7 @@ import { MateriaModule } from './materia/materia.module';
     ProductoModule,
     PapeletaModule,
     MateriaModule,
+    ColoresModule,
   ],
   controllers: [ApiGatewayController],
   providers: [ 

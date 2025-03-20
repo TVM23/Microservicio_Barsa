@@ -23,7 +23,8 @@ export class KafkaPublisherService implements OnModuleInit {
       topics: [
         'materia-response', 'materia-pagination-response', 'materia-codigo-response',
         'papeleta-response', 'papeleta-pagination-response', 'papeleta-codigo-response',
-        //'producto-response', 'producto-pagination-response', 'producto-codigo-response',
+        'producto-response', 'producto-pagination-response', 'producto-codigo-response',
+        'colores-response', 'colores-pagination-response', 'colores-colorId-response',
       ],
       fromBeginning: true,
     });

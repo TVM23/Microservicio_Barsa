@@ -7,9 +7,13 @@ import { KafkaPublisherService, PRODUCTO_PATTERNS, ProductoPaginationDto } from 
 export class ProductoService {
   constructor(private readonly kafkaService: KafkaPublisherService){}
 
-  /*getProductos(productoPaginationDto: ProductoPaginationDto){
+  getProductos(productoPaginationDto: ProductoPaginationDto){
       return this.kafkaService.sendRequest('get-producto-listado', productoPaginationDto)
-  }*/
+  }
+
+  getProductoByCodigo(codigo: string){
+    return this.kafkaService.sendRequest('get-producto-codigo', codigo)
+  }
   
   create(createProductoDto: CreateProductoDto) {
     return 'This action adds a new producto';
