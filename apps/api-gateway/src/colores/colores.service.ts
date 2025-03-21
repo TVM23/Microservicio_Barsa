@@ -9,4 +9,8 @@ export class ColoresService {
     getColoresListado(coloresPaginationDto: ColoresPaginationDto){
         return this.kafkaService.sendRequest('get-colores-listado', coloresPaginationDto)
     }
+
+    getColorPorId(colorId: number){
+        return this.kafkaService.sendRequest('get-papeleta-codigo', colorId)
+    }
 }

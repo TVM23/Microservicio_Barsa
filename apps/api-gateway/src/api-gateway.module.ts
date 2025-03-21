@@ -10,6 +10,7 @@ import { ProductoModule } from './producto/producto.module';
 import { PapeletaModule } from './papeleta/papeleta.module';
 import { MateriaModule } from './materia/materia.module';
 import { ColoresModule } from './colores/colores.module';
+import { ProductoXColorModule } from './producto_x_color/producto_x_color.module';
 
 @Module({
   imports: [MueblesModule, UserAuthenticationModule,
@@ -18,6 +19,7 @@ import { ColoresModule } from './colores/colores.module';
     PapeletaModule,
     MateriaModule,
     ColoresModule,
+    ProductoXColorModule,
   ],
   controllers: [ApiGatewayController],
   providers: [ 

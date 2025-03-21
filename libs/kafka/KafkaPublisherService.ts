@@ -25,6 +25,7 @@ export class KafkaPublisherService implements OnModuleInit {
         'papeleta-response', 'papeleta-pagination-response', 'papeleta-codigo-response',
         'producto-response', 'producto-pagination-response', 'producto-codigo-response',
         'colores-response', 'colores-pagination-response', 'colores-colorId-response',
+        'prodxcolor-response', 'prodxcolor-pagination-response',
       ],
       fromBeginning: true,
     });

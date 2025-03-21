@@ -22,6 +22,7 @@ export * from '../papeleta/papeleta-pagination.dto'
 export * from '../papeleta/papeleta.patterns'
 export * from '../materia/materia-pagination.dto'
 
+export * from '../producto_x_color/prodXcolor_pagination.dto'
 
 
 export * from '../../kafka/kafka.module'
