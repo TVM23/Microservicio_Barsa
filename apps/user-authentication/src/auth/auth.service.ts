@@ -22,7 +22,7 @@ export class AuthService {
 
     //Login
     async login(loginDto: LoginDto): Promise<Tokens> {      
-      const user = await this.usersService.getUserByEmail(loginDto.email);
+      const user = await this.usersService.getUserByUserName(loginDto.nombreUsuario);
   
       const passwordMatches = await bcrypt.compare(loginDto.password, user.password);
       if (!passwordMatches) {
@@ -32,8 +32,16 @@ export class AuthService {
           status: 403
         });
       }
+
+      if (user.estado == false){
+        throw new RpcException({
+            message: `Este usuario ha sido desactivado`,
+            error: 'Unauthorized',
+            status: 403
+        });
+    }
   
-      const tokens = await this.getTokens(user._id.toString(), user.email);
+      const tokens = await this.getTokens(user._id.toString(), user.nombreUsuario, user.rol);
       await this.usersService.updateRtHash(user._id.toHexString(), tokens.refresh_token);
           
       return tokens;
@@ -117,7 +125,7 @@ export class AuthService {
         });
       }
 
-      const tokens = await this.getTokens(user._id.toString(), user.email);
+      const tokens = await this.getTokens(user._id.toString(), user.nombreUsuario, user.rol);
       await this.usersService.updateRtHash(user._id.toHexString(), tokens.refresh_token);
           
       return tokens;
@@ -125,12 +133,13 @@ export class AuthService {
     }
 
     //Obtener los tokens
-    async getTokens(userId: string, email: string): Promise<Tokens>{
+    async getTokens(userId: string, userName: string, rol: string): Promise<Tokens>{
       const [at, rt] = await Promise.all([
 
         this.jwtService.signAsync({
           sub: userId,
-          email
+          userName,
+          rol,
         }, {
           secret: this.configService.getOrThrow('JWT_ACCESS_TOKEN_SECRET'),
           expiresIn: 60 * 15,
@@ -138,7 +147,8 @@ export class AuthService {
 
         this.jwtService.signAsync({
           sub: userId,
-          email
+          userName,
+          rol,
         }, {
           secret: this.configService.getOrThrow('JWT_REFRESH_TOKEN_SECRET'),
           expiresIn: 60 * 60 * 24 * 7,

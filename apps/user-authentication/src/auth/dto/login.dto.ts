@@ -2,10 +2,11 @@ import { IsEmail, IsString, IsStrongPassword, IsOptional, IsIn } from "class-val
 
 export class LoginDto {
 
-    @IsEmail({}, { message: "Debes ingresar un correo válido" })
-    public email: string;
+    /*@IsEmail({}, { message: "Debes ingresar un correo válido" })
+    public email: string;*/
+    @IsString()
+    public nombreUsuario: string;
 
-    
     @IsString()
     public password: string;
 }

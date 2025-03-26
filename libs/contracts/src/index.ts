@@ -10,6 +10,7 @@ export * from '../muebles/muebles.patterns';
 export * from '../users/create-user.request'
 export * from '../users/get-users-filter.dto'
 export * from '../users/update-user.dto'
+export * from '../users/update-personal-info.dto'
 export * from '../users/user-patterns'
 
 export * from '../producto/producto.patterns'

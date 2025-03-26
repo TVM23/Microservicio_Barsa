@@ -2,27 +2,21 @@ import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch, Post, Put, Q
 import { UserAuthenticationService } from './user-authentication.service';
 import { CreateUserRequest } from './dto/create-user.request';
 import { LoginDto } from './dto/login.dto';
-import { AuthGuard } from '@nestjs/passport';
-import { AtGuard, RtGuard } from './common/guards';
-import { GetCurrentUser, GetCurrentUserId, Public } from './common/decorators';
+import { RtGuard } from './common/guards';
+import { GetCurrentUser, GetCurrentUserId, Public, Roles } from './common/decorators';
 import { ChangePasswordDto } from './dto/change-password.dto';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
 import { GetUsersFiltersDto } from './dto/get-users-filter.dto';
-import { Types } from 'mongoose';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { UpdatePersonalInfoDto } from './dto/update-personal-info.dto';
+import { Role } from './enums/role.enum';
 
 @Controller('user-authentication')
 export class UserAuthenticationController {
 
     constructor (private userAuthService: UserAuthenticationService) {}
 
-    @Public()
-    @Post()
-    @HttpCode(HttpStatus.CREATED)
-    async createUser(@Body() dtoCreateUser: CreateUserRequest ){
-        return await this.userAuthService.createUser(dtoCreateUser);
-    }
-
+    //Iniciar sesion
     @Public() //Esto hace que se pueda realizar esta acción sin quese este autenticado
     @Post('login')
     @HttpCode(HttpStatus.OK)
@@ -30,6 +24,15 @@ export class UserAuthenticationController {
         return await this.userAuthService.login(dtoLogin)
     }
 
+    //Agregar usuario
+    @Public()
+    @Post()
+    @HttpCode(HttpStatus.CREATED)
+    async createUser(@Body() dtoCreateUser: CreateUserRequest ){
+        return await this.userAuthService.createUser(dtoCreateUser);
+    }
+
+    //Cerrar sesion
     //@UseGuards(AtGuard)
     @Post('logout')
     @HttpCode(HttpStatus.OK)
@@ -37,6 +40,7 @@ export class UserAuthenticationController {
         return await this.userAuthService.logout(userId)
     }
 
+    //Refrescar el token
     @Public()
     @UseGuards(RtGuard) // Recibe el mismo nombre que le pusimos al rt.strategy
     @Post('refresh')
@@ -47,25 +51,39 @@ export class UserAuthenticationController {
     ){
         return await this.userAuthService.refreshToken(userId, refreshToken)
     }
-    
+
+    //Listado de usuarios
     @Get('listado-usuarios')
+    @Roles(Role.ADMIN)   //Roles("Administrador")
     @HttpCode(HttpStatus.OK)
     async getListadoUsuarios(@Query() dtoGetUsers: GetUsersFiltersDto ){
         return await this.userAuthService.getListadoUsuarios(dtoGetUsers)
     }
 
-    @Get('obtener-info-usuario')
-    @HttpCode(HttpStatus.OK)
-    async getInfoUserAdmin(@Query('userId') userId: string){
-        return await this.userAuthService.getInfoUser(userId)
-    }
-
+    //Consultar tus propios datos de usuario logeado
     @Get('obtener-info-usuario-personal')
     @HttpCode(HttpStatus.OK)
     async getInfoUser(@GetCurrentUserId() userId: string,){
         return await this.userAuthService.getInfoUser(userId)
     }
 
+    //Editar datos de usuario logeados
+    @Patch('update-info-usuario-personal')
+    async updateUserPersonal(
+        @GetCurrentUserId() _id: string, 
+        @Body() dtoUpdateUserPersonal: UpdatePersonalInfoDto
+    ) {
+        return await this.userAuthService.updateUserPersonal({_id, ...dtoUpdateUserPersonal});
+    }
+
+    //Consultar detalles de usuario seleccionado
+    @Get('obtener-info-usuario')
+    @HttpCode(HttpStatus.OK)
+    async getInfoUserAdmin(@Query('userId') userId: string){
+        return await this.userAuthService.getInfoUser(userId)
+    }
+
+    //Editar datos de usuario seleccionado
     @Patch(':_id')
     async updateUser(
         @Param('_id') _id: string, 
@@ -74,12 +92,14 @@ export class UserAuthenticationController {
         return await this.userAuthService.updateUser({_id, ...dtoUpdateUser});
     }
 
+    //Desactivar usuario
     @Put('desactivar-usuario/:_id')
     @HttpCode(HttpStatus.OK)
     async deactivateUser(@Param('_id') _id: string){
         return await this.userAuthService.deactivateUser(_id)
     }
 
+    //Cambiar contraseña
     @Put('cambiar-password')
     @HttpCode(HttpStatus.OK)
     async changePassword(@Body() dtoChangePassword: ChangePasswordDto, @GetCurrentUserId() userId: string){

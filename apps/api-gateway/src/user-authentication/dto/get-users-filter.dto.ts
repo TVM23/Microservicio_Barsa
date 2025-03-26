@@ -8,6 +8,10 @@ export class GetUsersFiltersDto {
 
   @IsOptional()
   @IsString()
+  public nombreUsuario?: string;
+
+  @IsOptional()
+  @IsString()
   public email?: string;
 
   @IsOptional()

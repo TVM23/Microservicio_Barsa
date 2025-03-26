@@ -3,7 +3,7 @@ import { USERS_CLIENT } from './constant';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { CreateUserRequest } from './dto/create-user.request';
 import { lastValueFrom, tap } from 'rxjs';
-import { USER_PATTERNS, UpdateUserDto } from '@app/contracts';
+import { USER_PATTERNS, UpdateUserDto, UpdatePersonalInfoDto } from '@app/contracts';
 import { LoginDto } from './dto/login.dto';
 import { catchError, firstValueFrom } from 'rxjs';
 import { use } from 'passport';
@@ -49,6 +49,12 @@ export class UserAuthenticationService {
 
     getInfoUser(userId: string){
         return this.usersClient.send(USER_PATTERNS.GET_INFO_USUARIO, { userId }).pipe(
+            catchError(err => { throw new RpcException(err) })
+        );
+    }
+
+    updateUserPersonal(dtoUpdateUserPersonal: UpdatePersonalInfoDto){
+        return this.usersClient.send(USER_PATTERNS.UPDATE_USUARIOS_PERSONAL, dtoUpdateUserPersonal ).pipe(
             catchError(err => { throw new RpcException(err) })
         );
     }

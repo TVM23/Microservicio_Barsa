@@ -11,6 +11,7 @@ import { PapeletaModule } from './papeleta/papeleta.module';
 import { MateriaModule } from './materia/materia.module';
 import { ColoresModule } from './colores/colores.module';
 import { ProductoXColorModule } from './producto_x_color/producto_x_color.module';
+import { RolesGuard } from './user-authentication/common/guards/roles.guard';
 
 @Module({
   imports: [MueblesModule, UserAuthenticationModule,
@@ -23,10 +24,14 @@ import { ProductoXColorModule } from './producto_x_color/producto_x_color.module
   ],
   controllers: [ApiGatewayController],
   providers: [ 
-    /*{
+    {
       provide: APP_GUARD,
-      useClass: AtGuard,
-    },*/
+      useClass: AtGuard,  //Esto checa que el usuario este autenticado
+    },
+    {
+      provide: APP_GUARD,
+      useClass: RolesGuard,  //Esto checa que el usuario si es del rol que se pide
+    },
     ApiGatewayService,
   ],
 })

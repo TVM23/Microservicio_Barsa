@@ -1,4 +1,4 @@
-import { ExecutionContext, Injectable } from "@nestjs/common";
+import { ExecutionContext, Injectable, UnauthorizedException } from "@nestjs/common";
 import { Reflector } from "@nestjs/core";
 import { AuthGuard } from "@nestjs/passport";
 import { Observable } from "rxjs";
@@ -19,5 +19,12 @@ export class AtGuard extends AuthGuard('jwt') {
             return true;
 
         return super.canActivate(context);
+    }
+
+    handleRequest(err, user) {
+        if (err || !user) {
+            throw err || new UnauthorizedException();
+        }
+        return user; // Asegura que el usuario autenticado esté en `req.user`
     }
 }

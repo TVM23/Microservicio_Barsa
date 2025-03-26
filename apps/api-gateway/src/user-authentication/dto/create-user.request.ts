@@ -1,14 +1,21 @@
-import { IsEmail, IsString, IsStrongPassword, IsOptional, IsIn } from "class-validator";
+import { IsEmail, IsString, IsStrongPassword, IsOptional, IsIn, IsNotEmpty, Matches, IsEnum } from "class-validator";
+import { Role } from "../enums/role.enum";
 
 export class CreateUserRequest {
-    @IsString()
+    @IsString({message: "Ingresa el nombre de la persona de esta cuenta"})
+    @IsNotEmpty({message: "El nombre no puede ir vacio"})
     public nombre: string;
 
     @IsOptional()
     @IsString()
     public apellidos: string;
 
-    @IsEmail({}, { message: "Debes ingresar un correo válido" })
+    @IsString({message: "Ingresa tu nombre de usuario"})
+    @IsNotEmpty({message: "El nombre de usuario no puede ir vacio"})
+    public nombreUsuario: string;
+
+    @IsOptional()
+    @Matches(/^$|^.+@.+\..+$/, { message: "Debes ingresar un correo válido o dejarlo vacío" })
     public email: string;
 
     @IsString()
@@ -21,6 +28,6 @@ export class CreateUserRequest {
     }, { message: "La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula, un número y un símbolo." })
     public password: string;
 
-    @IsIn(["admin", "usuario"], { message: "Rol inválido" })
-    public rol: string;
+    @IsEnum(Role, { message: "Rol inválido" })  // Valida usando el enum
+    public rol: Role;
 }

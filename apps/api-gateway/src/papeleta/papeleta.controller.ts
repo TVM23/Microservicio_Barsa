@@ -3,6 +3,8 @@ import { PapeletaService } from './papeleta.service';
 import { CreatePapeletaDto } from './dto/create-papeleta.dto';
 import { UpdatePapeletaDto } from './dto/update-papeleta.dto';
 import { PapeletaPaginationDto } from '@app/contracts';
+import { Roles } from '../user-authentication/common/decorators';
+import { Role } from '../user-authentication/enums/role.enum';
 
 @Controller('papeleta')
 export class PapeletaController {
@@ -19,6 +21,7 @@ export class PapeletaController {
   }
 
   @Post()
+  @Roles(Role.ADMIN, Role.INVENTARIOS)
   create(@Body() createPapeletaDto: CreatePapeletaDto) {
     return this.papeletaService.create(createPapeletaDto);
   }
