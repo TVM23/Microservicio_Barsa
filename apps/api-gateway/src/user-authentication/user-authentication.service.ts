@@ -1,15 +1,10 @@
-import { Inject, Injectable, InternalServerErrorException, Req, UnauthorizedException } from '@nestjs/common';
-import { USERS_CLIENT } from './constant';
+import { catchError } from 'rxjs';
+import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
-import { CreateUserRequest } from './dto/create-user.request';
-import { lastValueFrom, tap } from 'rxjs';
-import { USER_PATTERNS, UpdateUserDto, UpdatePersonalInfoDto } from '@app/contracts';
-import { LoginDto } from './dto/login.dto';
-import { catchError, firstValueFrom } from 'rxjs';
-import { use } from 'passport';
-import { ChangePasswordDto } from './dto/change-password.dto';
+import { USER_PATTERNS, UpdateUserDto, UpdatePersonalInfoDto, ChangePasswordDto, CreateUserRequest, 
+    GetUsersFiltersDto, LoginDto } from '@app/contracts';
+import { USERS_CLIENT } from './constant';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
-import { GetUsersFiltersDto } from './dto/get-users-filter.dto';
 
 @Injectable()
 export class UserAuthenticationService {

@@ -1,15 +1,11 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch, Post, Put, Query, Req, Request, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch, Post, Put, Query, UseGuards } from '@nestjs/common';
+import { ChangePasswordDto, CreateUserRequest, GetUsersFiltersDto, LoginDto, Role } from '@app/contracts';
 import { UserAuthenticationService } from './user-authentication.service';
-import { CreateUserRequest } from './dto/create-user.request';
-import { LoginDto } from './dto/login.dto';
 import { RtGuard } from './common/guards';
 import { GetCurrentUser, GetCurrentUserId, Public, Roles } from './common/decorators';
-import { ChangePasswordDto } from './dto/change-password.dto';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
-import { GetUsersFiltersDto } from './dto/get-users-filter.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UpdatePersonalInfoDto } from './dto/update-personal-info.dto';
-import { Role } from './enums/role.enum';
 
 @Controller('user-authentication')
 export class UserAuthenticationController {
@@ -77,9 +73,9 @@ export class UserAuthenticationController {
     }
 
     //Consultar detalles de usuario seleccionado
-    @Get('obtener-info-usuario')
+    @Get('obtener-info-usuario/:_id')
     @HttpCode(HttpStatus.OK)
-    async getInfoUserAdmin(@Query('userId') userId: string){
+    async getInfoUserAdmin(@Param('_id') userId: string){
         return await this.userAuthService.getInfoUser(userId)
     }
 

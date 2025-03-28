@@ -1,13 +1,8 @@
-import { Controller, Post, UseGuards, Res, HttpCode, HttpStatus, Req, UnauthorizedException } from '@nestjs/common';
-import { User } from '../users/schema/user.schema';
-import { Request, Response } from 'express';
+import { Controller } from '@nestjs/common';
+import { USER_PATTERNS, ChangePasswordDto, LoginDto } from '@app/contracts';
 import { AuthService } from './auth.service';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { LoginDto } from './dto/login.dto';
-import { USER_PATTERNS } from '@app/contracts';
 import { Tokens } from './types';
-import { AuthGuard } from '@nestjs/passport';
-import { ChangePasswordDto } from './dto/change-password.dto';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
 
 @Controller('auth')

@@ -13,8 +13,8 @@ export class UpdatePersonalInfoDto {
     public nombreUsuario: string;
     
     @IsOptional()
-    @Matches(/^$|^.+@.+\..+$/, { message: "Debes ingresar un correo válido o dejarlo vacío" })
     @Transform(({ value }) => value.trim())  
+    @Matches(/^$|^.+@.+\..+$/, { message: "Debes ingresar un correo válido o dejarlo vacío" })
     public email: string;
     
 }

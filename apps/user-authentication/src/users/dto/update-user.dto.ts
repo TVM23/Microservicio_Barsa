@@ -1,5 +1,5 @@
 import { PartialType } from "@nestjs/mapped-types";
-import { CreateUserRequest } from "./create-user.request";
+import { CreateUserRequest } from "@app/contracts";
 import { IsOptional, IsString } from "class-validator";
 import { Transform } from "class-transformer";
 

@@ -1,19 +1,22 @@
 import { IsBoolean, IsNumber, IsOptional, IsString, Min } from "class-validator"
 import { PaginationDto } from "../common"
-import { Type } from "class-transformer";
+import { Transform, Type } from "class-transformer";
 
 export class ProductoPaginationDto extends PaginationDto {
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     codigo: string;
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     descripcion: string;
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     unidad: string;
 
     @IsOptional()
@@ -30,17 +33,21 @@ export class ProductoPaginationDto extends PaginationDto {
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     ean: string;
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     sku: string;
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     tapices: string;
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     borrado: string;
 }

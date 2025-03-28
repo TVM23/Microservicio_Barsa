@@ -1,15 +1,13 @@
+import * as bcrypt from 'bcryptjs';
+import { nanoid } from 'nanoid';
 import { HttpStatus, Injectable } from '@nestjs/common';
-import { UsersService } from '../users/users.service';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
-import { Tokens } from './types';
-import * as bcrypt from 'bcryptjs';
-import { LoginDto } from './dto/login.dto';
 import { RpcException } from '@nestjs/microservices';
-import { ChangePasswordDto } from './dto/change-password.dto';
+import { ChangePasswordDto, LoginDto } from '@app/contracts';
+import { UsersService } from '../users/users.service';
+import { Tokens } from './types';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
-import { nanoid } from 'nanoid';
-import { GetUsersFiltersDto } from '@app/contracts';
 
 @Injectable()
 export class AuthService {
@@ -39,7 +37,7 @@ export class AuthService {
             error: 'Unauthorized',
             status: 403
         });
-    }
+      }
   
       const tokens = await this.getTokens(user._id.toString(), user.nombreUsuario, user.rol);
       await this.usersService.updateRtHash(user._id.toHexString(), tokens.refresh_token);
@@ -76,6 +74,14 @@ export class AuthService {
       //Buscar usuario
       const user = await this.usersService.getUserById(userId);
 
+      if (user.estado == false){
+        throw new RpcException({
+            message: `Este usuario ha sido desactivado`,
+            error: 'Unauthorized',
+            status: 403
+        });
+      }
+
       //Coparar contraseñas viejas
       const oldPasswordMatches = await bcrypt.compare(dtoChangePassword.oldPassword, user.password);
       if (!oldPasswordMatches) {
@@ -87,8 +93,8 @@ export class AuthService {
       }
 
       //Encriptar contraseña nueva
-      const newHashePassword = await bcrypt.hash(dtoChangePassword.newPassword, 10)
-      return await this.usersService.changePassword(userId, newHashePassword)
+      const newPassword = dtoChangePassword.newPassword
+      return await this.usersService.changePassword(userId, newPassword)
 
     }
 
@@ -107,6 +113,14 @@ export class AuthService {
     //Refresh token
     async refreshToken(userId: string, rt: string){
       const user = await this.usersService.getUserById(userId);
+
+      if (user.estado == false){
+        throw new RpcException({
+            message: `Este usuario ha sido desactivado`,
+            error: 'Unauthorized',
+            status: 403
+        });
+      }
 
       if (!user.hashRefreshToken) {
         throw new RpcException({

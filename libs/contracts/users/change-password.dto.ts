@@ -1,11 +1,14 @@
+import { Transform } from "class-transformer";
 import { IsString, IsStrongPassword } from "class-validator";
 
 export class ChangePasswordDto {
 
     @IsString()
+    @Transform(({ value }) => value.trim())  
     oldPassword: string
 
     @IsString()
+    @Transform(({ value }) => value.trim())  
     @IsStrongPassword({
         minLength: 8,          
         minLowercase: 1,        

@@ -1,9 +1,8 @@
 import { NestFactory, Reflector } from '@nestjs/core';
 import { ApiGatewayModule } from './api-gateway.module';
 import { envs, RpcCustomExceptionFilter } from '@app/contracts';
-import { Logger, ValidationPipe } from '@nestjs/common';
+import { BadRequestException, Logger, ValidationPipe } from '@nestjs/common';
 import { AtGuard } from './user-authentication/common/guards';
-import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 
 async function bootstrap() {
   const app = await NestFactory.create(ApiGatewayModule);
@@ -23,9 +22,16 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
-      transform: true
+      transform: true,
+      exceptionFactory: (errors) => {
+        const messages = errors
+          .map((err) => err.constraints ? Object.values(err.constraints).join(". ") : "Error desconocido")
+          .filter(Boolean); // Filtra los valores vacíos
+        return new BadRequestException(messages[0] || "Error de validación"); // Devuelve un mensaje válido
+      },
     })
   );
+  
 
   //const reflector = new Reflector()
   //app.useGlobalGuards(new AtGuard(reflector))

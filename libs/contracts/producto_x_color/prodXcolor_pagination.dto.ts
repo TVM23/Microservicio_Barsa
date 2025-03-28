@@ -1,11 +1,12 @@
 import { IsNumber, IsOptional, IsString, Min } from "class-validator";
 import { PaginationDto } from "../common";
-import { Type } from "class-transformer";
+import { Transform, Type } from "class-transformer";
 
 export class ProdxColorPafinationDto extends PaginationDto {
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     public codigo: string;
 
     @IsOptional()
@@ -16,9 +17,11 @@ export class ProdxColorPafinationDto extends PaginationDto {
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     public desProducto: string;
 
     @IsOptional()
     @IsString()
+    @Transform(({ value }) => value.trim())  
     public desColor: string;
 }

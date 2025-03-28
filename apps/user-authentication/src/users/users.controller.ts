@@ -1,9 +1,7 @@
-import { Controller, HttpCode, HttpStatus } from '@nestjs/common';
-import { CreateUserRequest, USER_PATTERNS, UpdateUserDto, UpdatePersonalInfoDto } from '@app/contracts';
+import { Controller } from '@nestjs/common';
+import { MessagePattern, Payload} from '@nestjs/microservices';
+import { USER_PATTERNS, CreateUserRequest, GetUsersFiltersDto, UpdateUserDto, UpdatePersonalInfoDto } from '@app/contracts';
 import { UsersService } from './users.service';
-import { MessagePattern, Payload, RpcException } from '@nestjs/microservices';
-import { GetUsersFiltersDto } from 'libs/contracts/users/get-users-filter.dto';
-
 @Controller('users')
 export class UsersController {
 

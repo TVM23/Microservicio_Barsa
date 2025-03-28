@@ -1,10 +1,9 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
+import { PapeletaPaginationDto, Role } from '@app/contracts';
 import { PapeletaService } from './papeleta.service';
 import { CreatePapeletaDto } from './dto/create-papeleta.dto';
 import { UpdatePapeletaDto } from './dto/update-papeleta.dto';
-import { PapeletaPaginationDto } from '@app/contracts';
 import { Roles } from '../user-authentication/common/decorators';
-import { Role } from '../user-authentication/enums/role.enum';
 
 @Controller('papeleta')
 export class PapeletaController {
