@@ -1,12 +1,11 @@
 import * as bcrypt from 'bcryptjs';
 import { Model } from 'mongoose';
-import { HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
+import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { RpcException } from '@nestjs/microservices';
 import { CreateUserRequest, GetUsersFiltersDto, UpdateUserDto, UpdatePersonalInfoDto } from '@app/contracts';
 import { User } from './schema/user.schema';
 import { ResetToken } from './schema/reset-token.schema';
-import { use } from 'passport';
 
 @Injectable()
 export class UsersService {
@@ -16,51 +15,44 @@ export class UsersService {
         @InjectModel(ResetToken.name) private readonly resetTokenModel: Model<ResetToken>
      ) {}
 
-    //Creación de usuario
-    async createUser(data: CreateUserRequest) {
-        let userEmail = ""
-        if(data.email != null){
-            userEmail = data.email.toLowerCase();
-        }
+    private throwRpcException(message: string, error: string, status: number): never {
+        throw new RpcException({ message, error, status });
+    }
 
-        const emailInUse = await this.userModel.findOne({
-            email: userEmail,
-        }) 
-        //Checa si el email no esta registrada ya
-        if (emailInUse && emailInUse.email != "" && emailInUse.email != null){
-            throw new RpcException({
-                message: 'Este correo ya esta registrado',
-                error: 'BadRequestException',
-                status: HttpStatus.BAD_REQUEST
-            });
+    private async validateUsername(newUserName: string, currentUserName: string) {
+        if(currentUserName != newUserName){
+            const userNameCheck = await this.userModel.findOne({nombreUsuario: newUserName}).exec()
+            if (userNameCheck){
+                this.throwRpcException(`Este nombre de usuario ${newUserName} ya está registrado`, 
+                    'BadRequestException', HttpStatus.BAD_REQUEST);
+            }
         }
-        const userNameInUse = await this.userModel.findOne({
-            nombreUsuario: data.nombreUsuario,
-        }) 
-        //Checa si el email no esta registrada ya
-        if (userNameInUse){
-            throw new RpcException({
-                message: 'Este nombre de usuario ya esta registrado',
-                error: 'BadRequestException',
-                status: HttpStatus.BAD_REQUEST
-            });
+    }
+    
+    private async validateEmail(newUserEmail: string, currentEmail: string){
+        if(currentEmail != newUserEmail && newUserEmail != "" ){
+            const userEmailCheck = await this.userModel.findOne({email: newUserEmail}).exec() 
+            if (userEmailCheck ) {
+                this.throwRpcException(`Ya existe otra cuenta registrada con el email ${newUserEmail}.`, 
+                    'BadRequestException', HttpStatus.BAD_REQUEST
+                );
+            }
         }
-        if (typeof data.password === 'object') {
-            throw new RpcException({
-                message: 'Password should be a string',
-                error: 'BadRequestException',
-                status: HttpStatus.BAD_REQUEST
-            });
+    }
+
+    private checkCuentaEstado(estado: boolean){
+        if (estado == false){
+            this.throwRpcException(`Este usuario ha sido desactivado`, 'Unauthorized', 403);
         }
-        
-        const hashedPassword = await bcrypt.hash(data.password.trim(), 10);
-        
-        await new this.userModel({
-            ...data,
-            email: userEmail,
-            password: hashedPassword,
-        }).save();
-        return { message: `Usuario creado correctamente` };
+    }
+
+    private async updateUserInDB(userId: string, newUserEmail: string, data: any) {
+        return this.userModel.findByIdAndUpdate(
+            userId,
+            { $set: data, email: newUserEmail },
+            { new: true, select: 'nombre apellidos nombreUsuario email rol estado' }
+        );
+
     }
 
     //Obtener listado de usuarios
@@ -79,255 +71,152 @@ export class UsersService {
             .select('nombre apellidos nombreUsuario email rol estado').exec();
     }
 
+    //Creación de usuario
+    async createUser(data: CreateUserRequest) {
+        //Checa si el email no esta registrada ya
+        const userEmail = data.email ? data.email.toLowerCase() : "";
+        const emailInUse = await this.userModel.findOne({email: userEmail}).exec() 
+        if (emailInUse && emailInUse.email != "" && emailInUse.email != null){
+            this.throwRpcException('Este correo ya está registrado', 'BadRequestException', HttpStatus.BAD_REQUEST);
+        }
+
+        //Checa si el userName no esta registrada ya
+        const userNameInUse = await this.userModel.findOne({nombreUsuario: data.nombreUsuario}).exec()
+        if (userNameInUse){
+            this.throwRpcException('Este nombre de usuario ya está registrado', 'BadRequestException', HttpStatus.BAD_REQUEST);
+        }
+        
+        const hashedPassword = await bcrypt.hash(data.password.trim(), 10);
+        
+        await new this.userModel({
+            ...data,
+            email: userEmail,
+            password: hashedPassword,
+        }).save();
+        
+        return { message: `Usuario creado correctamente` };
+    }
+
     async updateUserPersonal(userId: string, dtoUpdateUserPersonal: UpdatePersonalInfoDto) {
-          const user = await this.getUserById(userId);
-          const { _id: _, ...data } = dtoUpdateUserPersonal; // Excluir _id del DTO
+        const user = await this.getUserById(userId);
+        const { _id: _, ...data } = dtoUpdateUserPersonal; // Excluir _id del DTO
 
-          const newUserName = data.nombreUsuario
-          let newUserEmail = ""
-          if(data.email != null){
-            newUserEmail = data.email.toLowerCase();
-          }
-          data.email = newUserEmail
+        //checar estado de la cuenta
+        this.checkCuentaEstado(user.estado);
 
-          if (!user) {
-            throw new RpcException({
-                message: `Usuario con id ${userId} no encontrado.`,
-                error: 'Unauthorized',
-                status: 403
-            });
-          }
-          if (user.estado == false){
-            throw new RpcException({
-                message: `Este usuario ha sido desactivado`,
-                error: 'Unauthorized',
-                status: 403
-            });
-          }
+        //checar el username
+        const newUserName = data.nombreUsuario
+        const currentUserName = user.nombreUsuario;
+        await this.validateUsername(newUserName, currentUserName);
 
-          if(user.nombreUsuario != newUserName){
-            const userNameCheck = await this.userModel.findOne({
-                nombreUsuario: newUserName,
-            }).exec();
-            if (userNameCheck) {
-                throw new RpcException({
-                    message: `Ya existe otra cuenta que tiene el nombre de usuario ${newUserName}.`,
-                    error: 'BadRequestException',
-                    status: HttpStatus.BAD_REQUEST
-                });
-            }
-          }
-
-          if(user.email != newUserEmail && newUserEmail != "" ){
-            const userEmailCheck = await this.userModel.findOne({
-                email: newUserEmail,
-            }).exec();
-            if (userEmailCheck ) {
-                throw new RpcException({
-                    message: `Ya existe otra cuenta registrada con el email ${newUserEmail}.`,
-                    error: 'BadRequestException',
-                    status: HttpStatus.BAD_REQUEST
-                });
-            }
-          }
-
-          Object.assign(user, data); // Copiar los campos del DTO al usuario existente
+        const newUserEmail = data.email ? data.email.toLowerCase() : "";
+        const currentEmail = user.email
+        await this.validateEmail(newUserEmail, currentEmail)
       
-           const userActualizado = await this.userModel.findByIdAndUpdate(
-                userId,
-                { $set: data },
-                { new: true, select: 'nombre apellidos nombreUsuario email rol estado' }
-            );
-          return userActualizado
+        return this.updateUserInDB(userId, newUserEmail, data);
     }
 
     async updateUser(_id: string, dtoUpdateUser: UpdateUserDto) {
-          const user = await this.getUserById(_id);
-          const { _id: _, ...data } = dtoUpdateUser; // Excluir _id del DTO
-          const newUserName = data.nombreUsuario
-          let newUserEmail = ""
-          if(data.email != null){
-            newUserEmail = data.email.toLowerCase();
-          }
-          data.email = newUserEmail
+        const user = await this.getUserById(_id);
+        const { _id: _, ...data } = dtoUpdateUser; // Excluir _id del DTO
 
-          if (!user) {
-            throw new RpcException({
-                message: `Usuario con id ${_id} no encontrado.`,
-                error: 'Unauthorized',
-                status: 403
-            });
-          }
+        //checar el username
+        const newUserName = data.nombreUsuario || user.nombreUsuario
+        const currentUserName = user.nombreUsuario;
+        await this.validateUsername(newUserName, currentUserName)
 
-          if(user.nombreUsuario != newUserName){
-            const userNameCheck = await this.userModel.findOne({
-                nombreUsuario: newUserName,
-            }).exec();
-            if (userNameCheck) {
-                throw new RpcException({
-                    message: `Ya existe otra cuenta que tiene el nombre de usuario ${newUserName}.`,
-                    error: 'BadRequestException',
-                    status: HttpStatus.BAD_REQUEST
-                });
-            }
-          }
+        const newUserEmail = data.email ? data.email.toLowerCase() : "";
+        const currentEmail = user.email
+        await this.validateEmail(newUserEmail, currentEmail)
 
-          if(user.email != newUserEmail && newUserEmail != "" ){
-            const userEmailCheck = await this.userModel.findOne({
-                email: newUserEmail,
-            }).exec();
-            if (userEmailCheck ) {
-                throw new RpcException({
-                    message: `Ya existe otra cuenta registrada con el email ${newUserEmail}.`,
-                    error: 'BadRequestException',
-                    status: HttpStatus.BAD_REQUEST
-                });
-            }
-          }
-
-          if (data.rol && data.rol !== user.rol) {
+        if (data.rol && data.rol !== user.rol) {
             await this.deleteRtUser(_id);
-          }
+        }
       
-          if (data.estado !== "true" && data.estado !== "false") {
-            data.estado = "true";
-          }else if(data.estado == "false"){
+        if(data.estado == "false"){
             await this.deleteRtUser(_id);
-          }
+        }
 
-          if (data.password) {
-            data.password = await bcrypt.hash(data.password, 10); // Encriptar la contraseña
-            await this.deleteRtUser(_id)
-          }
+        if (data.password) {
+            const oldPasswordMatches = await bcrypt.compare(data.password, user.password);
+            if (!oldPasswordMatches) {
+                data.password = await bcrypt.hash(data.password, 10); // Encriptar la contraseña
+                await this.deleteRtUser(_id)
+            }
+        }
 
-          Object.assign(user, data); // Copiar los campos del DTO al usuario existente
-      
-          const userActualizado = await this.userModel.findByIdAndUpdate(
-                _id,
-                { $set: data },
-                { new: true, select: 'nombre apellidos nombreUsuario email rol estado' }
-            );
-          return userActualizado
+        return this.updateUserInDB(_id, newUserEmail, data);
     }
 
     //Desactivar cuenta
     async deactivateUser(userId: string){
-            const user = await this.getUserById(userId);
-            if (!user) {
-              throw new RpcException({
-                message: `Usuario con id ${userId} no encontrado.`,
-                error: 'NotFoundExceptio',
-                status: HttpStatus.NOT_FOUND
-                });
-            }
-          
-            if(user.estado == true){
-                user.estado = false
-            }else if(user.estado == false){
-                user.estado = true
-            }
-        
-            await user.save(); // Guardar los cambios
+        const user = await this.getUserById(userId);
+        const newState = !user.estado;
 
-                  const userActualizado = await this.userModel.findByIdAndUpdate(
-                    userId,
-                    { $set: user },
-                    { new: true, select: 'nombre apellidos nombreUsuario email rol estado' }
-                );
-
-            await this.deleteRtUser(userId);
-            return userActualizado
+        const userActualizado = await this.userModel.findByIdAndUpdate(
+            userId,
+            { $set: { estado: newState } },
+            { new: true, select: 'nombre apellidos nombreUsuario email rol estado' }
+        );
+        if (newState === false) {
+            await this.deleteRtUser(userId); // Solo elimina RT si se desactivó
+        }
+        return userActualizado;
     }
 
     //Cambiar contraseña
     async changePassword(userId: string, newPassword: string){
-        const user = await this.getUserById(userId)
+        const user = await this.getUserById(userId);
         if (user.estado == false){
-            throw new RpcException({
-                message: `Este usuario ha sido desactivado`,
-                error: 'Unauthorized',
-                status: 403
-            });
+            this.throwRpcException(`Este usuario ha sido desactivado`, 'Unauthorized', 403);
         }
-        const newHashePassword = await bcrypt.hash(newPassword, 10)
-        user.password = newHashePassword
-        await user.save()
-        return { message: "Contraseña cambiada con éxito" }
+        user.password = newPassword;
+        await user.save();
+        return { message: "Contraseña cambiada con éxito" };
     }
 
     //Buscar usuario por email
     async getUserByEmail(email: string){
-        const user = await this.userModel.findOne({ email });
+        const user = await this.userModel.findOne({ email }).exec();
         if (!user) {
-            throw new RpcException({
-              message: `Usuario con email ${email} no encontrado.`,
-              error: 'Unauthorized',
-              status: 403
-            });
+            this.throwRpcException(`Usuario con email ${email} no encontrado.`, 'BadRequestException', HttpStatus.BAD_REQUEST);
         }
         return user;
     }
 
     //Buscar usuario por nombre de Usuario
     async getUserByUserName(nombreUsuario: string){
-        const user = await this.userModel.findOne({ nombreUsuario });
+        const user = await this.userModel.findOne({ nombreUsuario }).exec();
         if (!user) {
-            throw new RpcException({
-              message: `Usuario con nombre de usuario ${nombreUsuario} no encontrado.`,
-              error: 'Unauthorized',
-              status: 403
-            });
+            this.throwRpcException(`Usuario con nombre de usuario ${nombreUsuario} no encontrado.`, 
+                'BadRequestException', HttpStatus.BAD_REQUEST);
         }
         return user;
     }
 
     //Buscar usuario por id
     async getUserById(userId: string) {
-        try {
-          const user = await this.userModel.findOne({ _id: userId });
-          if (!user) {
-            throw new RpcException({
-              message: `Usuario con id ${userId} no encontrado.`,
-              error: 'Unauthorized',
-              status: 403
-            });
-          }
-          return user;
-        } catch (error) {
-          throw new RpcException({
-            message: "Error al buscar el usuario en la base de datos",
-            error: error.message,
-            status: 500
-          });
+        const user = await this.userModel.findOne({ _id: userId }).exec();
+        if (!user) {
+            this.throwRpcException(`Usuario con id ${userId} no encontrado.`, 'NotFoundException', HttpStatus.NOT_FOUND);
         }
-      }
+        return user; 
+    }
       
 
     //Buscar usuario por id y obtener solo ciertos datos
     async getUserByIdInfo(userId: string){
-        try{
-            const user = await this.userModel.findOne({ _id: userId })
-                .select('nombre apellidos nombreUsuario email rol estado');
-            if (!user) {
-                throw new RpcException({
-                message: `Usuario con id ${userId} no encontrado.`,
-                error: 'Unauthorized',
-                status: 403
-                });
-            }
-            return user;
-        }catch (error) {
-            throw new RpcException({
-              message: "Error al buscar el usuario en la base de datos",
-              error: error.message,
-              status: 500
-            });
+        const user = await this.userModel.findOne({ _id: userId })
+            .select('nombre apellidos nombreUsuario email rol estado').exec();
+        if (!user) {
+            this.throwRpcException(`Usuario con id ${userId} no encontrado.`, 'NotFoundException', HttpStatus.NOT_FOUND);
         }
+        return user;
     }
 
     //Actualizar el rt del usuario
     async updateRtHash(userId: string, rt: string){
-        const hash = await bcrypt.hash(rt, 10)
+        const hash = await bcrypt.hash(rt, 10);
         await this.userModel.updateOne(
             { _id: userId },
             { $set: { hashRefreshToken: hash } }
@@ -338,13 +227,6 @@ export class UsersService {
     async deleteRtUser(userId: string) {
             // Verificar si el usuario existe
             const user = await this.getUserById(userId);
-            if (!user) {
-                throw new RpcException({
-                    message: 'Usuario no encontrado',
-                    error: 'Not Found',
-                    status: HttpStatus.NOT_FOUND,
-                });
-            }
     
             // Intentar actualizar el hashRefreshToken a null
             const result = await this.userModel.updateOne(
@@ -354,6 +236,7 @@ export class UsersService {
             return { message: "Cerrado de sesión exitoso" };
     }
 
+    //PENDIENTE ..... Esto seria para lo del forgot password si es que se desa continuarlo
     async saveResetToken(resetToken: string, userId: string){
         const expiryDate = new Date();
         expiryDate.setHours(expiryDate.getHours() + 1)
@@ -363,6 +246,5 @@ export class UsersService {
             expiryDate: expiryDate
         })
     }
-    
 
 }
