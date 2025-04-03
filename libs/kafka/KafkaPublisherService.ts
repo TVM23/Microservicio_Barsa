@@ -1,4 +1,5 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
+import { RpcException } from '@nestjs/microservices';
 import { Kafka } from 'kafkajs';
 
 @Injectable()
@@ -24,7 +25,7 @@ export class KafkaPublisherService implements OnModuleInit {
         'materia-response', 'materia-pagination-response', 'materia-codigo-response',
         'papeleta-response', 'papeleta-pagination-response', 'papeleta-codigo-response',
         'producto-response', 'producto-pagination-response', 'producto-codigo-response',
-        'colores-response', 'colores-pagination-response', 'colores-colorId-response',
+        'colores-response', 'colores-pagination-response', 'colores-colorId-response', 'colores-create-response',
         'prodxcolor-response', 'prodxcolor-pagination-response',
       ],
       fromBeginning: true,
@@ -77,7 +78,17 @@ export class KafkaPublisherService implements OnModuleInit {
     const correlationId = Math.random().toString(36).substring(7);
 
     return new Promise(async (resolve, reject) => {
-      this.responses.set(correlationId, resolve); // Store resolver
+      this.responses.set(correlationId, (data: any) => {
+        if (data?.error) {
+          reject(new RpcException({
+            message: data.message || 'Error en el servicio',
+            error: data.error || 'InternalServerError',
+            status: data.status || 500,
+          }));
+        } else {
+          resolve(data);
+        }
+      });
 
       await this.producer.send({
         topic,
@@ -88,7 +99,11 @@ export class KafkaPublisherService implements OnModuleInit {
       setTimeout(() => {
         if (this.responses.has(correlationId)) {
           this.responses.delete(correlationId);
-          reject(new Error(`Timeout waiting for response on topic: ${topic}`));
+          reject(new RpcException({
+            message: `Timeout esperando respuesta en el topic: ${topic}`,
+            error: 'GatewayTimeout',
+            status: 504,
+          }));
         }
       }, 40000);
     });

@@ -1,21 +1,21 @@
-import { IsBoolean, IsNumber, IsOptional, IsString, Min } from "class-validator"
+import { IsBoolean, IsIn, IsNumber, IsOptional, IsString, Min } from "class-validator"
 import { PaginationDto } from "../common"
 import { Transform, Type } from "class-transformer";
 
 export class ProductoPaginationDto extends PaginationDto {
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'El código debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     codigo: string;
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'La descripción debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     descripcion: string;
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'La unidad debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     unidad: string;
 
@@ -32,22 +32,23 @@ export class ProductoPaginationDto extends PaginationDto {
     venta: number;
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'El código EAN debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     ean: string;
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'El SKU debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     sku: string;
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'El campo tapices debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     tapices: string;
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'El estado debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
+    @IsIn(['true', 'false'], { message: 'El estado solo puede ser "true" o "false".' })
     borrado: string;
 }

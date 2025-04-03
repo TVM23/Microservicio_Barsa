@@ -3,6 +3,9 @@ export * from './contracts.module';
 export * from './contracts.service';
 export * from '../common'
 
+export * from '../colores/colores-paginarion.dto'
+export * from '../colores/create-color.dto'
+
 export * from '../muebles/create-mueble.dto';
 export * from '../muebles/update-mueble.dto';
 export * from '../muebles/mueble.dto';
@@ -21,8 +24,8 @@ export * from '../producto/producto-pagination.dto'
 
 export * from '../papeleta/papeleta.patterns'
 export * from '../papeleta/papeleta-pagination.dto'
-
 export * from '../papeleta/papeleta.patterns'
+
 export * from '../materia/materia-pagination.dto'
 
 export * from '../producto_x_color/prodXcolor_pagination.dto'

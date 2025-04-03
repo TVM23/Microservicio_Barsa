@@ -12,6 +12,7 @@ com\access\model\Producto.class
 com\access\service\ProductoService.class
 com\access\listener\PapeletaListener.class
 com\access\model\Producto_X_Color.class
+com\access\dto\colores\CreateColorDTO.class
 com\access\ProyectoAccess1Application.class
 com\access\service\PapeletaService.class
 com\access\listener\ColoresListener.class

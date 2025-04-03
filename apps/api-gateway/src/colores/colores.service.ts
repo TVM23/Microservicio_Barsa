@@ -1,4 +1,4 @@
-import { KafkaPublisherService } from '@app/contracts';
+import { CreateColorDto, KafkaPublisherService } from '@app/contracts';
 import { Injectable } from '@nestjs/common';
 import { ColoresPaginationDto } from 'libs/contracts/colores/colores-paginarion.dto';
 
@@ -11,6 +11,10 @@ export class ColoresService {
     }
 
     getColorPorId(colorId: number){
-        return this.kafkaService.sendRequest('get-papeleta-codigo', colorId)
+        return this.kafkaService.sendRequest('get-colorId-codigo', colorId)
+    }
+
+    crearNuevoColor(createColor: CreateColorDto ){
+        return this.kafkaService.sendRequest('post-color-crear', createColor)
     }
 }

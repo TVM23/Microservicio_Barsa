@@ -1,4 +1,4 @@
-import { IsBoolean, IsOptional, IsString } from "class-validator";
+import { IsBoolean, IsIn, IsOptional, IsString } from "class-validator";
 import { PaginationDto } from "../common";
 import { boolean } from "joi";
 import { Transform, Type } from "class-transformer";
@@ -6,27 +6,28 @@ import { Transform, Type } from "class-transformer";
 export class MateriaPaginationDto extends PaginationDto{
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'El código de material debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     public codigoMat: string
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'La descripción debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     public descripcion: string
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'La unidad debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     public unidad: string
 
     @IsOptional()
-    @IsString()
+    @IsString({ message: 'El proceso debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     public proceso: string
 
     @IsOptional()
-    @IsString()
-    @Transform(({ value }) => value.trim())  
+    @IsString({ message: 'El estado debe ser un texto válido.' })
+    @Transform(({ value }) => value.trim()) 
+    @IsIn(['true', 'false'], { message: 'El estado solo puede ser "true" o "false".' }) 
     public borrado: string
 }

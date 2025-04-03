@@ -13,7 +13,11 @@ export class PapeletaService {
   constructor(private readonly kafkaService: KafkaPublisherService) {}
 
   getListadoPapeletas(papeletaPaginationDto: PapeletaPaginationDto){
-    return this.kafkaService.sendRequest('get-papeleta-listado', papeletaPaginationDto)
+    try {
+      return this.kafkaService.sendRequest('get-papeleta-listado', papeletaPaginationDto);
+    } catch (error) {
+        throw new RpcException(error.getError()); // Propagar error a la API
+    }
   }
 
   getPapeletaPorFolio(folio: number){
