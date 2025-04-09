@@ -1,6 +1,5 @@
-import { IsBoolean, IsIn, IsOptional, IsString } from "class-validator";
-import { PaginationDto } from "../common";
-import { boolean } from "joi";
+import { IsIn, IsOptional, IsString } from "class-validator";
+import { PaginationDto } from "@app/contracts";
 import { Transform, Type } from "class-transformer";
 
 export class MateriaPaginationDto extends PaginationDto{

@@ -21,9 +21,12 @@ com\access\controller\MateriaController.class
 com\access\listener\Prod_X_ColorListener.class
 com\access\dto\papeleta\DetallePapeletaDTO.class
 com\access\dto\papeleta\PapeletaPaginationDTO.class
+com\access\config\CloudinaryConfig.class
 com\access\service\DetallePapeletaService.class
+com\access\dto\materia\CreateMateriaDTO.class
 com\access\service\Prod_x_ColorService.class
 com\access\config\DataBaseWarmUp.class
+com\access\service\cloudinary\CloudinaryService.class
 com\access\dto\colores\ColoresPaginationDTO.class
 com\access\model\Colores.class
 com\access\service\ColoresService.class

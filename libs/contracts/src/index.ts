@@ -26,6 +26,7 @@ export * from '../papeleta/papeleta.patterns'
 export * from '../papeleta/papeleta-pagination.dto'
 export * from '../papeleta/papeleta.patterns'
 
+export * from '../materia/create-materia.dto'
 export * from '../materia/materia-pagination.dto'
 
 export * from '../producto_x_color/prodXcolor_pagination.dto'

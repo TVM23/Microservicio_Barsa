@@ -1,11 +1,6 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { CreateMateriaDto } from './dto/create-materia.dto';
+import { Injectable } from '@nestjs/common';
 import { UpdateMateriaDto } from './dto/update-materia.dto';
-import { MATERIA_CLIENT } from './constant';
-import { ClientProxy, ClientProxyFactory, RpcException, Transport } from '@nestjs/microservices';
-import { MATERIA_PATTERNS } from 'libs/contracts/materia/materia.patterns';
-import { catchError, timeout } from 'rxjs';
-import { KafkaPublisherService, MateriaPaginationDto } from '@app/contracts';
+import { KafkaPublisherService, MateriaPaginationDto, CreateMateriaDto } from '@app/contracts';
 
 @Injectable()
 export class MateriaService {
@@ -24,8 +19,8 @@ export class MateriaService {
     return this.kafkaService.sendRequest('get-materia-codigo', codigo)
   }
 
-  create(createMateriaDto: CreateMateriaDto) {
-    return 'This action adds a new materia';
+  createMateria(createMateriaDto: CreateMateriaDto) {
+    return this.kafkaService.sendRequest('post-materia-crear', createMateriaDto)
   }
 
   findAll() {

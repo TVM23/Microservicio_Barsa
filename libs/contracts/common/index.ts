@@ -6,3 +6,4 @@ export * from './enums/role.enum';
 
 export * from './exceptions/rpc-custom-exception.filter';
 
+export * from './validators/isgreater.validator';
