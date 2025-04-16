@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { UpdateMateriaDto } from './dto/update-materia.dto';
-import { KafkaPublisherService, MateriaPaginationDto, CreateMateriaDto } from '@app/contracts';
+import { KafkaPublisherService, MateriaPaginationDto, CreateMateriaDto, UpdateMateriaDto } from '@app/contracts';
 
 @Injectable()
 export class MateriaService {
@@ -23,19 +22,11 @@ export class MateriaService {
     return this.kafkaService.sendRequest('post-materia-crear', createMateriaDto)
   }
 
-  findAll() {
-    return `This action returns all materia`;
+  updateMateria(updateMateriaDto: UpdateMateriaDto) {
+    return this.kafkaService.sendRequest('put-materia-update', updateMateriaDto)
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} materia`;
-  }
-
-  update(id: number, updateMateriaDto: UpdateMateriaDto) {
-    return `This action updates a #${id} materia`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} materia`;
+  borrarMateria(codigoMat: string) {
+    return this.kafkaService.sendRequest('delete-materia-borrar', codigoMat);
   }
 }

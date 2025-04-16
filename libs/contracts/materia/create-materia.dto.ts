@@ -1,6 +1,6 @@
 import { Transform, Type } from "class-transformer";
 import { IsIn, IsNotEmpty, IsNumber, IsOptional, IsString, Min } from "class-validator";
-import { IsGreaterThan } from "@app/contracts";
+import { ImagenDto, IsGreaterThan } from "@app/contracts";
 
 export class CreateMateriaDto {
     @IsString({message: 'Debes ingresar un texto valido'})
@@ -66,6 +66,6 @@ export class CreateMateriaDto {
     public borrado: string = 'false';
 
     @IsOptional()
-    public imagenes?: string[];
+    public imagenes?: ImagenDto[];
 
 }
