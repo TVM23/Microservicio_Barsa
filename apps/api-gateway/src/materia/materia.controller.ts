@@ -1,10 +1,11 @@
+import * as path from 'path';
 import { Controller, Get, Post, Body, Patch, Param, Delete, Query, UseInterceptors, UploadedFiles, BadRequestException, Put } from '@nestjs/common';
 import { MateriaService } from './materia.service';
-import { MateriaPaginationDto, CreateMateriaDto } from '@app/contracts';
+import { MateriaPaginationDto, CreateMateriaDto, InventarioSalidaDTO } from '@app/contracts';
 import { AnyFilesInterceptor } from '@nestjs/platform-express';
-import * as path from 'path';
 import { CloudinaryService } from 'libs/cloudinary/cloudinary.service';
 import { UpdateMateriaDto } from './dto/update-materia.dto';
+import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
 
 
 @Controller('materia')
@@ -33,23 +34,8 @@ export class MateriaController {
     @UploadedFiles() files: Express.Multer.File[],
   ) 
   {
-    const allowedExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
-    const base64Images = files.map(file => {
-      const ext = path.extname(file.originalname).toLowerCase();
-      if (!allowedExtensions.includes(ext)) {
-        throw new BadRequestException(
-          `Tipo de archivo no soportado: ${ext}. Solo se permiten imágenes`,
-        );
-      }
-      return file.buffer.toString('base64');
-    });
-    // Subir a Cloudinary
-    const uploaded  = await this.cloudinaryService.uploadBase64Images(base64Images);
-
-    // Guardar las URLs en el DTO
+    const uploaded  = await this.procesarImagenes(files);
     createMateriaDto.imagenes = uploaded;
-
-    // Mandar solo el DTO con URLs por Kafka
     return this.materiaService.createMateria(createMateriaDto);
   }
   
@@ -60,17 +46,7 @@ export class MateriaController {
     @Body() updateMateriaDto: UpdateMateriaDto,
     @UploadedFiles() files: Express.Multer.File[],
   ){
-    const allowedExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
-
-    const base64Images = files.map(file => {
-      const ext = path.extname(file.originalname).toLowerCase();
-      if (!allowedExtensions.includes(ext)) {
-        throw new BadRequestException(`Archivo no soportado: ${ext}`);
-      }
-      return file.buffer.toString('base64');
-    });
-  
-    const uploaded  = await this.cloudinaryService.uploadBase64Images(base64Images);
+    const uploaded  = await this.procesarImagenes(files);
     updateMateriaDto.imagenes = uploaded;
     return this.materiaService.updateMateria({codigoMat, ...updateMateriaDto})
   }
@@ -78,5 +54,26 @@ export class MateriaController {
   @Delete('borrar-materia/:codigo')
   borrarMateria(@Param('codigo') codigoMat: string) {
     return this.materiaService.borrarMateria(codigoMat);
+  }
+  
+  @Post('crear-salida-nueva')
+  async createSalidaInventario(
+    @Body() crearFichaDto: InventarioSalidaDTO,
+    @GetCurrentUserName() createdBy: string,
+  ) {
+    return await this.materiaService.createSalidaInventario({createdBy, ...crearFichaDto});
+  }
+
+  private async procesarImagenes(files: Express.Multer.File[]): Promise<{ url: string; public_id: string }[]> {
+    const allowedExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
+    const base64Images = files.map(file => {
+      const ext = path.extname(file.originalname).toLowerCase();
+      if (!allowedExtensions.includes(ext)) {
+        throw new BadRequestException(
+          `Tipo de archivo no soportado: ${ext}. Solo se permiten imágenes jpg, jpeg, png y webp`,
+        );      }
+      return file.buffer.toString('base64');
+    });
+    return this.cloudinaryService.uploadBase64Images(base64Images);
   }
 }

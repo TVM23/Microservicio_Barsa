@@ -12,7 +12,8 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY libs ./libs 
+#COPY libs ./libs 
+COPY ./libs ./libs
 
 COPY . .
 
@@ -29,9 +30,11 @@ RUN apt-get update && apt-get install -y \
 
 COPY package*.json ./
 
-RUN npm install --only=production
+# RUN npm install --only=production
+COPY --from=development /usr/src/app/node_modules ./node_modules
 
-COPY libs ./libs 
+#COPY libs ./libs 
+COPY ./libs ./libs
 
 COPY --from=development /usr/src/app/dist ./dist
 

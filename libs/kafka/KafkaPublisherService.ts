@@ -24,6 +24,11 @@ export class KafkaPublisherService implements OnModuleInit {
       topics: [
         'materia-response', 'materia-pagination-response', 'materia-codigo-response', 'materia-create-response', 
                 'materia-update-response', "materia-delete-response",
+        'inventario_entradas-response', 'inventario_entradas-pagination-response', 'inventario_entradas-codigo-response', 
+                'inventario_entradas-create-response',
+        'inventario_salidas-response', 'inventario_salidas-pagination-response', 'inventario_salidas-codigo-response', 
+                'inventario_salidas-create-response',
+        
         'papeleta-response', 'papeleta-pagination-response', 'papeleta-codigo-response',
         'producto-response', 'producto-pagination-response', 'producto-codigo-response',
         'colores-response', 'colores-pagination-response', 'colores-colorId-response', 'colores-create-response',

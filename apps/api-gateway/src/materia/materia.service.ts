@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { KafkaPublisherService, MateriaPaginationDto, CreateMateriaDto, UpdateMateriaDto } from '@app/contracts';
+import { InventarioSalidaCompDTO } from './dto/inventario-salida.dto';
 
 @Injectable()
 export class MateriaService {
@@ -28,5 +29,9 @@ export class MateriaService {
 
   borrarMateria(codigoMat: string) {
     return this.kafkaService.sendRequest('delete-materia-borrar', codigoMat);
+  }
+
+  createSalidaInventario(crearFichaDto: InventarioSalidaCompDTO) {
+    return this.kafkaService.sendRequest('post-salida-crear', crearFichaDto)
   }
 }

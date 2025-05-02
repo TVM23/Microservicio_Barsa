@@ -1,14 +1,18 @@
 services:
   access-api:
+    #image: tvm23/access-api:latest   #Rotar entre image o build
     build: 
       context: .
       dockerfile: ./apps/access-api/Dockerfile
+
+      #context: ./apps/access-api
+      #dockerfile: ./Dockerfile
+
     container_name: access-api
     ports:
       - "8080:8080"
     volumes:
       - C:\Users\Tadeo\Downloads\prueba:/app/database
-      - ./apps/access-api/practica-access-1-0.0.1-SNAPSHOT.jar:/app/app.jar
     environment:
       - SPRING_DATASOURCE_URL=jdbc:ucanaccess:///app/database/Prod_Data.mdb;memory=false;
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=net.ucanaccess.jdbc.UcanaccessDriver
@@ -48,6 +52,7 @@ services:
     
 
   api-gateway:
+    #image: tvm23/api-gateway:latest
     build:
       context: .
       dockerfile: ./apps/api-gateway/Dockerfile
@@ -71,6 +76,7 @@ services:
       - app-network
 
   user-authentication:
+    #image: tvm23/user-authentication:latest
     build:
       context: .
       dockerfile: ./apps/user-authentication/Dockerfile

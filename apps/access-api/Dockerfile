@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Copiar el archivo JAR al contenedor
 COPY ./apps/access-api/practica-access-1-0.0.1-SNAPSHOT.jar app.jar
+#COPY ./practica-access-1-0.0.1-SNAPSHOT.jar app.jar
 
 # Configurar la variable de entorno para la base de datos
 ENV SPRING_DATASOURCE_URL=jdbc:ucanaccess:///app/database/Prod_Data.mdb
