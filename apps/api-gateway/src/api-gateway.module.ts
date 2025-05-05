@@ -12,6 +12,7 @@ import { MateriaModule } from './materia/materia.module';
 import { ColoresModule } from './colores/colores.module';
 import { ProductoXColorModule } from './producto_x_color/producto_x_color.module';
 import { RolesGuard } from './user-authentication/common/guards/roles.guard';
+import { InventarioModule } from './inventario/inventario.module';
 
 @Module({
   imports: [MueblesModule, UserAuthenticationModule,
@@ -21,6 +22,7 @@ import { RolesGuard } from './user-authentication/common/guards/roles.guard';
     MateriaModule,
     ColoresModule,
     ProductoXColorModule,
+    InventarioModule,
   ],
   controllers: [ApiGatewayController],
   providers: [ 

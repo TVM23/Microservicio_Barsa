@@ -5,8 +5,6 @@ import { MateriaPaginationDto, CreateMateriaDto, InventarioSalidaDTO } from '@ap
 import { AnyFilesInterceptor } from '@nestjs/platform-express';
 import { CloudinaryService } from 'libs/cloudinary/cloudinary.service';
 import { UpdateMateriaDto } from './dto/update-materia.dto';
-import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
-
 
 @Controller('materia')
 export class MateriaController {
@@ -54,14 +52,6 @@ export class MateriaController {
   @Delete('borrar-materia/:codigo')
   borrarMateria(@Param('codigo') codigoMat: string) {
     return this.materiaService.borrarMateria(codigoMat);
-  }
-  
-  @Post('crear-salida-nueva')
-  async createSalidaInventario(
-    @Body() crearFichaDto: InventarioSalidaDTO,
-    @GetCurrentUserName() createdBy: string,
-  ) {
-    return await this.materiaService.createSalidaInventario({createdBy, ...crearFichaDto});
   }
 
   private async procesarImagenes(files: Express.Multer.File[]): Promise<{ url: string; public_id: string }[]> {

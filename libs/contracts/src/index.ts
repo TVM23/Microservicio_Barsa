@@ -28,6 +28,7 @@ export * from '../papeleta/papeleta.patterns'
 
 export * from '../inventario/inventario-item.dto'
 export * from '../inventario/inventario-salida.dto'
+export * from '../inventario/inventario-entrada.dto'
 
 export * from '../materia/create-materia.dto'
 export * from '../materia/update-materia.dto'
