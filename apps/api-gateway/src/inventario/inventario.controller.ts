@@ -1,11 +1,16 @@
-import { Body, Controller, Post } from '@nestjs/common';
-import { InventarioEntradaDTO, InventarioSalidaDTO } from '@app/contracts';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { InventarioEntradaDTO, InventarioEntradasPaginationDto, InventarioSalidaDTO } from '@app/contracts';
 import { InventarioService } from './inventario.service';
 import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
 
 @Controller('inventario')
 export class InventarioController {
     constructor(private readonly inventarioService: InventarioService) {}
+
+    @Get('get-listado-entradas')
+    async getEntradasInventario(@Body() paginationDTO: InventarioEntradasPaginationDto) {
+        return await this.inventarioService.getEntradasInventario(paginationDTO);
+    }
 
     @Post('crear-salida-nueva')
     async createSalidaInventario(

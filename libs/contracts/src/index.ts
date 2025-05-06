@@ -26,6 +26,7 @@ export * from '../papeleta/papeleta.patterns'
 export * from '../papeleta/papeleta-pagination.dto'
 export * from '../papeleta/papeleta.patterns'
 
+export * from '../inventario/entradas-pagination.dto'
 export * from '../inventario/inventario-item.dto'
 export * from '../inventario/inventario-salida.dto'
 export * from '../inventario/inventario-entrada.dto'

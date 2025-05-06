@@ -2,6 +2,7 @@ com\access\listener\InventarioListener.class
 com\access\service\InventarioService.class
 com\access\dto\ImagenDTO.class
 com\access\model\DetallePapeleta.class
+com\access\model\InventarioEntrada.class
 com\access\dto\producto\ProductoxColorPaginationDTO.class
 com\access\model\ImagenMateria.class
 com\access\model\Producto.class
@@ -23,6 +24,7 @@ com\access\dto\PaginationResult.class
 com\access\dto\inventario\InventarioSalidaDTO.class
 com\access\model\Papeleta.class
 com\access\controller\PapeletaController.class
+com\access\model\InventarioEntradaDetalle.class
 com\access\config\KafkaProducerConfig.class
 com\access\service\MateriaService.class
 com\access\listener\MateriaListener.class
@@ -32,6 +34,7 @@ com\access\listener\PapeletaListener.class
 com\access\model\Producto_X_Color.class
 com\access\model\Proveedor.class
 com\access\dto\colores\CreateColorDTO.class
+com\access\dto\inventario\EntradasPaginationDTO.class
 com\access\dto\materia\UpdateMateriaDTO.class
 com\access\ProyectoAccess1Application.class
 com\access\service\PapeletaService.class
