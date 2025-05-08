@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { InventarioEntradaDTO, InventarioEntradasPaginationDto, InventarioSalidaDTO } from '@app/contracts';
+import { InventarioEntradaDTO, InventarioEntradasPaginationDto, InventarioSalidaDTO, InventarioSalidasPaginationDto } from '@app/contracts';
 import { InventarioService } from './inventario.service';
 import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
 
@@ -10,6 +10,11 @@ export class InventarioController {
     @Get('get-listado-entradas')
     async getEntradasInventario(@Body() paginationDTO: InventarioEntradasPaginationDto) {
         return await this.inventarioService.getEntradasInventario(paginationDTO);
+    }
+
+    @Get('get-listado-salidas')
+    async getSalidasInventario(@Body() paginationDTO: InventarioSalidasPaginationDto) {
+        return await this.inventarioService.getSalidasInventario(paginationDTO);
     }
 
     @Post('crear-salida-nueva')

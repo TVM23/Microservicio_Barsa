@@ -29,6 +29,11 @@ export class InventarioEntradasPaginationDto extends PaginationDto {
     public proveedorId: number;
 
     @IsOptional()
+    @IsString({ message: 'El nombre de proveedor debe ser un texto válido' })
+    @Transform(({ value }) => value.trim()) 
+    public proveedorNombre: string;
+
+    @IsOptional()
     @IsString({ message: 'Las notas extras deben ser un texto válido' })
     @Transform(({ value }) => value.trim()) 
     public notes: string;

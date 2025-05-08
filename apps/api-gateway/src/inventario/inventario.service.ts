@@ -1,4 +1,4 @@
-import { InventarioEntradasPaginationDto, KafkaPublisherService } from '@app/contracts';
+import { InventarioEntradasPaginationDto, InventarioSalidasPaginationDto, KafkaPublisherService } from '@app/contracts';
 import { Injectable } from '@nestjs/common';
 import { InventarioSalidaCompDTO } from './dto/inventario-salida.dto';
 import { InventarioEntradaCompDTO } from './dto/inventario-entrada.dto';
@@ -11,6 +11,10 @@ export class InventarioService {
         return this.kafkaService.sendRequest('get-inventario-entradas', paginationDTO)
     }
 
+    getSalidasInventario(paginationDTO: InventarioSalidasPaginationDto) {
+        return this.kafkaService.sendRequest('get-inventario-salidas', paginationDTO)
+    }
+
     createSalidaInventario(crearFichaDto: InventarioSalidaCompDTO) {
         return this.kafkaService.sendRequest('post-salida-crear', crearFichaDto)
     }
@@ -18,5 +22,6 @@ export class InventarioService {
     createEntradaInventario(crearFichaDto: InventarioEntradaCompDTO) {
         return this.kafkaService.sendRequest('post-entrada-crear', crearFichaDto)
     }
+    
 
 }

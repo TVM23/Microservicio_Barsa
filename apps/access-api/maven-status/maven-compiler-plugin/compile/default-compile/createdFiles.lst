@@ -1,8 +1,11 @@
 com\access\listener\InventarioListener.class
 com\access\service\InventarioService.class
 com\access\dto\ImagenDTO.class
+com\access\model\InventarioSalidaDetalle.class
+com\access\dto\inventario\SalidaPaginationDTO.class
 com\access\model\DetallePapeleta.class
 com\access\model\InventarioEntrada.class
+com\access\model\InventarioSalida.class
 com\access\dto\producto\ProductoxColorPaginationDTO.class
 com\access\model\ImagenMateria.class
 com\access\model\Producto.class

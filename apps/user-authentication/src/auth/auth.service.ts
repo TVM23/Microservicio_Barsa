@@ -115,7 +115,8 @@ export class AuthService {
           rol,
         }, {
           secret: this.configService.getOrThrow('JWT_ACCESS_TOKEN_SECRET'),
-          expiresIn: 60 * 15,
+          //expiresIn: 60 * 15, //expira en 15 minutos
+          expiresIn: 60 * 60, //expira en 1 hora
         }),
 
         this.jwtService.signAsync({
