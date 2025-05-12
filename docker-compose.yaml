@@ -1,9 +1,9 @@
 services:
   access-api:
-    #image: tvm23/access-api:latest   #Rotar entre image o build
-    build: 
-      context: .
-      dockerfile: ./apps/access-api/Dockerfile
+    image: tvm23/access-api:latest   #Rotar entre image o build
+    #build: 
+    #  context: .
+    #  dockerfile: ./apps/access-api/Dockerfile
 
       #context: ./apps/access-api
       #dockerfile: ./Dockerfile
@@ -52,12 +52,12 @@ services:
     
 
   api-gateway:
-    #image: tvm23/api-gateway:latest
-    build:
-      context: .
-      dockerfile: ./apps/api-gateway/Dockerfile
-      target: development
-    command: npm run start:dev api-gateway
+    image: tvm23/api-gateway:latest
+    #build:
+    #  context: .
+    #  dockerfile: ./apps/api-gateway/Dockerfile
+    #  target: development
+    #command: npm run start:dev api-gateway
     env_file:
       - ./.env
     depends_on:
@@ -66,22 +66,22 @@ services:
       - zookeeper
     environment:
       KAFKA_BROKER: kafka:9092
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-      - ./libs:/usr/src/app/libs  
+    #volumes:
+    #  - .:/usr/src/app
+    #  - /usr/src/app/node_modules
+    #  - ./libs:/usr/src/app/libs  
     ports:
       - '3000:3000'
     networks:
       - app-network
 
   user-authentication:
-    #image: tvm23/user-authentication:latest
-    build:
-      context: .
-      dockerfile: ./apps/user-authentication/Dockerfile
-      target: development
-    command: npm run start:dev user-authentication
+    image: tvm23/user-authentication:latest
+    #build:
+    #  context: .
+    #  dockerfile: ./apps/user-authentication/Dockerfile
+    #  target: development
+    #command: npm run start:dev user-authentication
     env_file:
       - ./.env
     depends_on:
@@ -89,10 +89,10 @@ services:
       - kafka
       - zookeeper
       - api-gateway
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-      - ./libs:/usr/src/app/libs  
+    #volumes:
+    #  - .:/usr/src/app
+    #  - /usr/src/app/node_modules
+    #  - ./libs:/usr/src/app/libs  
     ports:
       - '3002:3002'
     networks:
@@ -107,6 +107,18 @@ services:
       - mongodb_master_data:/data/db
     networks:
       - app-network
+  
+  mongo-seed:
+    image: tvm23/mongo-seed:latest
+    #build:
+      #context: ./init
+    depends_on:
+      - mongo
+      - user-authentication
+    env_file: .env
+    networks:
+      - app-network
+    restart: "no"   # Solo se ejecuta una vez al levantar
       
 volumes:
   mongodb_master_data:

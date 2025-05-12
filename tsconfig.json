@@ -24,6 +24,9 @@
       "@app/contracts/*": [
         "libs/contracts/src/*"
       ]
-    }
-  }
+    },
+    "allowJs": true
+  },
+
+  
 }

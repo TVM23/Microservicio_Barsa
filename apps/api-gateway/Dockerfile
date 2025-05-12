@@ -45,7 +45,9 @@ COPY ./libs ./libs
 
 COPY --from=development /usr/src/app/dist ./dist
 
-CMD ["node", "dist/main"]
+#CMD ["node", "dist/main"]
+CMD ["node", "dist/apps/api-gateway/main"]
+
 
 # Si es para producción, puedes modificar la línea CMD por:
 # CMD ["node", "dist/apps/api-gateway/main"]
