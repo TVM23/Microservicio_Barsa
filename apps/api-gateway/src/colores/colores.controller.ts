@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { ColoresService } from './colores.service';
 import { ColoresPaginationDto } from 'libs/contracts/colores/colores-paginarion.dto';
-import { CreateColorDto } from '@app/contracts';
+import { CreateColorDto, Role, Roles } from '@app/contracts';
 
 @Controller('colores')
 export class ColoresController {
@@ -18,6 +18,7 @@ export class ColoresController {
     }
 
     @Post('nuevo-color')
+    @Roles(Role.ADMIN, Role.INVENTARIOS) 
     async crearNuevoColor(@Body() createColor: CreateColorDto ){
         return await this.coloresService.crearNuevoColor(createColor)
     }

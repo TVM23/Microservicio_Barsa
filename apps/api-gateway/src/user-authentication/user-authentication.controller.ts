@@ -21,8 +21,8 @@ export class UserAuthenticationController {
     }
 
     //Agregar usuario
-    @Public()
-    @Post()
+    @Post('registro')
+    @Roles(Role.ADMIN) //Roles("Administrador")
     @HttpCode(HttpStatus.CREATED)
     async createUser(@Body() dtoCreateUser: CreateUserRequest ){
         return await this.userAuthService.createUser(dtoCreateUser);
@@ -74,6 +74,7 @@ export class UserAuthenticationController {
 
     //Consultar detalles de usuario seleccionado
     @Get('obtener-info-usuario/:_id')
+    @Roles(Role.ADMIN)  //Roles("Administrador")
     @HttpCode(HttpStatus.OK)
     async getInfoUserAdmin(@Param('_id') userId: string){
         return await this.userAuthService.getInfoUser(userId)
@@ -81,6 +82,7 @@ export class UserAuthenticationController {
 
     //Editar datos de usuario seleccionado
     @Patch(':_id')
+    @Roles(Role.ADMIN) //Roles("Administrador")
     async updateUser(
         @Param('_id') _id: string, 
         @Body() dtoUpdateUser: UpdateUserDto
@@ -90,6 +92,7 @@ export class UserAuthenticationController {
 
     //Desactivar usuario
     @Put('desactivar-usuario/:_id')
+    @Roles(Role.ADMIN) //Roles("Administrador")
     @HttpCode(HttpStatus.OK)
     async deactivateUser(@Param('_id') _id: string){
         return await this.userAuthService.deactivateUser(_id)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.access.ProyectoAccess1ApplicationTests" time="4.276" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.access.ProyectoAccess1ApplicationTests" time="11.458" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="MX"/>
     <property name="sun.boot.library.path" value="C:\Users\Tadeo\Documents\SpringToolSuite\sts-4.28.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\Tadeo\AppData\Local\Temp\surefire8604915678872674419\surefirebooter-20250507124039486_3.jar C:\Users\Tadeo\AppData\Local\Temp\surefire8604915678872674419 2025-05-07T12-40-39_372-jvmRun1 surefire-20250507124039486_1tmp surefire_0-20250507124039486_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Tadeo\AppData\Local\Temp\surefire793095574804715281\surefirebooter-20250515162830324_3.jar C:\Users\Tadeo\AppData\Local\Temp\surefire793095574804715281 2025-05-15T16-28-30_027-jvmRun1 surefire-20250515162830324_1tmp surefire_0-20250515162830324_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Proyecto Residencias\pruebaMonorepo2\Microservicio_MuebleriaBarsa\apps\access-api\test-classes;D:\Proyecto Residencias\pruebaMonorepo2\Microservicio_MuebleriaBarsa\apps\access-api\classes;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.4.3\spring-boot-starter-web-3.4.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-starter\3.4.3\spring-boot-starter-3.4.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot\3.4.3\spring-boot-3.4.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.4.3\spring-boot-autoconfigure-3.4.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.4.3\spring-boot-starter-logging-3.4.3.jar;C:\Users\Tadeo\.m2\repository\ch\qos\logback\logback-classic\1.5.16\logback-classic-1.5.16.jar;C:\Users\Tadeo\.m2\repository\ch\qos\logback\logback-core\1.5.16\logback-core-1.5.16.jar;C:\Users\Tadeo\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\Tadeo\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\Tadeo\.m2\repository\org\slf4j\jul-to-slf4j\2.0.16\jul-to-slf4j-2.0.16.jar;C:\Users\Tadeo\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Tadeo\.m2\repository\org\yaml\snakeyaml\2.3\snakeyaml-2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.4.3\spring-boot-starter-json-3.4.3.jar;C:\Users\Tadeo\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.18.2\jackson-datatype-jdk8-2.18.2.jar;C:\Users\Tadeo\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.2\jackson-datatype-jsr310-2.18.2.jar;C:\Users\Tadeo\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.18.2\jackson-module-parameter-names-2.18.2.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.4.3\spring-boot-starter-tomcat-3.4.3.jar;C:\Users\Tadeo\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.36\tomcat-embed-core-10.1.36.jar;C:\Users\Tadeo\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.36\tomcat-embed-el-10.1.36.jar;C:\Users\Tadeo\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.36\tomcat-embed-websocket-10.1.36.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-web\6.2.3\spring-web-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-beans\6.2.3\spring-beans-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-webmvc\6.2.3\spring-webmvc-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-aop\6.2.3\spring-aop-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-expression\6.2.3\spring-expression-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.4.3\spring-boot-starter-jdbc-3.4.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-jdbc\6.2.3\spring-jdbc-6.2.3.jar;C:\Users\Tadeo\.m2\repository\io\github\spannm\ucanaccess\5.1.0\ucanaccess-5.1.0.jar;C:\Users\Tadeo\.m2\repository\org\hsqldb\hsqldb\2.7.1\hsqldb-2.7.1-debug.jar;C:\Users\Tadeo\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\Tadeo\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.4.3\spring-boot-starter-test-3.4.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-test\3.4.3\spring-boot-test-3.4.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.4.3\spring-boot-test-autoconfigure-3.4.3.jar;C:\Users\Tadeo\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Tadeo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\Tadeo\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\Tadeo\.m2\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;C:\Users\Tadeo\.m2\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;C:\Users\Tadeo\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\Tadeo\.m2\repository\org\assertj\assertj-core\3.26.3\assertj-core-3.26.3.jar;C:\Users\Tadeo\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\Tadeo\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\Tadeo\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Tadeo\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;C:\Users\Tadeo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\Tadeo\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Tadeo\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\Tadeo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Tadeo\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;C:\Users\Tadeo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;C:\Users\Tadeo\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;C:\Users\Tadeo\.m2\repository\org\mockito\mockito-core\5.14.2\mockito-core-5.14.2.jar;C:\Users\Tadeo\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar;C:\Users\Tadeo\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Tadeo\.m2\repository\org\mockito\mockito-junit-jupiter\5.14.2\mockito-junit-jupiter-5.14.2.jar;C:\Users\Tadeo\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\Tadeo\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-core\6.2.3\spring-core-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-jcl\6.2.3\spring-jcl-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-test\6.2.3\spring-test-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\xmlunit\xmlunit-core\2.10.0\xmlunit-core-2.10.0.jar;C:\Users\Tadeo\.m2\repository\com\healthmarketscience\jackcess\jackcess\3.0.1\jackcess-3.0.1.jar;C:\Users\Tadeo\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\Tadeo\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Tadeo\.m2\repository\org\hsqldb\hsqldb\2.7.3\hsqldb-2.7.3.jar;C:\Users\Tadeo\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\Tadeo\.m2\repository\net\sf\jt400\jt400\6.3\jt400-6.3.jar;C:\Users\Tadeo\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar;C:\Users\Tadeo\.m2\repository\org\springframework\kafka\spring-kafka\3.3.3\spring-kafka-3.3.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-context\6.2.3\spring-context-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-messaging\6.2.3\spring-messaging-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\spring-tx\6.2.3\spring-tx-6.2.3.jar;C:\Users\Tadeo\.m2\repository\org\springframework\retry\spring-retry\2.0.11\spring-retry-2.0.11.jar;C:\Users\Tadeo\.m2\repository\org\apache\kafka\kafka-clients\3.8.1\kafka-clients-3.8.1.jar;C:\Users\Tadeo\.m2\repository\com\github\luben\zstd-jni\1.5.6-4\zstd-jni-1.5.6-4.jar;C:\Users\Tadeo\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\Tadeo\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\Tadeo\.m2\repository\io\micrometer\micrometer-observation\1.14.4\micrometer-observation-1.14.4.jar;C:\Users\Tadeo\.m2\repository\io\micrometer\micrometer-commons\1.14.4\micrometer-commons-1.14.4.jar;C:\Users\Tadeo\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.2.Final\hibernate-validator-8.0.2.Final.jar;C:\Users\Tadeo\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Tadeo\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\Tadeo\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\Tadeo\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\Tadeo\.m2\repository\com\cloudinary\cloudinary-http5\2.0.0\cloudinary-http5-2.0.0.jar;C:\Users\Tadeo\.m2\repository\com\cloudinary\cloudinary-core\2.0.0\cloudinary-core-2.0.0.jar;C:\Users\Tadeo\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.4.2\httpclient5-5.4.2.jar;C:\Users\Tadeo\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.3.3\httpcore5-h2-5.3.3.jar;C:\Users\Tadeo\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.3.3\httpcore5-5.3.3.jar;C:\Users\Tadeo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.2\jackson-databind-2.18.2.jar;C:\Users\Tadeo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.2\jackson-annotations-2.18.2.jar;C:\Users\Tadeo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.2\jackson-core-2.18.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -35,7 +35,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\Tadeo\AppData\Local\Temp\surefire8604915678872674419\surefirebooter-20250507124039486_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Tadeo\AppData\Local\Temp\surefire793095574804715281\surefirebooter-20250515162830324_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.6+7-LTS"/>
@@ -54,7 +54,7 @@
     <property name="user.dir" value="C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="6420"/>
+    <property name="PID" value="14488"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="hsqldb.method_class_names" value="net.ucanaccess.converters.*"/>
@@ -68,9 +68,9 @@
     <property name="java.class.version" value="65.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[proyecto-access-1] "/>
   </properties>
-  <testcase name="contextLoads" classname="com.access.ProyectoAccess1ApplicationTests" time="0.691">
-    <system-out><![CDATA[12:40:40.349 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.access.ProyectoAccess1ApplicationTests]: ProyectoAccess1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-12:40:40.444 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.access.ProyectoAccess1Application for test class com.access.ProyectoAccess1ApplicationTests
+  <testcase name="contextLoads" classname="com.access.ProyectoAccess1ApplicationTests" time="1.777">
+    <system-out><![CDATA[16:28:31.922 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.access.ProyectoAccess1ApplicationTests]: ProyectoAccess1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:28:32.211 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.access.ProyectoAccess1Application for test class com.access.ProyectoAccess1ApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -81,11 +81,11 @@
 
  :: Spring Boot ::                (v3.4.3)
 
-2025-05-07T12:40:40.820-06:00  INFO 6420 --- [proyecto-access-1] [           main] c.a.ProyectoAccess1ApplicationTests      : Starting ProyectoAccess1ApplicationTests using Java 21.0.6 with PID 6420 (started by Tadeo in C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1)
-2025-05-07T12:40:40.823-06:00  INFO 6420 --- [proyecto-access-1] [           main] c.a.ProyectoAccess1ApplicationTests      : No active profile set, falling back to 1 default profile: "default"
-2025-05-07T12:40:41.701-06:00  WARN 6420 --- [proyecto-access-1] [           main] com.zaxxer.hikari.HikariConfig           : HikariCP - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
-2025-05-07T12:40:41.701-06:00  INFO 6420 --- [proyecto-access-1] [           main] com.zaxxer.hikari.HikariDataSource       : HikariCP - Starting...
-2025-05-07T12:40:43.426-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:33.363-06:00  INFO 14488 --- [proyecto-access-1] [           main] c.a.ProyectoAccess1ApplicationTests      : Starting ProyectoAccess1ApplicationTests using Java 21.0.6 with PID 14488 (started by Tadeo in C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1)
+2025-05-15T16:28:33.366-06:00  INFO 14488 --- [proyecto-access-1] [           main] c.a.ProyectoAccess1ApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T16:28:36.783-06:00  WARN 14488 --- [proyecto-access-1] [           main] com.zaxxer.hikari.HikariConfig           : HikariCP - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-05-15T16:28:36.787-06:00  INFO 14488 --- [proyecto-access-1] [           main] com.zaxxer.hikari.HikariDataSource       : HikariCP - Starting...
+2025-05-15T16:28:40.067-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -184,12 +184,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.475-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.637-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.638-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.638-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243636
-2025-05-07T12:40:43.641-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Subscribed to topic(s): get-inventario-entradas
-2025-05-07T12:40:43.652-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.193-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.723-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.724-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.724-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120719
+2025-05-15T16:28:40.735-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Subscribed to topic(s): get-inventario-entradas
+2025-05-15T16:28:40.763-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -288,12 +288,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.652-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.660-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.661-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.661-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243660
-2025-05-07T12:40:43.661-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Subscribed to topic(s): get-materia-codigo
-2025-05-07T12:40:43.662-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.764-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.796-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.796-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.797-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120796
+2025-05-15T16:28:40.799-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Subscribed to topic(s): get-materia-listado-filtro
+2025-05-15T16:28:40.801-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -392,12 +392,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.663-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.671-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.672-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.673-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243671
-2025-05-07T12:40:43.674-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Subscribed to topic(s): delete-materia-borrar
-2025-05-07T12:40:43.675-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.804-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.831-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.832-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.832-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120831
+2025-05-15T16:28:40.833-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Subscribed to topic(s): get-materia-codigo
+2025-05-15T16:28:40.837-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -496,12 +496,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.677-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.682-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.682-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.682-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243682
-2025-05-07T12:40:43.683-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Subscribed to topic(s): put-materia-update
-2025-05-07T12:40:43.684-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.839-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.861-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.862-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.862-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120861
+2025-05-15T16:28:40.863-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Subscribed to topic(s): delete-materia-borrar
+2025-05-15T16:28:40.867-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -600,12 +600,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.684-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.690-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.690-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.690-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243690
-2025-05-07T12:40:43.690-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Subscribed to topic(s): get-colores-listado
-2025-05-07T12:40:43.692-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.869-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.887-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.888-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.888-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120887
+2025-05-15T16:28:40.891-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Subscribed to topic(s): post-color-crear
+2025-05-15T16:28:40.896-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -704,12 +704,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.692-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.696-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.696-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.696-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243696
-2025-05-07T12:40:43.696-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Subscribed to topic(s): post-salida-crear
-2025-05-07T12:40:43.699-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.897-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.912-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.914-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.914-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120912
+2025-05-15T16:28:40.915-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Subscribed to topic(s): get-inventario-salidas
+2025-05-15T16:28:40.919-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -808,12 +808,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.699-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.704-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.704-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.704-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243704
-2025-05-07T12:40:43.705-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Subscribed to topic(s): get-inventario-salidas
-2025-05-07T12:40:43.706-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.920-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.933-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.934-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.934-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120933
+2025-05-15T16:28:40.935-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Subscribed to topic(s): post-entrada-crear
+2025-05-15T16:28:40.938-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -912,12 +912,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.707-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.711-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.711-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.711-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243711
-2025-05-07T12:40:43.711-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Subscribed to topic(s): post-entrada-crear
-2025-05-07T12:40:43.713-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.940-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.953-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.954-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.955-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120953
+2025-05-15T16:28:40.957-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Subscribed to topic(s): post-salida-crear
+2025-05-15T16:28:40.961-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1016,12 +1016,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.713-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.717-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.717-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.717-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243717
-2025-05-07T12:40:43.717-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Subscribed to topic(s): get-materia-listado-filtro
-2025-05-07T12:40:43.719-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.962-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.973-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.975-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.975-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120973
+2025-05-15T16:28:40.975-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Subscribed to topic(s): get-prodXcolor-listado
+2025-05-15T16:28:40.979-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1120,12 +1120,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.719-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.723-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.723-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.723-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243723
-2025-05-07T12:40:43.724-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Subscribed to topic(s): get-papeleta-folio
-2025-05-07T12:40:43.725-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:40.980-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:40.993-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:40.994-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:40.994-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348120993
+2025-05-15T16:28:40.995-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Subscribed to topic(s): post-materia-crear
+2025-05-15T16:28:40.999-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1224,12 +1224,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.729-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.731-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.731-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.731-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243731
-2025-05-07T12:40:43.732-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Subscribed to topic(s): post-color-crear
-2025-05-07T12:40:43.734-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:41.000-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:41.013-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:41.013-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:41.014-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348121013
+2025-05-15T16:28:41.014-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Subscribed to topic(s): get-papeleta-listado
+2025-05-15T16:28:41.017-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1328,12 +1328,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.734-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.737-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.737-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.737-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243737
-2025-05-07T12:40:43.737-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Subscribed to topic(s): get-colorId-codigo
-2025-05-07T12:40:43.739-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:41.019-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:41.032-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:41.032-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:41.033-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348121032
+2025-05-15T16:28:41.033-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Subscribed to topic(s): get-colores-listado
+2025-05-15T16:28:41.037-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1432,12 +1432,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.739-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.742-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.742-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.742-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243742
-2025-05-07T12:40:43.743-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Subscribed to topic(s): post-materia-crear
-2025-05-07T12:40:43.744-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:41.038-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:41.049-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:41.049-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:41.049-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348121049
+2025-05-15T16:28:41.050-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Subscribed to topic(s): get-colorId-codigo
+2025-05-15T16:28:41.053-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1536,12 +1536,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.745-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.747-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.748-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.748-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243747
-2025-05-07T12:40:43.748-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Subscribed to topic(s): get-producto-codigo
-2025-05-07T12:40:43.749-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:41.055-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:41.065-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:41.066-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:41.066-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348121065
+2025-05-15T16:28:41.067-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Subscribed to topic(s): put-materia-update
+2025-05-15T16:28:41.079-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1640,12 +1640,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.750-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.752-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.752-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.752-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243752
-2025-05-07T12:40:43.753-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Subscribed to topic(s): get-prodXcolor-listado
-2025-05-07T12:40:43.754-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:41.080-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:41.106-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:41.106-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:41.106-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348121106
+2025-05-15T16:28:41.108-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Subscribed to topic(s): get-producto-listado
+2025-05-15T16:28:41.111-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1744,12 +1744,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.754-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.762-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.762-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.762-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243762
-2025-05-07T12:40:43.763-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Subscribed to topic(s): get-papeleta-listado
-2025-05-07T12:40:43.765-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2025-05-15T16:28:41.112-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:41.122-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:41.122-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:41.124-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348121121
+2025-05-15T16:28:41.126-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Subscribed to topic(s): get-producto-codigo
+2025-05-15T16:28:41.129-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -1848,46 +1848,386 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-07T12:40:43.765-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2025-05-07T12:40:43.770-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
-2025-05-07T12:40:43.770-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
-2025-05-07T12:40:43.770-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1746643243770
-2025-05-07T12:40:43.770-06:00  INFO 6420 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Subscribed to topic(s): get-producto-listado
-2025-05-07T12:40:43.777-06:00  INFO 6420 --- [proyecto-access-1] [           main] c.a.ProyectoAccess1ApplicationTests      : Started ProyectoAccess1ApplicationTests in 3.208 seconds (process running for 4.102)
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.125-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Cluster ID: nPuCjzptRqC9vvaGvMMIrA
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [tainer#10-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [tainer#14-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.126-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#3-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.126-06:00  INFO 6420 --- [proyecto-access-1] [tainer#12-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.126-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#9-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.126-06:00  INFO 6420 --- [proyecto-access-1] [tainer#13-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.126-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#4-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.126-06:00  INFO 6420 --- [proyecto-access-1] [tainer#15-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [tainer#16-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#7-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#8-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#6-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#5-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
-2025-05-07T12:40:44.127-06:00  INFO 6420 --- [proyecto-access-1] [tainer#11-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-05-15T16:28:41.130-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:41.142-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:41.143-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:41.143-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348121142
+2025-05-15T16:28:41.144-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Subscribed to topic(s): get-papeleta-folio
+2025-05-15T16:28:41.148-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-materia-service-group-18
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = materia-service-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-05-15T16:28:41.150-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-05-15T16:28:41.162-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-05-15T16:28:41.164-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-05-15T16:28:41.164-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1747348121162
+2025-05-15T16:28:41.169-06:00  INFO 14488 --- [proyecto-access-1] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Subscribed to topic(s): post-iniciar-tiempo
+2025-05-15T16:28:41.201-06:00  INFO 14488 --- [proyecto-access-1] [           main] c.a.ProyectoAccess1ApplicationTests      : Started ProyectoAccess1ApplicationTests in 8.62 seconds (process running for 10.556)
+2025-05-15T16:28:41.587-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.587-06:00  INFO 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.588-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.587-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.587-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.587-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.588-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.590-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.590-06:00  INFO 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.590-06:00  INFO 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.590-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.593-06:00  INFO 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.594-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.594-06:00  INFO 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.594-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.594-06:00  INFO 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.594-06:00  INFO 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.594-06:00  INFO 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.597-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.598-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.598-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.596-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.599-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.597-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.598-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.598-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.598-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.701-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.701-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.702-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.702-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.702-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.702-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.704-06:00  INFO 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.704-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.704-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.704-06:00  INFO 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.704-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.705-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.705-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.705-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.705-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.706-06:00  INFO 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.707-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.707-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.709-06:00  INFO 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.709-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.709-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.712-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.713-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.713-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.714-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.714-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.714-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.716-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.716-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.717-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.719-06:00  INFO 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.719-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.719-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.719-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.720-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.720-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.720-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.720-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.720-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.729-06:00  INFO 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.729-06:00  INFO 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.729-06:00  INFO 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.729-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.730-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.730-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.730-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.730-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.730-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.730-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.730-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.730-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.733-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.733-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.734-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.820-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.820-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.820-06:00  INFO 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.821-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.820-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.821-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.821-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.821-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.821-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.821-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.821-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.821-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.823-06:00  INFO 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.823-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.823-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.824-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.824-06:00  INFO 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.824-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.824-06:00  INFO 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.824-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.824-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.824-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.824-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.824-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.835-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.835-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.836-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.836-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.837-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.837-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.837-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.837-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.837-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.838-06:00  INFO 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.838-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.838-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.839-06:00  INFO 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.839-06:00  INFO 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.839-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.840-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.840-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.840-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.852-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.852-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.853-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.867-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.867-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.867-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.884-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.884-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.885-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:41.898-06:00  INFO 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:41.898-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:41.898-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.009-06:00  INFO 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.009-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.009-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.009-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.009-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.009-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.037-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.037-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.037-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.052-06:00  INFO 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.052-06:00  INFO 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.052-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.053-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.053-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.053-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.053-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.053-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.053-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.068-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.068-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.069-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.069-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.069-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.069-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.084-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.085-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.085-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.085-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.085-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.085-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.085-06:00  INFO 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.085-06:00  INFO 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.086-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.086-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.086-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.086-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.116-06:00  INFO 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.116-06:00  INFO 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.117-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.117-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.117-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.117-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.129-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.129-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.130-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.130-06:00  INFO 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.130-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.130-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.131-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.131-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.131-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.132-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.132-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.132-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.377-06:00  INFO 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.378-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.378-06:00  WARN 14488 --- [proyecto-access-1] [tainer#13-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-17, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.424-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.424-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.424-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-12, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.439-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.439-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.440-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.440-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.440-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#9-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-4, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.440-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#3-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-6, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.454-06:00  INFO 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.454-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.454-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.454-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#2-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-5, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.454-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.454-06:00  WARN 14488 --- [proyecto-access-1] [tainer#15-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-15, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.484-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.484-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.484-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#8-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-3, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.515-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.515-06:00  INFO 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.515-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.516-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.516-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#7-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-2, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.516-06:00  WARN 14488 --- [proyecto-access-1] [tainer#11-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-10, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.532-06:00  INFO 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.532-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.532-06:00  WARN 14488 --- [proyecto-access-1] [tainer#10-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-14, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.547-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.547-06:00  INFO 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.547-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.547-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-13, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.547-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.547-06:00  INFO 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.547-06:00  WARN 14488 --- [proyecto-access-1] [tainer#17-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-9, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.548-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.548-06:00  WARN 14488 --- [proyecto-access-1] [tainer#14-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-18, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.562-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.562-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.562-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.562-06:00  INFO 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.562-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.562-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#5-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-8, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.562-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.563-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#4-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-7, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.563-06:00  WARN 14488 --- [proyecto-access-1] [ntainer#6-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-1, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.609-06:00  INFO 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.609-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.610-06:00  WARN 14488 --- [proyecto-access-1] [tainer#12-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-11, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-05-15T16:28:42.624-06:00  INFO 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Node -1 disconnected.
+2025-05-15T16:28:42.625-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-05-15T16:28:42.625-06:00  WARN 14488 --- [proyecto-access-1] [tainer#16-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-materia-service-group-16, groupId=materia-service-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
 ]]></system-out>
     <system-err><![CDATA[WARNING: Unknown driver property functionsHsqldb with value false
 Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3

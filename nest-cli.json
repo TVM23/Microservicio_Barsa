@@ -37,15 +37,6 @@
         "tsConfigPath": "apps/materia/tsconfig.app.json"
       }
     },
-    "muebles": {
-      "type": "application",
-      "root": "apps/muebles",
-      "entryFile": "main",
-      "sourceRoot": "apps/muebles/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/muebles/tsconfig.app.json"
-      }
-    },
     "papeleta": {
       "type": "application",
       "root": "apps/papeleta",

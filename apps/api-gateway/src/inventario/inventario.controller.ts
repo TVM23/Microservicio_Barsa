@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { InventarioEntradaDTO, InventarioEntradasPaginationDto, InventarioSalidaDTO, InventarioSalidasPaginationDto } from '@app/contracts';
+import { InventarioEntradaDTO, InventarioEntradasPaginationDto, InventarioSalidaDTO, InventarioSalidasPaginationDto, Role, Roles } from '@app/contracts';
 import { InventarioService } from './inventario.service';
 import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
 
@@ -18,6 +18,7 @@ export class InventarioController {
     }
 
     @Post('crear-salida-nueva')
+    @Roles(Role.ADMIN, Role.INVENTARIOS) 
     async createSalidaInventario(
         @Body() crearFichaDto: InventarioSalidaDTO,
         @GetCurrentUserName() createdBy: string,
@@ -26,6 +27,7 @@ export class InventarioController {
     }
 
     @Post('crear-entrada-nueva')
+    @Roles(Role.ADMIN, Role.INVENTARIOS) 
     async createEntradaInventario(
         @Body() crearFichaDto: InventarioEntradaDTO,
         @GetCurrentUserName() createdBy: string,

@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ApiGatewayController } from './api-gateway.controller';
 import { ApiGatewayService } from './api-gateway.service';
-import { MueblesModule } from './muebles/muebles.module';
 import { UserAuthenticationModule } from './user-authentication/user-authentication.module';
 import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
@@ -13,9 +12,10 @@ import { ColoresModule } from './colores/colores.module';
 import { ProductoXColorModule } from './producto_x_color/producto_x_color.module';
 import { RolesGuard } from './user-authentication/common/guards/roles.guard';
 import { InventarioModule } from './inventario/inventario.module';
+import { ProduccionModule } from './produccion/produccion.module';
 
 @Module({
-  imports: [MueblesModule, UserAuthenticationModule,
+  imports: [UserAuthenticationModule,
     ConfigModule.forRoot({ isGlobal: true }),
     ProductoModule,
     PapeletaModule,
@@ -23,6 +23,7 @@ import { InventarioModule } from './inventario/inventario.module';
     ColoresModule,
     ProductoXColorModule,
     InventarioModule,
+    ProduccionModule,
   ],
   controllers: [ApiGatewayController],
   providers: [ 

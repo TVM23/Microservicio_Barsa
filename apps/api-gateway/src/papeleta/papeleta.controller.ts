@@ -20,7 +20,6 @@ export class PapeletaController {
   }
 
   @Post()
-  @Roles(Role.ADMIN, Role.INVENTARIOS)
   create(@Body() createPapeletaDto: CreatePapeletaDto) {
     return this.papeletaService.create(createPapeletaDto);
   }

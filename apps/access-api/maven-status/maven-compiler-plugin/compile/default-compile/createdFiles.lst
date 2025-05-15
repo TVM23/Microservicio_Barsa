@@ -1,5 +1,6 @@
 com\access\listener\InventarioListener.class
 com\access\service\InventarioService.class
+com\access\model\Proceso.class
 com\access\dto\ImagenDTO.class
 com\access\model\InventarioSalidaDetalle.class
 com\access\dto\inventario\SalidaPaginationDTO.class
@@ -15,11 +16,14 @@ com\access\service\ProveedorService.class
 com\access\dto\inventario\InventarioItemDTO.class
 com\access\listener\ColoresListener.class
 com\access\controller\MateriaController.class
+com\access\dto\produccion\IniciarTiempoDTO.class
 com\access\listener\Prod_X_ColorListener.class
+com\access\service\ProduccionService.class
 com\access\dto\papeleta\DetallePapeletaDTO.class
 com\access\dto\materia\CreateMateriaDTO.class
 com\access\config\DataBaseWarmUp.class
 com\access\service\ColoresService.class
+com\access\model\Tiempo.class
 com\access\config\JdbcConfig.class
 com\access\dto\inventario\InventarioEntradaDTO.class
 com\access\dto\materia\MateriaPaginationDTO.class
@@ -29,6 +33,7 @@ com\access\model\Papeleta.class
 com\access\controller\PapeletaController.class
 com\access\model\InventarioEntradaDetalle.class
 com\access\config\KafkaProducerConfig.class
+com\access\listener\ProduccionListener.class
 com\access\service\MateriaService.class
 com\access\listener\MateriaListener.class
 com\access\listener\ProductoListener.class
