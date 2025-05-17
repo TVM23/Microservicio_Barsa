@@ -1,6 +1,6 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, Put } from '@nestjs/common';
 import { ProduccionService } from './produccion.service';
-import { IniciarTiempoDto } from '@app/contracts';
+import { FinalizarTiempoDto, IniciarTiempoDto, PausarTiempoDto, ReiniciarTiempoDto } from '@app/contracts';
 
 @Controller('produccion')
 export class ProduccionController {
@@ -8,6 +8,22 @@ export class ProduccionController {
 
     @Post('iniciar-tiempo')
     async iniciarTiempo(@Body() iniciarTiempoDto: IniciarTiempoDto) {
-        await this.produccionService.iniciarTiempo(iniciarTiempoDto);
+        return await this.produccionService.iniciarTiempo(iniciarTiempoDto);
     }
+
+    @Put('pausar-tiempo')
+    async pausarTiempo(@Body() pausarTiempoDto: PausarTiempoDto) {
+        return await this.produccionService.pausarTiempo(pausarTiempoDto);
+    }
+
+    @Put('reiniciar-tiempo')
+    async reiniciarTiempo(@Body() reiniciarTiempoDto: ReiniciarTiempoDto) {
+        return await this.produccionService.reiniciarTiempo(reiniciarTiempoDto);
+    }
+
+    @Put('finalizar-tiempo')
+    async finalizarTiempo(@Body() finalizarTiempoDto: FinalizarTiempoDto){
+        return await this.produccionService.finalizarTiempo(finalizarTiempoDto);
+    }
+
 }

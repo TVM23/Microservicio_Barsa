@@ -27,6 +27,9 @@ export * from '../papeleta/papeleta-pagination.dto'
 export * from '../papeleta/papeleta.patterns'
 
 export * from '../produccion/iniciar-tiempo.dto'
+export * from '../produccion/pausar-tiempo.dto'
+export * from '../produccion/reiniciar-tiempo.dto'
+export * from '../produccion/finalizar-tiempo.dto'
 
 export * from '../inventario/entradas-pagination.dto'
 export * from '../inventario/salidas-pagination.dto'

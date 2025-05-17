@@ -19,7 +19,10 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\PaginationResult.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\papeleta\DetallePapeletaDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\papeleta\PapeletaPaginationDTO.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\produccion\FinalizarTiempoDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\produccion\IniciarTiempoDTO.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\produccion\PausarTiempoDTO.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\produccion\ReiniciarTiempoDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\producto\ProductoPaginationDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\producto\ProductoxColorPaginationDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\BaseKafkaListener.java

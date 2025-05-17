@@ -1,5 +1,6 @@
 com\access\listener\InventarioListener.class
 com\access\service\InventarioService.class
+com\access\dto\produccion\FinalizarTiempoDTO.class
 com\access\model\Proceso.class
 com\access\dto\ImagenDTO.class
 com\access\model\InventarioSalidaDetalle.class
@@ -34,9 +35,11 @@ com\access\controller\PapeletaController.class
 com\access\model\InventarioEntradaDetalle.class
 com\access\config\KafkaProducerConfig.class
 com\access\listener\ProduccionListener.class
+com\access\dto\produccion\ReiniciarTiempoDTO.class
 com\access\service\MateriaService.class
 com\access\listener\MateriaListener.class
 com\access\listener\ProductoListener.class
+com\access\dto\produccion\PausarTiempoDTO.class
 com\access\listener\BaseKafkaListener.class
 com\access\listener\PapeletaListener.class
 com\access\model\Producto_X_Color.class
