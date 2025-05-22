@@ -26,6 +26,8 @@ export * from '../papeleta/papeleta.patterns'
 export * from '../papeleta/papeleta-pagination.dto'
 export * from '../papeleta/papeleta.patterns'
 
+export * from '../produccion/detencion.dto'
+export * from '../produccion/desactivar-detencion.dto'
 export * from '../produccion/iniciar-tiempo.dto'
 export * from '../produccion/pausar-tiempo.dto'
 export * from '../produccion/reiniciar-tiempo.dto'
@@ -36,6 +38,9 @@ export * from '../inventario/salidas-pagination.dto'
 export * from '../inventario/inventario-item.dto'
 export * from '../inventario/inventario-salida.dto'
 export * from '../inventario/inventario-entrada.dto'
+export * from '../inventario/detalle-movimiento.materia.dto'
+export * from '../inventario/movimiento-materia.dto'
+
 
 export * from '../materia/create-materia.dto'
 export * from '../materia/update-materia.dto'

@@ -2,7 +2,7 @@ import { Transform, Type } from "class-transformer";
 import { IsInt, IsNotEmpty, IsNumber, IsString, MaxLength, Min } from "class-validator";
 
 export class TiempoDto {
-    @IsInt({ message: 'El número de ID debe ser un entero válido.' })
+    @IsInt({ message: 'El numero del folio debe ser un entero válido.' })
     @IsNumber({}, { message: 'El folio debe ser un número válido.' })
     @Type(() => Number)
     @Min(1, { message: 'El folio debe ser mayor a 0.' })

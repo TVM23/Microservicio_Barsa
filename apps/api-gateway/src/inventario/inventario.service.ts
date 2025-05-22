@@ -2,6 +2,7 @@ import { InventarioEntradasPaginationDto, InventarioSalidasPaginationDto, KafkaP
 import { Injectable } from '@nestjs/common';
 import { InventarioSalidaCompDTO } from './dto/inventario-salida.dto';
 import { InventarioEntradaCompDTO } from './dto/inventario-entrada.dto';
+import { MovimientoMateriaCompDto } from './dto/movimiento-materia.dto';
 
 @Injectable()
 export class InventarioService {
@@ -23,5 +24,8 @@ export class InventarioService {
         return this.kafkaService.sendRequest('post-entrada-crear', crearFichaDto)
     }
     
+    createMovimientoMateria(movimientoMateriaDto: MovimientoMateriaCompDto){
+        return this.kafkaService.sendRequest('post-movimiento-materia', movimientoMateriaDto)
+    }
 
 }

@@ -1,6 +1,7 @@
-import { Body, Controller, Post, Put } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ProduccionService } from './produccion.service';
-import { FinalizarTiempoDto, IniciarTiempoDto, PausarTiempoDto, ReiniciarTiempoDto } from '@app/contracts';
+import { DesactivarDetencionDto, DetencionDto, FinalizarTiempoDto, IniciarTiempoDto, PausarTiempoDto, ReiniciarTiempoDto } from '@app/contracts';
+import { TiempoDto } from 'libs/contracts/produccion/tiempo.dto';
 
 @Controller('produccion')
 export class ProduccionController {
@@ -24,6 +25,26 @@ export class ProduccionController {
     @Put('finalizar-tiempo')
     async finalizarTiempo(@Body() finalizarTiempoDto: FinalizarTiempoDto){
         return await this.produccionService.finalizarTiempo(finalizarTiempoDto);
+    }
+
+    @Post('detencion-tiempo')
+    async detenerTiempo(@Body() detenerTiempoDto: DetencionDto){
+        return await this.produccionService.detenerTiempo(detenerTiempoDto);
+    }
+
+    @Put('desactivar-detencion-tiempo')
+    async desactivarDetencion(@Body() desactivarDetencionDto: DesactivarDetencionDto){
+        return await this.produccionService.desactivarDetencion(desactivarDetencionDto);
+    }
+
+    @Get('obtener-tiempo')
+    async obtenerTiempo(@Query() tiempoDto: TiempoDto){
+        return await this.produccionService.obtenerTiempo(tiempoDto);
+    }
+
+    @Get('obtener-detencion')
+    async obtenerDetencion(@Query() tiempoDto: TiempoDto){
+        return await this.produccionService.obtenerDetencion(tiempoDto);
     }
 
 }

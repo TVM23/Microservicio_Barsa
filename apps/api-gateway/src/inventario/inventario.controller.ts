@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { InventarioEntradaDTO, InventarioEntradasPaginationDto, InventarioSalidaDTO, InventarioSalidasPaginationDto, Role, Roles } from '@app/contracts';
+import { InventarioEntradaDTO, InventarioEntradasPaginationDto, InventarioSalidaDTO, InventarioSalidasPaginationDto, MovimientoMateriaDto, Role, Roles } from '@app/contracts';
 import { InventarioService } from './inventario.service';
 import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
 
@@ -33,5 +33,14 @@ export class InventarioController {
         @GetCurrentUserName() createdBy: string,
     ){
         return await this.inventarioService.createEntradaInventario({createdBy, ...crearFichaDto});
+    }
+
+    @Post('materia/movimiento')
+    @Roles(Role.INVENTARIOS)
+    async createMovimientoMateria(
+        @Body() movimientoMateriaDto: MovimientoMateriaDto,
+        @GetCurrentUserName() usuario: string,
+    ){
+        return await this.inventarioService.createMovimientoMateria({usuario, ...movimientoMateriaDto});
     }
 }

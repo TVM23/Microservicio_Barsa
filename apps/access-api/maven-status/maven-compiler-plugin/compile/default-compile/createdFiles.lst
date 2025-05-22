@@ -3,6 +3,7 @@ com\access\service\InventarioService.class
 com\access\dto\produccion\FinalizarTiempoDTO.class
 com\access\model\Proceso.class
 com\access\dto\ImagenDTO.class
+com\access\model\Detencion.class
 com\access\model\InventarioSalidaDetalle.class
 com\access\dto\inventario\SalidaPaginationDTO.class
 com\access\model\DetallePapeleta.class
@@ -12,8 +13,10 @@ com\access\dto\producto\ProductoxColorPaginationDTO.class
 com\access\model\ImagenMateria.class
 com\access\model\Producto.class
 com\access\service\ProductoService.class
+com\access\model\DetalleMovimientoMateria.class
 com\access\config\KafkaConsumerConfig.class
 com\access\service\ProveedorService.class
+com\access\model\MovimientoMateria.class
 com\access\dto\inventario\InventarioItemDTO.class
 com\access\listener\ColoresListener.class
 com\access\controller\MateriaController.class
@@ -24,11 +27,15 @@ com\access\dto\papeleta\DetallePapeletaDTO.class
 com\access\dto\materia\CreateMateriaDTO.class
 com\access\config\DataBaseWarmUp.class
 com\access\service\ColoresService.class
+com\access\model\MovimientoInventario.class
 com\access\model\Tiempo.class
 com\access\config\JdbcConfig.class
 com\access\dto\inventario\InventarioEntradaDTO.class
+com\access\dto\produccion\DetencionDTO.class
 com\access\dto\materia\MateriaPaginationDTO.class
 com\access\dto\PaginationResult.class
+com\access\dto\produccion\DesactivarDetencionDTO.class
+com\access\dto\produccion\TiempoDTO.class
 com\access\dto\inventario\InventarioSalidaDTO.class
 com\access\model\Papeleta.class
 com\access\controller\PapeletaController.class
@@ -47,6 +54,7 @@ com\access\model\Proveedor.class
 com\access\dto\colores\CreateColorDTO.class
 com\access\dto\inventario\EntradasPaginationDTO.class
 com\access\dto\materia\UpdateMateriaDTO.class
+com\access\dto\inventario\DetalleMovMateriaDTO.class
 com\access\ProyectoAccess1Application.class
 com\access\service\PapeletaService.class
 com\access\model\Imagen.class
@@ -58,4 +66,5 @@ com\access\service\Prod_x_ColorService.class
 com\access\service\cloudinary\CloudinaryService.class
 com\access\dto\colores\ColoresPaginationDTO.class
 com\access\model\Colores.class
+com\access\dto\inventario\MovimientoMateriaDTO.class
 com\access\dto\producto\ProductoPaginationDTO.class
