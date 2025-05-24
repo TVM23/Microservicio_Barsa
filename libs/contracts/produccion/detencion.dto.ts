@@ -1,13 +1,17 @@
-import { IsInt, IsNotEmpty, IsNumber, IsString, MaxLength } from "class-validator";
+import { IsDateString, IsInt, IsNotEmpty, IsNumber, IsString, MaxLength } from "class-validator";
 import { TiempoDto } from "./tiempo.dto";
 import { Transform, Type } from "class-transformer";
 
 export class DetencionDto extends TiempoDto {
 
-    @IsNumber({}, { message: 'El tiempo debe ser un número válido.' })
+    /*@IsNumber({}, { message: 'El tiempo debe ser un número válido.' })
     @Type(() => Number)
     @IsNotEmpty({ message: 'El tiempo no puede estar vacío.' })
-    fecha: number;
+    fecha: number;*/
+
+    @IsDateString({}, { message: 'La fecha debe tener un formato válido (YYYY-MM-DD)' })
+    @Transform(({ value }) => value.trim())  
+    fecha: string;
 
     @IsString({ message: 'El motivo debe ser un texto válido.' })
     @MaxLength(100, { message: 'El motivo no debe exceder los 100 caracteres.' })

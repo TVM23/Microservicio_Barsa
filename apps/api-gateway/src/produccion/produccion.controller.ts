@@ -47,4 +47,14 @@ export class ProduccionController {
         return await this.produccionService.obtenerDetencion(tiempoDto);
     }
 
+    @Get('obtener-tiempos/:procesoFolio')
+    async obtenerTiemposFolio(@Param('procesoFolio') procesoFolio: number){
+        return await this.produccionService.obtenerTiemposFolio(procesoFolio);
+    }
+
+    @Get('obtener-ultima-detencion/:procesoFolio')
+    async obtenerUltimaDetencionActiva(@Param('procesoFolio') procesoFolio: number){
+        return await this.produccionService.obtenerUltimaDetencionActiva(procesoFolio);
+    }
+
 }

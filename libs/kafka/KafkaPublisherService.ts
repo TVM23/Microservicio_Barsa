@@ -24,10 +24,10 @@ export class KafkaPublisherService implements OnModuleInit {
       topics: [
         'materia-response', 'materia-pagination-response', 'materia-codigo-response', 'materia-create-response', 
                 'materia-update-response', "materia-delete-response",
-        'inventario-response', 'inventario_entradas-pagination-response', 'inventario_entradas-codigo-response', 
-                'inventario-movimiento_materia-response',
+        'inventario-response', 'inventario-movimiento_materia-pagination-response', 'inventario-movimiento_producto-pagination-response', 
+                'inventario-movimiento_materia-response', 'inventario-movimiento_producto-response',
         'produccion-response', 'produccion-iniciarTiempo-response', 'produccion-pausarTiempo-response',      
-                'produccion-reiniciarTiempo-response', 'produccion-finalizarTiempo-response',
+                'produccion-reiniciarTiempo-response', 'produccion-finalizarTiempo-response', 'produccion-obtenerTiemposFolio-response', 'produccion-obtenerUltDetencion-response',
                 'produccion-detencion-response', 'produccion-desactivarDetencion-response', 'produccion-getTiempo-response', 'produccion-getDetencion-response',
         'papeleta-response', 'papeleta-pagination-response', 'papeleta-codigo-response', 
         'producto-response', 'producto-pagination-response', 'producto-codigo-response',

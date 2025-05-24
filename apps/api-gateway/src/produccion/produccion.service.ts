@@ -10,6 +10,10 @@ export class ProduccionService {
         return this.kafkaService.sendRequest('post-iniciar-tiempo', iniciarTiempoDto)
     }
 
+    detenerTiempo(detenerTiempoDto: DetencionDto) {
+        return this.kafkaService.sendRequest('post-detencion-tiempo', detenerTiempoDto)
+    }
+
     pausarTiempo(pausarTiempoDto: PausarTiempoDto) {
         return this.kafkaService.sendRequest('put-pausar-tiempo', pausarTiempoDto)
     }
@@ -20,10 +24,6 @@ export class ProduccionService {
 
     finalizarTiempo(finalizarTiempoDto: FinalizarTiempoDto) {
         return this.kafkaService.sendRequest('put-finalizar-tiempo', finalizarTiempoDto)
-    }
-
-    detenerTiempo(detenerTiempoDto: DetencionDto) {
-        return this.kafkaService.sendRequest('post-detencion-tiempo', detenerTiempoDto)
     }
 
     desactivarDetencion(desactivarDetencionDto: DesactivarDetencionDto){
@@ -37,4 +37,13 @@ export class ProduccionService {
     obtenerDetencion(tiempoDto: TiempoDto){
         return this.kafkaService.sendRequest('get-registro-detencion', tiempoDto)
     }
+
+    obtenerTiemposFolio(procesoFolio: number){
+        return this.kafkaService.sendRequest('get-tiempos-folio', procesoFolio)
+    }
+
+    obtenerUltimaDetencionActiva(procesoFolio: number){
+        return this.kafkaService.sendRequest('get-ultima-detencion', procesoFolio)
+    }
+
 }

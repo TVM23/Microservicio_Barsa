@@ -1,7 +1,7 @@
 import * as path from 'path';
 import { Controller, Get, Post, Body, Patch, Param, Delete, Query, UseInterceptors, UploadedFiles, BadRequestException, Put } from '@nestjs/common';
 import { MateriaService } from './materia.service';
-import { MateriaPaginationDto, CreateMateriaDto, InventarioSalidaDTO, Roles, Role } from '@app/contracts';
+import { MateriaPaginationDto, CreateMateriaDto, Roles, Role } from '@app/contracts';
 import { AnyFilesInterceptor } from '@nestjs/platform-express';
 import { CloudinaryService } from 'libs/cloudinary/cloudinary.service';
 import { UpdateMateriaDto } from './dto/update-materia.dto';

@@ -1,8 +1,8 @@
 import { PaginationDto } from "@app/contracts"
 import { Transform, Type } from "class-transformer"
-import { IsDateString, IsIn, IsInt, IsNumber, IsOptional, IsString, Min } from "class-validator"
+import { IsDateString, IsInt, IsNumber, IsOptional, IsString, Min } from "class-validator"
 
-export class InventarioEntradasPaginationDto extends PaginationDto {
+export class MovimientoMateriaPagiDto extends PaginationDto {
 
     @IsOptional()
     @IsDateString({}, { message: 'La fecha de inicio debe tener un formato válido (YYYY-MM-DD)' })
@@ -19,29 +19,31 @@ export class InventarioEntradasPaginationDto extends PaginationDto {
     @IsNumber({}, { message: 'El ID debe ser un número válido' })
     @Type(() => Number)
     @Min(1, { message: 'El ID debe ser mayor a 0' })
-    public id: number;
+    public consecutivo: number;
 
     @IsOptional()
-    @IsInt({ message: 'El ID de proveedor debe ser un entero válido' })
-    @IsNumber({}, { message: 'El ID de proveedor debe ser un número válido' })
+    @IsInt({ message: 'El ID del movimiento debe ser un entero válido' })
+    @IsNumber({}, { message: 'El ID del movimiento debe ser un número válido' })
     @Type(() => Number)
-    @Min(1, { message: 'El ID de proveedor debe ser mayor a 0' })
-    public proveedorId: number;
+    @Min(1, { message: 'El ID del movimiento debe ser mayor a 0' })
+    public movId: number;
 
     @IsOptional()
-    @IsString({ message: 'El nombre de proveedor debe ser un texto válido' })
-    @Transform(({ value }) => value.trim()) 
-    public proveedorNombre: string;
+    @IsInt({ message: 'El número de folio debe ser un entero válido' })
+    @IsNumber({}, { message: 'El folio debe ser un número válido' })
+    @Type(() => Number)
+    @Min(0, { message: 'El folio debe ser mayor o igual a a 0' })
+    public folio: number;
 
     @IsOptional()
-    @IsString({ message: 'Las notas extras deben ser un texto válido' })
-    @Transform(({ value }) => value.trim()) 
-    public notes: string;
-
-    @IsOptional()
-    @IsString({ message: 'El nombre de usuario debe ser un texto válido' })
+    @IsString({ message: 'El nombre del usuario ser un texto válido' })
     @Transform(({ value }) => value.trim()) 
     public usuario: string;
+
+    @IsOptional()
+    @IsString({ message: 'La observación deben ser un texto válido' })
+    @Transform(({ value }) => value.trim()) 
+    public observacion: string;
 
     @IsOptional()
     @IsString({ message: 'El código de material debe ser un texto válido.' })
@@ -52,5 +54,4 @@ export class InventarioEntradasPaginationDto extends PaginationDto {
     @IsString({ message: 'La descripción debe ser un texto válido.' })
     @Transform(({ value }) => value.trim())  
     public descripcion: string
-    
 }
