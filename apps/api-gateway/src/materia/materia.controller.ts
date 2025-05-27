@@ -5,6 +5,7 @@ import { MateriaPaginationDto, CreateMateriaDto, Roles, Role } from '@app/contra
 import { AnyFilesInterceptor } from '@nestjs/platform-express';
 import { CloudinaryService } from 'libs/cloudinary/cloudinary.service';
 import { UpdateMateriaDto } from './dto/update-materia.dto';
+import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
 
 @Controller('materia')
 export class MateriaController {
@@ -30,12 +31,13 @@ export class MateriaController {
   @UseInterceptors(AnyFilesInterceptor())
   async createMateria(
     @Body() createMateriaDto: CreateMateriaDto,
+    @GetCurrentUserName() usuario: string,
     @UploadedFiles() files: Express.Multer.File[],
   ) 
   {
     const uploaded  = await this.procesarImagenes(files);
     createMateriaDto.imagenes = uploaded;
-    return this.materiaService.createMateria(createMateriaDto);
+    return this.materiaService.createMateria(createMateriaDto, usuario);
   }
   
   @Put('update-materia/:codigo')
@@ -44,17 +46,21 @@ export class MateriaController {
   async updateMateria(
     @Param('codigo') codigoMat: string,
     @Body() updateMateriaDto: UpdateMateriaDto,
+    @GetCurrentUserName() usuario: string,
     @UploadedFiles() files: Express.Multer.File[],
   ){
     const uploaded  = await this.procesarImagenes(files);
     updateMateriaDto.imagenes = uploaded;
-    return this.materiaService.updateMateria({codigoMat, ...updateMateriaDto})
+    return this.materiaService.updateMateria({codigoMat, ...updateMateriaDto}, usuario)
   }
 
   @Delete('borrar-materia/:codigo')
   @Roles(Role.ADMIN, Role.INVENTARIOS) 
-  borrarMateria(@Param('codigo') codigoMat: string) {
-    return this.materiaService.borrarMateria(codigoMat);
+  borrarMateria(
+    @Param('codigo') codigoMat: string,
+    @GetCurrentUserName() usuario: string,
+  ) {
+    return this.materiaService.borrarMateria(codigoMat, usuario);
   }
 
   private async procesarImagenes(files: Express.Multer.File[]): Promise<{ url: string; public_id: string }[]> {

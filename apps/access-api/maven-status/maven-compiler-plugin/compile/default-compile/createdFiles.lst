@@ -37,6 +37,7 @@ com\access\model\Papeleta.class
 com\access\controller\PapeletaController.class
 com\access\config\KafkaProducerConfig.class
 com\access\listener\ProduccionListener.class
+com\access\service\BitacoraService.class
 com\access\dto\produccion\ReiniciarTiempoDTO.class
 com\access\service\MateriaService.class
 com\access\listener\MateriaListener.class

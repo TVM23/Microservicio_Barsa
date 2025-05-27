@@ -18,16 +18,16 @@ export class MateriaService {
     return this.kafkaService.sendRequest('get-materia-codigo', codigo)
   }
 
-  createMateria(createMateriaDto: CreateMateriaDto) {
-    return this.kafkaService.sendRequest('post-materia-crear', createMateriaDto)
+  createMateria(createMateriaDto: CreateMateriaDto, usuario: string) {
+    return this.kafkaService.sendRequest('post-materia-crear', { createMateriaDto, usuario  })
   }
 
-  updateMateria(updateMateriaDto: UpdateMateriaDto) {
-    return this.kafkaService.sendRequest('put-materia-update', updateMateriaDto)
+  updateMateria(updateMateriaDto: UpdateMateriaDto, usuario: string) {
+    return this.kafkaService.sendRequest('put-materia-update', { updateMateriaDto, usuario })
   }
 
-  borrarMateria(codigoMat: string) {
-    return this.kafkaService.sendRequest('delete-materia-borrar', codigoMat);
+  borrarMateria(codigoMat: string, usuario: string) {
+    return this.kafkaService.sendRequest('delete-materia-borrar', { codigoMat, usuario });
   }
 
 }

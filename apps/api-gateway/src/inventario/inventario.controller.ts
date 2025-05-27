@@ -12,7 +12,7 @@ export class InventarioController {
         return await this.inventarioService.getListadoMovimientoMateria(paginationDTO);
     }
 
-    @Get('producto/movimiento-listado')
+    @Get('producto/movimiento-listado') 
     async getListadoMovimientoProducto(@Query() paginationDTO: MovimientoProductoPagiDto) {
         return await this.inventarioService.getListadoMovimientoProducto(paginationDTO);
     }
