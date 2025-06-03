@@ -2,14 +2,18 @@ import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ProduccionService } from './produccion.service';
 import { DesactivarDetencionDto, DetencionDto, FinalizarTiempoDto, IniciarTiempoDto, PausarTiempoDto, ReiniciarTiempoDto } from '@app/contracts';
 import { TiempoDto } from 'libs/contracts/produccion/tiempo.dto';
+import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
 
 @Controller('produccion')
 export class ProduccionController {
     constructor(private readonly produccionService: ProduccionService) {}
 
     @Post('iniciar-tiempo')
-    async iniciarTiempo(@Body() iniciarTiempoDto: IniciarTiempoDto) {
-        return await this.produccionService.iniciarTiempo(iniciarTiempoDto);
+    async iniciarTiempo(
+        @Body() iniciarTiempoDto: IniciarTiempoDto,
+        @GetCurrentUserName() nombreUsuario: string
+    ) {
+        return await this.produccionService.iniciarTiempo( { ...iniciarTiempoDto, nombreUsuario } );
     }
 
     @Put('pausar-tiempo')

@@ -11,6 +11,12 @@ export class UserAuthenticationService {
 
     constructor (@Inject(USERS_CLIENT) private usersClient: ClientProxy){}
 
+    obtenerNotificaciones(rol: string) {
+        return this.usersClient.send('obtener-notificaciones', { rol }).pipe(
+            catchError( err => { throw new RpcException(err) } )
+        );
+    }
+
     createUser(dtoCreateUser: CreateUserRequest) {
         return this.usersClient.send(USER_PATTERNS.CREATE_USUARIO, dtoCreateUser).pipe(
             catchError( err => { throw new RpcException(err) } )

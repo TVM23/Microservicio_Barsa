@@ -13,6 +13,7 @@ import { ProductoXColorModule } from './producto_x_color/producto_x_color.module
 import { RolesGuard } from './user-authentication/common/guards/roles.guard';
 import { InventarioModule } from './inventario/inventario.module';
 import { ProduccionModule } from './produccion/produccion.module';
+import { NotificacionModule } from './notificacion/notificacion.module';
 
 @Module({
   imports: [UserAuthenticationModule,
@@ -24,6 +25,7 @@ import { ProduccionModule } from './produccion/produccion.module';
     ProductoXColorModule,
     InventarioModule,
     ProduccionModule,
+    NotificacionModule,
   ],
   controllers: [ApiGatewayController],
   providers: [ 

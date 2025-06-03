@@ -3,9 +3,10 @@ import { UserAuthController } from './user-auth.controller';
 import { UserAuthService } from './user-auth.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { envs } from '@app/contracts';
+import { envs, KafkaModule } from '@app/contracts';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { NotificacionModule } from './notificacion/notificacion.module';
 
 @Module({
   imports: [
@@ -16,7 +17,9 @@ import { AuthModule } from './auth/auth.module';
       }),
     }),
     UsersModule,
-    AuthModule
+    AuthModule,
+    NotificacionModule,
+    //KafkaModule,
   ],
   controllers: [UserAuthController],
   providers: [UserAuthService],

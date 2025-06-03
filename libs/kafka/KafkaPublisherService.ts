@@ -29,6 +29,7 @@ export class KafkaPublisherService implements OnModuleInit {
         'produccion-response', 'produccion-iniciarTiempo-response', 'produccion-pausarTiempo-response',      
                 'produccion-reiniciarTiempo-response', 'produccion-finalizarTiempo-response', 'produccion-obtenerTiemposFolio-response', 'produccion-obtenerUltDetencion-response',
                 'produccion-detencion-response', 'produccion-desactivarDetencion-response', 'produccion-getTiempo-response', 'produccion-getDetencion-response',
+        'notificaciones-response',
         'papeleta-response', 'papeleta-pagination-response', 'papeleta-codigo-response', 
         'producto-response', 'producto-pagination-response', 'producto-codigo-response',
         'colores-response', 'colores-pagination-response', 'colores-colorId-response', 'colores-create-response',

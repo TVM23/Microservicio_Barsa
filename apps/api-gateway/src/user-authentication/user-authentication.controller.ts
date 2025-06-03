@@ -2,7 +2,7 @@ import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch, Post, Put, Q
 import { ChangePasswordDto, CreateUserRequest, GetUsersFiltersDto, LoginDto, Role } from '@app/contracts';
 import { UserAuthenticationService } from './user-authentication.service';
 import { RtGuard } from './common/guards';
-import { GetCurrentUser, GetCurrentUserId, Public, Roles } from './common/decorators';
+import { GetCurrentUser, GetCurrentUserId, GetCurrentUserRole, Public, Roles } from './common/decorators';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UpdatePersonalInfoDto } from './dto/update-personal-info.dto';
@@ -11,6 +11,13 @@ import { UpdatePersonalInfoDto } from './dto/update-personal-info.dto';
 export class UserAuthenticationController {
 
     constructor (private userAuthService: UserAuthenticationService) {}
+
+    @Get('notificacion/lista-notificaciones')
+    async obtenerNotificaciones(
+        @GetCurrentUserRole() rol: string
+    ) {
+        return await this.userAuthService.obtenerNotificaciones(rol);
+    }
 
     //Iniciar sesion
     @Public() //Esto hace que se pueda realizar esta acción sin quese este autenticado

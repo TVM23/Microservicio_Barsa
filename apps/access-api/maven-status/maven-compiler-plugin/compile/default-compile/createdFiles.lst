@@ -1,7 +1,6 @@
 com\access\listener\InventarioListener.class
 com\access\service\InventarioService.class
 com\access\dto\produccion\FinalizarTiempoDTO.class
-com\access\model\Proceso.class
 com\access\model\Detalle_Movimiento.class
 com\access\dto\ImagenDTO.class
 com\access\model\Detencion.class
@@ -17,7 +16,6 @@ com\access\config\KafkaConsumerConfig.class
 com\access\service\ProveedorService.class
 com\access\model\MovimientoMateria.class
 com\access\listener\ColoresListener.class
-com\access\controller\MateriaController.class
 com\access\dto\produccion\IniciarTiempoDTO.class
 com\access\listener\Prod_X_ColorListener.class
 com\access\service\ProduccionService.class
@@ -34,8 +32,7 @@ com\access\dto\PaginationResult.class
 com\access\dto\produccion\DesactivarDetencionDTO.class
 com\access\dto\produccion\TiempoDTO.class
 com\access\model\Papeleta.class
-com\access\controller\PapeletaController.class
-com\access\config\KafkaProducerConfig.class
+com\access\service\NotificacionService.class
 com\access\listener\ProduccionListener.class
 com\access\service\BitacoraService.class
 com\access\dto\produccion\ReiniciarTiempoDTO.class
@@ -54,6 +51,7 @@ com\access\dto\materia\UpdateMateriaDTO.class
 com\access\dto\inventario\DetalleMovMateriaDTO.class
 com\access\ProyectoAccess1Application.class
 com\access\service\PapeletaService.class
+com\access\model\Notificacion.class
 com\access\model\Imagen.class
 com\access\model\Materia.class
 com\access\dto\inventario\MovimientoProductoPagiDTO.class
@@ -62,9 +60,11 @@ com\access\config\CloudinaryConfig.class
 com\access\service\DetallePapeletaService.class
 com\access\dto\inventario\MovimientoMateriaPagiDto.class
 com\access\service\Prod_x_ColorService.class
+com\access\listener\NotificacionListener.class
 com\access\service\cloudinary\CloudinaryService.class
 com\access\dto\colores\ColoresPaginationDTO.class
 com\access\model\Colores.class
+com\access\controller\NotificacionController.class
 com\access\dto\inventario\DetalleMovProductoDTO.class
 com\access\dto\inventario\MovimientoMateriaDTO.class
 com\access\dto\producto\ProductoPaginationDTO.class

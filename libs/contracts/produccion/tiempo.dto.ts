@@ -1,5 +1,5 @@
 import { Transform, Type } from "class-transformer";
-import { IsInt, IsNotEmpty, IsNumber, IsString, MaxLength, Min } from "class-validator";
+import { IsInt, IsNotEmpty, IsNumber, IsOptional, IsString, MaxLength, Min } from "class-validator";
 
 export class TiempoDto {
     @IsInt({ message: 'El numero del folio debe ser un entero válido.' })
@@ -13,4 +13,10 @@ export class TiempoDto {
     @Transform(({ value }) => value.trim())  
     @IsNotEmpty({ message: 'La etapa no puede estar vacía.' })
     etapa: string;
+
+    @IsOptional()
+    @IsString({message: "Ingresa tu nombre de usuario"})
+    @IsNotEmpty({message: "El nombre de usuario no puede ir vacio"})
+    @Transform(({ value }) => value.trim())  
+    public nombreUsuario: string;
 }

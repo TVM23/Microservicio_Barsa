@@ -2,9 +2,7 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\DataBaseWarmUp.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\JdbcConfig.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\KafkaConsumerConfig.java
-C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\KafkaProducerConfig.java
-C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\controller\MateriaController.java
-C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\controller\PapeletaController.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\controller\NotificacionController.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\colores\ColoresPaginationDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\colores\CreateColorDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\ImagenDTO.java
@@ -35,6 +33,7 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\ColoresListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\InventarioListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\MateriaListener.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\NotificacionListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\PapeletaListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\Prod_X_ColorListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\ProduccionListener.java
@@ -50,8 +49,8 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\MovimientoInventario.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\MovimientoMateria.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Movimientos.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Notificacion.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Papeleta.java
-C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Proceso.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Producto.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Producto_X_Color.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Proveedor.java
@@ -63,6 +62,7 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\DetallePapeletaService.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\InventarioService.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\MateriaService.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\NotificacionService.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\PapeletaService.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\Prod_x_ColorService.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\ProduccionService.java
