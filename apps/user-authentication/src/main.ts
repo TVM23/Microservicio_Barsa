@@ -8,7 +8,7 @@ async function bootstrap() {
 
   const logger = new Logger('UsuarioAuthService')
 
-  const app = await NestFactory.createMicroservice<MicroserviceOptions>(
+  /*const app = await NestFactory.createMicroservice<MicroserviceOptions>(
     UserAuthModule,
       {
         transport: Transport.TCP,
@@ -30,9 +30,9 @@ async function bootstrap() {
   
     await app.listen();
   
-    logger.log(`Usuarios Microservice running on port: ${envs.usuariosMicroservicePort}`)
+    logger.log(`Usuarios Microservice running on port: ${envs.usuariosMicroservicePort}`)*/
 
-  /*const app = await NestFactory.create(UserAuthModule);
+  const app = await NestFactory.create(UserAuthModule);
 
   // 1. Microservicio TCP
   app.connectMicroservice<MicroserviceOptions>({
@@ -49,11 +49,10 @@ async function bootstrap() {
     transport: Transport.KAFKA,
     options: {
       client: {
-        clientId: 'notificaciones',
         brokers: ['kafka:9092'],
       },
       consumer: {
-        groupId: 'notificaciones-consumer-group',
+        groupId: 'user-auth-consumer',
       },
     },
   });
@@ -62,6 +61,6 @@ async function bootstrap() {
   await app.startAllMicroservices();
   await app.listen(3000); // si necesitas también un endpoint HTTP opcional
 
-  logger.log('✅ Notificaciones microservice con TCP y Kafka activo');*/
+  logger.log('✅ Notificaciones microservice con TCP y Kafka activo');
 }
 bootstrap();

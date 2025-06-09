@@ -60,14 +60,14 @@ export class UserAuthenticationService {
         );
     }
 
-    updateUser(dtoUpdateUser: UpdateUserDto){
-        return this.usersClient.send(USER_PATTERNS.UPDATE_USUARIOS, dtoUpdateUser ).pipe(
+    updateUser(dtoUpdateUser: UpdateUserDto, rol: string){
+        return this.usersClient.send(USER_PATTERNS.UPDATE_USUARIOS, { dtoUpdateUser, rol }).pipe(
             catchError(err => { throw new RpcException(err) })
         );
     }
 
-    deactivateUser(userId: string){
-        return this.usersClient.send(USER_PATTERNS.DEACTIVATE_USUARIO, userId ).pipe(
+    deactivateUser(userId: string, rol: string, idLogeado: string){
+        return this.usersClient.send(USER_PATTERNS.DEACTIVATE_USUARIO, { userId, rol, idLogeado } ).pipe(
             catchError(err => { throw new RpcException(err) })
         );
     }

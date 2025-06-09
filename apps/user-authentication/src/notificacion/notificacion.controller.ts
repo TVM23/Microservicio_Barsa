@@ -13,8 +13,8 @@ export class NotificacionController {
         return this.notificacionService.procesarYListarNotificaciones(data.rol);
     }
 
-    @Post('crear')
-    async crearNotificacion(@Body() body: any) {
+    @MessagePattern('crear-notificacion')
+    async crearNotificacion(@Payload() body: any) {
         return await this.notificacionService.crearNotificacion(body);
     }
 }

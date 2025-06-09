@@ -29,7 +29,7 @@ export class UserAuthenticationController {
 
     //Agregar usuario
     @Post('registro')
-    @Roles(Role.ADMIN) //Roles("Administrador")
+    @Roles(Role.ADMIN, Role.SUPERADMIN) //Roles("Administrador")
     @HttpCode(HttpStatus.CREATED)
     async createUser(@Body() dtoCreateUser: CreateUserRequest ){
         return await this.userAuthService.createUser(dtoCreateUser);
@@ -57,7 +57,7 @@ export class UserAuthenticationController {
 
     //Listado de usuarios
     @Get('listado-usuarios')
-    @Roles(Role.ADMIN)   //Roles("Administrador")
+    @Roles(Role.ADMIN, Role.SUPERADMIN)   //Roles("Administrador")
     @HttpCode(HttpStatus.OK)
     async getListadoUsuarios(@Query() dtoGetUsers: GetUsersFiltersDto ){
         return await this.userAuthService.getListadoUsuarios(dtoGetUsers)
@@ -66,7 +66,7 @@ export class UserAuthenticationController {
     //Consultar tus propios datos de usuario logeado
     @Get('obtener-info-usuario-personal')
     @HttpCode(HttpStatus.OK)
-    async getInfoUser(@GetCurrentUserId() userId: string,){
+    async getInfoUser(@GetCurrentUserId() userId: string){
         return await this.userAuthService.getInfoUser(userId)
     }
 
@@ -81,7 +81,7 @@ export class UserAuthenticationController {
 
     //Consultar detalles de usuario seleccionado
     @Get('obtener-info-usuario/:_id')
-    @Roles(Role.ADMIN)  //Roles("Administrador")
+    @Roles(Role.ADMIN, Role.SUPERADMIN)  //Roles("Administrador")
     @HttpCode(HttpStatus.OK)
     async getInfoUserAdmin(@Param('_id') userId: string){
         return await this.userAuthService.getInfoUser(userId)
@@ -89,20 +89,25 @@ export class UserAuthenticationController {
 
     //Editar datos de usuario seleccionado
     @Patch(':_id')
-    @Roles(Role.ADMIN) //Roles("Administrador")
+    @Roles(Role.ADMIN, Role.SUPERADMIN) //Roles("Administrador")
     async updateUser(
         @Param('_id') _id: string, 
-        @Body() dtoUpdateUser: UpdateUserDto
+        @Body() dtoUpdateUser: UpdateUserDto,
+        @GetCurrentUserRole() rol: string
     ) {
-        return await this.userAuthService.updateUser({_id, ...dtoUpdateUser});
+        return await this.userAuthService.updateUser({_id, ...dtoUpdateUser}, rol);
     }
 
     //Desactivar usuario
     @Put('desactivar-usuario/:_id')
-    @Roles(Role.ADMIN) //Roles("Administrador")
+    @Roles(Role.ADMIN, Role.SUPERADMIN) //Roles("Administrador")
     @HttpCode(HttpStatus.OK)
-    async deactivateUser(@Param('_id') _id: string){
-        return await this.userAuthService.deactivateUser(_id)
+    async deactivateUser(
+        @Param('_id') _id: string,
+        @GetCurrentUserRole() rol: string,
+        @GetCurrentUserId() idLogeado: string
+    ){
+        return await this.userAuthService.deactivateUser(_id, rol, idLogeado)
     }
 
     //Cambiar contraseña

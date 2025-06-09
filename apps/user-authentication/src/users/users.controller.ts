@@ -24,12 +24,12 @@ export class UsersController {
     }
 
     @MessagePattern(USER_PATTERNS.UPDATE_USUARIOS)
-    async updateUser(@Payload() dtoUpdateUser: UpdateUserDto){
-        return await this.userService.updateUser(dtoUpdateUser._id, dtoUpdateUser)
+    async updateUser(@Payload() data: { dtoUpdateUser: UpdateUserDto, rol: string }){
+        return await this.userService.updateUser(data.dtoUpdateUser._id, data.dtoUpdateUser, data.rol)
     }
 
     @MessagePattern(USER_PATTERNS.DEACTIVATE_USUARIO)
-    async deactivateUser(@Payload() userId: string){
-        return await this.userService.deactivateUser(userId)
+    async deactivateUser(@Payload() data: { userId: string, rol: string, idLogeado: string }){
+        return await this.userService.deactivateUser(data.userId, data.rol, data.idLogeado)
     }
 }

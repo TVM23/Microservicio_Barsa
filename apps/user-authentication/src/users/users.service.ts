@@ -3,7 +3,7 @@ import { Model } from 'mongoose';
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { RpcException } from '@nestjs/microservices';
-import { CreateUserRequest, GetUsersFiltersDto, UpdateUserDto, UpdatePersonalInfoDto } from '@app/contracts';
+import { CreateUserRequest, GetUsersFiltersDto, UpdateUserDto, UpdatePersonalInfoDto, Role } from '@app/contracts';
 import { User } from './schema/user.schema';
 import { ResetToken } from './schema/reset-token.schema';
 
@@ -116,8 +116,11 @@ export class UsersService {
         return this.updateUserInDB(userId, newUserEmail, data);
     }
 
-    async updateUser(_id: string, dtoUpdateUser: UpdateUserDto) {
+    async updateUser(_id: string, dtoUpdateUser: UpdateUserDto, rolUsuariLogeado: string) {
         const user = await this.getUserById(_id);
+        if((user.rol == Role.SUPERADMIN || user.rol == Role.ADMIN) && rolUsuariLogeado == Role.ADMIN.toString()){
+            this.throwRpcException('No tienes permiso para modificar este usuario', 'BadRequestException', HttpStatus.BAD_REQUEST);
+        }
         const { _id: _, ...data } = dtoUpdateUser; // Excluir _id del DTO
 
         //checar el username
@@ -130,10 +133,6 @@ export class UsersService {
         await this.validateEmail(newUserEmail, currentEmail)
 
         if (data.rol && data.rol !== user.rol) {
-            await this.deleteRtUser(_id);
-        }
-      
-        if(data.estado == "false"){
             await this.deleteRtUser(_id);
         }
 
@@ -149,8 +148,14 @@ export class UsersService {
     }
 
     //Desactivar cuenta
-    async deactivateUser(userId: string){
+    async deactivateUser(userId: string, rolUsuariLogeado: string, idLogeado: string){
         const user = await this.getUserById(userId);
+        if(userId == idLogeado){
+            this.throwRpcException('No te puedes desactivar a ti mismo', 'BadRequestException', HttpStatus.BAD_REQUEST);
+        }
+        if((user.rol == Role.SUPERADMIN || user.rol == Role.ADMIN) && rolUsuariLogeado == Role.ADMIN.toString()){
+            this.throwRpcException('No tienes permiso para desactivar a este usuario', 'BadRequestException', HttpStatus.BAD_REQUEST);
+        }
         const newState = !user.estado;
 
         const userActualizado = await this.userModel.findByIdAndUpdate(

@@ -10,16 +10,19 @@ export class PapeletaController {
   constructor(private readonly papeletaService: PapeletaService) {}
 
   @Get('get-listado-papeletas')
+  @Roles(Role.ADMIN, Role.PRODUCCION) 
   async getListadoPapeletas(@Query() papeletaPaginationDto: PapeletaPaginationDto){
     return await this.papeletaService.getListadoPapeletas(papeletaPaginationDto)
   }
 
   @Get(':folio')
+  @Roles(Role.ADMIN, Role.PRODUCCION) 
   async getPapeletaPorFolio(@Param('folio') folio: number){
     return await this.papeletaService.getPapeletaPorFolio(folio)
   }
 
   @Post()
+  @Roles(Role.PRODUCCION) 
   create(@Body() createPapeletaDto: CreatePapeletaDto) {
     return this.papeletaService.create(createPapeletaDto);
   }

@@ -2,6 +2,7 @@ com\access\listener\InventarioListener.class
 com\access\service\InventarioService.class
 com\access\dto\produccion\FinalizarTiempoDTO.class
 com\access\model\Detalle_Movimiento.class
+com\access\service\BitacoraTiempoService.class
 com\access\dto\ImagenDTO.class
 com\access\model\Detencion.class
 com\access\dto\inventario\SalidaPaginationDTO.class
@@ -32,6 +33,7 @@ com\access\dto\PaginationResult.class
 com\access\dto\produccion\DesactivarDetencionDTO.class
 com\access\dto\produccion\TiempoDTO.class
 com\access\model\Papeleta.class
+com\access\config\KafkaProducerConfig.class
 com\access\service\NotificacionService.class
 com\access\listener\ProduccionListener.class
 com\access\service\BitacoraService.class

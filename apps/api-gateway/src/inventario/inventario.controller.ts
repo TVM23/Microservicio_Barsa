@@ -8,11 +8,13 @@ export class InventarioController {
     constructor(private readonly inventarioService: InventarioService) {}
 
     @Get('materia/movimiento-listado')
+    @Roles(Role.ADMIN, Role.INVENTARIOS) 
     async getListadoMovimientoMateria(@Query() paginationDTO: MovimientoMateriaPagiDto) {
         return await this.inventarioService.getListadoMovimientoMateria(paginationDTO);
     }
 
     @Get('producto/movimiento-listado') 
+    @Roles(Role.ADMIN, Role.INVENTARIOS) 
     async getListadoMovimientoProducto(@Query() paginationDTO: MovimientoProductoPagiDto) {
         return await this.inventarioService.getListadoMovimientoProducto(paginationDTO);
     }

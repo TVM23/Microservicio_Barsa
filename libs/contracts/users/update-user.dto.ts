@@ -9,9 +9,4 @@ export class UpdateUserDto extends PartialType(CreateUserRequest) {
     @Transform(({ value }) => value.trim())  
     public _id: string
     
-    @IsOptional()
-    @IsString()
-    @IsIn(['true', 'false'], { message: 'El estado solo puede ser "true" o "false".' })
-    @Transform(({ value }) => value.trim())  
-    public estado?: string
 }

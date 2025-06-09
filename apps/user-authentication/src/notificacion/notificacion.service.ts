@@ -5,6 +5,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { NotificacionDocument } from './schema/notificacion.schema';
 import { HttpService } from '@nestjs/axios';
+import { KafkaPublisherService } from '@app/contracts';
 
 @Injectable()
 export class NotificacionService {
@@ -50,18 +51,32 @@ export class NotificacionService {
     }
 
     async crearNotificacion(data: any) {
+      // 1. Elimina notificaciones anteriores si es una etapa superior
+      const etapasIniciales = ['MADERA', 'PRODUCCION'];
+      const etapaActual = data.etapa?.toUpperCase();
+
+      // Si etapa no es MADERA ni PRODUCCION, entonces borra esas
+      if (!etapasIniciales.includes(etapaActual)) {
+        await this.notificacionModel.deleteMany({
+          codigo: data.codigo,
+          etapa: { $in: etapasIniciales },
+        });
+      }
+
+      // 2. Crea o actualiza la notificación para esa etapa
       return this.notificacionModel.updateOne(
-        { codigo: data.codigo }, // condición de búsqueda
+        { codigo: data.codigo, etapa: etapaActual },
         {
           $set: {
             mensaje: data.mensaje,
-            fecha: new Date(),
             descripcion: data.descripcion,
-            area: data.area
-          }
+            fecha: data.fecha || new Date(),
+            area: data.area,
+          },
         },
-        { upsert: true } // crea si no existe
+        { upsert: true },
       );
     }
+
 }
 

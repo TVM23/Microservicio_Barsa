@@ -2,6 +2,7 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\DataBaseWarmUp.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\JdbcConfig.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\KafkaConsumerConfig.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\KafkaProducerConfig.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\controller\NotificacionController.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\colores\ColoresPaginationDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\colores\CreateColorDTO.java
@@ -57,6 +58,7 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Tiempo.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\ProyectoAccess1Application.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\BitacoraService.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\BitacoraTiempoService.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\cloudinary\CloudinaryService.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\ColoresService.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\service\DetallePapeletaService.java

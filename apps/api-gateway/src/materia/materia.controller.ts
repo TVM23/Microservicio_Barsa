@@ -12,22 +12,25 @@ export class MateriaController {
   constructor(private readonly materiaService: MateriaService, private readonly cloudinaryService: CloudinaryService) {}
 
   @Get('get-listado')
+  @Roles(Role.ADMIN, Role.INVENTARIOS) 
   async getListadoMateria(){
     return await this.materiaService.getListadoMateria();
   }
 
   @Get('get-listado-materia')
+  @Roles(Role.ADMIN, Role.INVENTARIOS) 
   async getListadoMateriaFiltro(@Query() dtoMateriaPaginado: MateriaPaginationDto){
     return await this.materiaService.getListadoMateriaFiltro(dtoMateriaPaginado);
   }
 
   @Get(':codigo')
+  @Roles(Role.ADMIN, Role.INVENTARIOS) 
   async getMateriaPorCodigo(@Param('codigo') codigo: string){
     return await this.materiaService.getMateriaPorCodigo(codigo);
   }
 
   @Post('crear-materia')
-  @Roles(Role.ADMIN, Role.INVENTARIOS) 
+  @Roles(Role.INVENTARIOS) 
   @UseInterceptors(AnyFilesInterceptor())
   async createMateria(
     @Body() createMateriaDto: CreateMateriaDto,
@@ -41,7 +44,7 @@ export class MateriaController {
   }
   
   @Put('update-materia/:codigo')
-  @Roles(Role.ADMIN, Role.INVENTARIOS) 
+  @Roles(Role.INVENTARIOS) 
   @UseInterceptors(AnyFilesInterceptor())
   async updateMateria(
     @Param('codigo') codigoMat: string,
@@ -55,7 +58,7 @@ export class MateriaController {
   }
 
   @Delete('borrar-materia/:codigo')
-  @Roles(Role.ADMIN, Role.INVENTARIOS) 
+  @Roles(Role.INVENTARIOS) 
   borrarMateria(
     @Param('codigo') codigoMat: string,
     @GetCurrentUserName() usuario: string,

@@ -8,8 +8,11 @@ export class Notificacion {
   @Prop({ type: SchemaTypes.ObjectId, auto: true })
   _id: Types.ObjectId;
 
-  @Prop({ required: true, unique: true })
+  @Prop({ required: true })
   codigo: string;
+
+  @Prop({ required: true })
+  etapa: string;
 
   @Prop({ required: true })
   descripcion: string;
