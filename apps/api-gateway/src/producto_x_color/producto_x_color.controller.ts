@@ -7,7 +7,7 @@ export class ProductoXColorController {
     constructor(private readonly prodXcolorService: ProductoXColorService){}
 
     @Get('get-prodXcolor-listado')
-    @Roles(Role.ADMIN, Role.INVENTARIOS) 
+    @Roles(Role.SUPERADMIN, Role.ADMIN, Role.INVENTARIOS) 
     async getListado(@Query() prodXcolorPaginationDto: ProdxColorPafinationDto){
         return await this.prodXcolorService.getListado(prodXcolorPaginationDto)
     }

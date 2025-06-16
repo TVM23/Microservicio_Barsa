@@ -9,8 +9,8 @@ export class UsersController {
 
 
     @MessagePattern(USER_PATTERNS.CREATE_USUARIO)
-    async createUser(@Payload() dtoCreateUser: CreateUserRequest ){
-        return await this.userService.createUser(dtoCreateUser);
+    async createUser(@Payload() data: { dtoCreateUser: CreateUserRequest, rol: string } ){
+        return await this.userService.createUser(data.dtoCreateUser, data.rol);
     }
 
     @MessagePattern(USER_PATTERNS.LISTADO_USUARIOS)

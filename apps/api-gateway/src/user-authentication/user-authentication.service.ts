@@ -17,8 +17,8 @@ export class UserAuthenticationService {
         );
     }
 
-    createUser(dtoCreateUser: CreateUserRequest) {
-        return this.usersClient.send(USER_PATTERNS.CREATE_USUARIO, dtoCreateUser).pipe(
+    createUser(dtoCreateUser: CreateUserRequest, rol: string) {
+        return this.usersClient.send(USER_PATTERNS.CREATE_USUARIO, { dtoCreateUser, rol}).pipe(
             catchError( err => { throw new RpcException(err) } )
         );
     }

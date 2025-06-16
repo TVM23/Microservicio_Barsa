@@ -138,7 +138,7 @@ export class AuthService {
     }
 
     //PENDIENTE POR EL MOMENTO ------- Cambiar contraseña pero se olvido de la antigua
-    async forgotPassword(dtoForgotPassword: ForgotPasswordDto){
+    /*async forgotPassword(dtoForgotPassword: ForgotPasswordDto){
       const user = await this.usersService.getUserByEmail(dtoForgotPassword.email);
 
       if(user){
@@ -147,6 +147,6 @@ export class AuthService {
       }
 
       return { message: "Un mensaje ha sido enviado al correo para restablece su contraseña" }
-    }
+    }*/
 
 }

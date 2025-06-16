@@ -6,6 +6,7 @@ import { NotificacionSchema } from './schema/notificacion.schema';
 import { KafkaModule } from '@app/contracts';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { HttpModule } from '@nestjs/axios';
+import { NotificacionRepository } from './notificacion.repository';
 
 @Module({
   imports: [
@@ -16,6 +17,6 @@ import { HttpModule } from '@nestjs/axios';
     //KafkaModule,
   ],
   controllers: [NotificacionController],
-  providers: [NotificacionService]
+  providers: [NotificacionService, NotificacionRepository]
 })
 export class NotificacionModule {}

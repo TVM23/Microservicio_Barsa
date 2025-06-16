@@ -63,7 +63,7 @@ export class ProduccionController {
     }
 
     @Get('obtener-tiempo')
-    @Roles(Role.ADMIN, Role.PRODUCCION) 
+    @Roles(Role.SUPERADMIN, Role.ADMIN, Role.PRODUCCION) 
     async obtenerTiempo(
         @Query() tiempoDto: TiempoDto,
         @GetCurrentUserName() nombreUsuario: string
@@ -72,19 +72,19 @@ export class ProduccionController {
     }
 
     @Get('obtener-detencion')
-    @Roles(Role.ADMIN, Role.PRODUCCION) 
+    @Roles(Role.SUPERADMIN, Role.ADMIN, Role.PRODUCCION) 
     async obtenerDetencion(@Query() tiempoDto: TiempoDto){
         return await this.produccionService.obtenerDetencion(tiempoDto);
     }
 
     @Get('obtener-tiempos/:procesoFolio')
-    @Roles(Role.ADMIN, Role.PRODUCCION) 
+    @Roles(Role.SUPERADMIN, Role.ADMIN, Role.PRODUCCION) 
     async obtenerTiemposFolio(@Param('procesoFolio') procesoFolio: number){
         return await this.produccionService.obtenerTiemposFolio(procesoFolio);
     }
 
     @Get('obtener-ultima-detencion/:procesoFolio')
-    @Roles(Role.ADMIN, Role.PRODUCCION) 
+    @Roles(Role.SUPERADMIN, Role.ADMIN, Role.PRODUCCION) 
     async obtenerUltimaDetencionActiva(@Param('procesoFolio') procesoFolio: number){
         return await this.produccionService.obtenerUltimaDetencionActiva(procesoFolio);
     }

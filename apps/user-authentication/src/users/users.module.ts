@@ -4,6 +4,7 @@ import { UsersService } from './users.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { User, UserSchema } from './schema/user.schema';
 import { ResetToken, ResetTokenSchema } from './schema/reset-token.schema';
+import { UsersRepository } from './users.repository';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { ResetToken, ResetTokenSchema } from './schema/reset-token.schema';
     ])
   ],
   controllers: [UsersController],
-  providers: [UsersService],
+  providers: [UsersService, UsersRepository],
   exports: [UsersService]
 })
 export class UsersModule {}

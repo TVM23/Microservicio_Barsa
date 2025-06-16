@@ -9,13 +9,13 @@ export class ProductoController {
   constructor(private readonly productoService: ProductoService) {}
 
   @Get('get-productos-listado')
-  @Roles(Role.ADMIN, Role.INVENTARIOS) 
+  @Roles(Role.SUPERADMIN, Role.ADMIN, Role.INVENTARIOS) 
   async getProductos(@Query() productoPaginationDto: ProductoPaginationDto){
     return await this.productoService.getProductos(productoPaginationDto)
   }
 
   @Get(':codigo')
-  @Roles(Role.ADMIN, Role.INVENTARIOS) 
+  @Roles(Role.SUPERADMIN, Role.ADMIN, Role.INVENTARIOS) 
   async getProductoByCodigo(@Param('codigo') codigo: string){
     return await this.productoService.getProductoByCodigo(codigo)
   }

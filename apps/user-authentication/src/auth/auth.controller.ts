@@ -37,9 +37,9 @@ export class AuthController {
     }
 
     //PENDIENTE POR EL MOMENTO ------- Cambiar contraseña pero se olvido de la antigua
-    @MessagePattern(USER_PATTERNS.FORGOT_PASSWORD)
+    /*@MessagePattern(USER_PATTERNS.FORGOT_PASSWORD)
     async forgotPassword(@Payload() dtoForgotPassword: ForgotPasswordDto) {
         return await this.authService.forgotPassword(dtoForgotPassword);
-    }
+    }*/
 
 }

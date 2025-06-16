@@ -31,8 +31,11 @@ export class UserAuthenticationController {
     @Post('registro')
     @Roles(Role.ADMIN, Role.SUPERADMIN) //Roles("Administrador")
     @HttpCode(HttpStatus.CREATED)
-    async createUser(@Body() dtoCreateUser: CreateUserRequest ){
-        return await this.userAuthService.createUser(dtoCreateUser);
+    async createUser(
+        @Body() dtoCreateUser: CreateUserRequest,
+        @GetCurrentUserRole() rol: string
+     ){
+        return await this.userAuthService.createUser(dtoCreateUser, rol);
     }
 
     //Cerrar sesion
