@@ -22,6 +22,7 @@ export class KafkaPublisherService implements OnModuleInit {
     await this.consumer.connect();
     await this.consumer.subscribe({
       topics: [
+        'bitacora-inventario-response',  'bitacora-produccion-response',
         'materia-response', 'materia-pagination-response', 'materia-codigo-response', 'materia-create-response', 
                 'materia-update-response', "materia-delete-response",
         'inventario-response', 'inventario-movimiento_materia-pagination-response', 'inventario-movimiento_producto-pagination-response', 

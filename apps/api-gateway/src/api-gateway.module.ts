@@ -14,6 +14,7 @@ import { RolesGuard } from './user-authentication/common/guards/roles.guard';
 import { InventarioModule } from './inventario/inventario.module';
 import { ProduccionModule } from './produccion/produccion.module';
 import { NotificacionModule } from './notificacion/notificacion.module';
+import { BitacoraModule } from './bitacora/bitacora.module';
 
 @Module({
   imports: [UserAuthenticationModule,
@@ -26,6 +27,7 @@ import { NotificacionModule } from './notificacion/notificacion.module';
     InventarioModule,
     ProduccionModule,
     NotificacionModule,
+    BitacoraModule,
   ],
   controllers: [ApiGatewayController],
   providers: [ 

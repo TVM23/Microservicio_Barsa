@@ -4,6 +4,8 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\KafkaConsumerConfig.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\config\KafkaProducerConfig.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\controller\NotificacionController.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\bitacoras\BitacoraInvListadoDTO.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\bitacoras\BitacoraProdListadoDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\colores\ColoresPaginationDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\colores\CreateColorDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\ImagenDTO.java
@@ -31,6 +33,7 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\producto\ProductoPaginationDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\dto\producto\ProductoxColorPaginationDTO.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\BaseKafkaListener.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\BitacoraListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\ColoresListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\InventarioListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\MateriaListener.java
@@ -39,6 +42,8 @@ C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\Prod_X_ColorListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\ProduccionListener.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\listener\ProductoListener.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Bitacora.java
+C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\BitacoraTiempos.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Colores.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\Detalle_Movimiento.java
 C:\Users\Tadeo\git\MicroServicioBarsa-Spring\proyecto-access-1\src\main\java\com\access\model\DetalleMovimientoMateria.java
