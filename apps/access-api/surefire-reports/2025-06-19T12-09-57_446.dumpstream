@@ -1,0 +1,5 @@
+# Created at 2025-06-19T12:09:57.613
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Proyecto Residencias\pruebaMonorepo2\Microservicio_MuebleriaBarsa\apps\access-api\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

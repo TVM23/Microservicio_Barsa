@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ProduccionService } from './produccion.service';
-import { DesactivarDetencionDto, DetencionDto, FinalizarTiempoDto, IniciarTiempoDto, PausarTiempoDto, ReiniciarTiempoDto, Role, Roles } from '@app/contracts';
+import { DesactivarDetencionDto, DetencionDto, FinalizarTiempoDto, IniciarTiempoDto, PausarTiempoDto, ReiniciarTiempoDto, Role, Roles, TiemposFechaBusquedaDto } from '@app/contracts';
 import { TiempoDto } from 'libs/contracts/produccion/tiempo.dto';
 import { GetCurrentUserName } from '../user-authentication/common/decorators/get-current-user-name.decorator';
 
@@ -87,6 +87,18 @@ export class ProduccionController {
     @Roles(Role.SUPERADMIN, Role.ADMIN, Role.PRODUCCION) 
     async obtenerUltimaDetencionActiva(@Param('procesoFolio') procesoFolio: number){
         return await this.produccionService.obtenerUltimaDetencionActiva(procesoFolio);
+    }
+
+    @Get('obtener-detenciones-folio/:procesoFolio')
+    @Roles(Role.SUPERADMIN, Role.ADMIN, Role.PRODUCCION) 
+    async obtenerDetencionesFolio(@Param('procesoFolio') procesoFolio: number){
+        return await this.produccionService.obtenerDetencionesFolio(procesoFolio);
+    }
+
+    @Get('obtener-tiempos-periodo')
+    @Roles(Role.SUPERADMIN, Role.ADMIN, Role.PRODUCCION) 
+    async obtenerTiemposPeriodo(@Query() dto: TiemposFechaBusquedaDto){
+        return await this.produccionService.obtenerTiemposPeriodo(dto);
     }
 
 }

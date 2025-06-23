@@ -35,6 +35,7 @@ export * from '../produccion/iniciar-tiempo.dto';
 export * from '../produccion/pausar-tiempo.dto';
 export * from '../produccion/reiniciar-tiempo.dto';
 export * from '../produccion/finalizar-tiempo.dto';
+export * from '../produccion/tiempos-fecha-busqueda.dto'
 
 export * from '../inventario/detalle-movimiento.materia.dto';
 export * from '../inventario/movimiento-materia.dto';

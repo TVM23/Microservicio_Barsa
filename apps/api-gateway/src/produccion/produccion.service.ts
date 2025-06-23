@@ -1,4 +1,4 @@
-import { DesactivarDetencionDto, DetencionDto, FinalizarTiempoDto, IniciarTiempoDto, KafkaPublisherService, PausarTiempoDto, ReiniciarTiempoDto } from '@app/contracts';
+import { DesactivarDetencionDto, DetencionDto, FinalizarTiempoDto, IniciarTiempoDto, KafkaPublisherService, PausarTiempoDto, ReiniciarTiempoDto, TiemposFechaBusquedaDto } from '@app/contracts';
 import { Injectable } from '@nestjs/common';
 import { TiempoDto } from 'libs/contracts/produccion/tiempo.dto';
 
@@ -46,4 +46,11 @@ export class ProduccionService {
         return this.kafkaService.sendRequest('get-ultima-detencion', procesoFolio)
     }
 
+    obtenerDetencionesFolio(procesoFolio: number){
+        return this.kafkaService.sendRequest('get-detenciones-folio', procesoFolio)
+    }
+
+    obtenerTiemposPeriodo(dto: TiemposFechaBusquedaDto){
+        return this.kafkaService.sendRequest('get-tiempos-periodo', dto)
+    }
 }
