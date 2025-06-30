@@ -7,7 +7,7 @@ import { NotificacionDocument } from "./schema/notificacion.schema";
 export class NotificacionRepository {
     constructor (@InjectModel('Notificacion') private notificacionModel: Model<NotificacionDocument>) {}
 
-    async eliminarNotificacionesInventarioExcluyendoCodigos(codigos: string[]) {
+  async eliminarNotificacionesInventarioExcluyendoCodigos(codigos: string[]) {
     return this.notificacionModel.deleteMany({
       area: 'INVENTARIO',
       codigo: { $nin: codigos },
@@ -18,6 +18,14 @@ export class NotificacionRepository {
     return this.notificacionModel.updateOne(
       { codigo: materia.codigo, area: 'INVENTARIO' },
       { $set: materia },
+      { upsert: true },
+    );
+  }
+
+  async upsertNotificacionTiempo(tiempo: any) {
+    return this.notificacionModel.updateOne(
+      { codigo: tiempo.codigo },
+      { $set: tiempo },
       { upsert: true },
     );
   }
@@ -51,4 +59,14 @@ export class NotificacionRepository {
       { upsert: true },
     );
   }
+
+  async eliminarNotificacionesFinalizacionTiempoAntiguas() {
+      const tresDiasAntes = new Date();
+      tresDiasAntes.setDate(tresDiasAntes.getDate() - 3);
+
+      await this.notificacionModel.deleteMany({
+        descripcion: "FINALIZACIÓN DE TIEMPO",
+        fecha: { $lte: tresDiasAntes.toISOString().split("T")[0] }  // Formato YYYY-MM-DD
+      });
+    }
 }
