@@ -44,6 +44,7 @@ export class NotificacionService {
         // 3. Devolver lista actual de MongoDB
         switch(rol){
           case "Administrador":
+          case "SuperAdministrador":
             return this.notificacionRepository.obtenerTodas();
           case "Inventarios":
             return this.notificacionRepository.obtenerPorArea('INVENTARIO');

@@ -1,15 +1,15 @@
 # Etapa de desarrollo
-FROM node:22-slim AS development
+FROM node:22-alpine AS development
 
 WORKDIR /usr/src/app
 
 # Instalar dependencias necesarias para ODBC
-RUN apt-get update && apt-get install -y \
+#RUN apt-get update && apt-get install -y \
+RUN apk update && apk add --no-cache \
     unixodbc \
     unixodbc-dev \
-    odbcinst \
-    odbc-mdbtools \
-    && rm -rf /var/lib/apt/lists/*
+    mdbtools \
+    && rm -rf /var/cache/apk/*
 
 COPY package*.json ./
 
@@ -23,17 +23,20 @@ COPY . .
 RUN npm run build
 
 # Etapa de producción
-FROM node:22-slim AS production
+FROM node:22-alpine AS production
 
 WORKDIR /usr/src/app
 
 # Instalar dependencias necesarias para ODBC
-RUN apt-get update && apt-get install -y \
+#RUN apt-get update && apt-get install -y \
+RUN apk update && apk add --no-cache \
     unixodbc \
     unixodbc-dev \
-    odbcinst \
-    odbc-mdbtools \
-    && rm -rf /var/lib/apt/lists/*
+    mdbtools \
+    && rm -rf /var/cache/apk/*
+    #odbcinst \
+    #odbc-mdbtools \
+    #&& rm -rf /var/lib/apt/lists/*
 
 COPY package*.json ./
 

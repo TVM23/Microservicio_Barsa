@@ -1,5 +1,5 @@
 import { Transform, Type } from "class-transformer";
-import { IsIn, IsNotEmpty, IsNumber, IsOptional, IsString, Min } from "class-validator";
+import { IsIn, IsInt, IsNotEmpty, IsNumber, IsOptional, IsString, Max, Min } from "class-validator";
 import { ImagenDto, IsGreaterThan } from "@app/contracts";
 
 export class CreateMateriaDto {
@@ -64,6 +64,13 @@ export class CreateMateriaDto {
     @Transform(({ value }) => value ? value.trim() : 'true') 
     @IsIn(['true', 'false'], { message: 'El estado solo puede ser true o false' })
     public borrado: string = 'false';
+
+    @IsNumber({}, {message: 'Debes ingresar un numero para el porcentaje de la merma'})
+    @IsInt({ message: 'El porcentaje de la merma debe ser un entero válido.' })
+    @Min(0, { message: 'La cantidad de merma no puede ser un porcentaje negativo' })
+    @Max(100, { message: 'La cantidad de merma no puede sobre pasar del 100%' })
+    @Type(() => Number)
+    public merma: number = 0;
 
     @IsOptional()
     public imagenes?: ImagenDto[];

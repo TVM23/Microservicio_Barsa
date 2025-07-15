@@ -119,6 +119,19 @@ services:
     networks:
       - app-network
     restart: "no"   # Solo se ejecuta una vez al levantar
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ngrok
+    depends_on:
+      - api-gateway
+    environment:
+      - NGROK_AUTHTOKEN=2zNGmcTEQTxQx5jb1ZpQS6W4aiU_3C8eFAyXHoh36xFkK6z9i
+    command: http --domain=kind-positively-zebra.ngrok-free.app api-gateway:3000
+    networks:
+      - app-network
+
+
       
 volumes:
   mongodb_master_data:
